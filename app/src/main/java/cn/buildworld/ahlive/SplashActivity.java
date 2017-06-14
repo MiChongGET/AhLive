@@ -8,6 +8,9 @@ import android.view.WindowManager;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import cn.buildworld.ahlive.guide.GuideActivity;
+import cn.buildworld.ahlive.utils.Preferences;
+
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -22,11 +25,19 @@ public class SplashActivity extends AppCompatActivity {
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this,TabActivity.class));
+
+//                if (Preferences.getBoolean(SplashActivity.this,"first_start",true)){
+//                    Preferences.setBoolean(SplashActivity.this,"first_start",false);
+//                    startActivity(new Intent(SplashActivity.this,GuideActivity.class));
+//                }else {
+//                    startActivity(new Intent(SplashActivity.this,TabActivity.class));
+//                }
+                startActivity(new Intent(SplashActivity.this,GuideActivity.class));
+
                 finish();
             }
         };
 
-        timer.schedule(timerTask,2000);
+        timer.schedule(timerTask,1000);
     }
 }
