@@ -21,7 +21,17 @@
         <activity
             android:name=".TabActivity"
             android:label="@string/title_activity_tab" />
-        <activity android:name=".guide.GuideActivity" android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".guide.GuideActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".activity.SlidingActivity"
+            android:label="@string/title_activity_sliding"
+            android:parentActivityName=".TabActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cn.buildworld.ahlive.TabActivity" />
         </activity>
     </application>
 
