@@ -12,9 +12,10 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <cn.buildworld.ahlive.utils.CircleImageView
+
         android:id="@+id/imageView"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:src="@drawable/header" />
 

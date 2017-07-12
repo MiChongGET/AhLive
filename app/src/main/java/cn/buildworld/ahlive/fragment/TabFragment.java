@@ -18,7 +18,6 @@ public class TabFragment extends BaseFragment {
         return new TabFragment();
     }
 
-    private TextView mTextMessage;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -26,15 +25,21 @@ public class TabFragment extends BaseFragment {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                   // mTextMessage.setText(R.string.title_home);
+                    getFragmentManager().beginTransaction().replace(R.id.content,FirstPage.newInstance(),null).commit();
                     return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                case R.id.navigation_news:
+                    getFragmentManager().beginTransaction().replace(R.id.content,NewsCenter.newInstance(),null).commit();
                     return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                case R.id.navigation_server:
+                    getFragmentManager().beginTransaction().replace(R.id.content,Server.newInstance(),null).commit();
                     return true;
-
+                case R.id.navigation_work:
+                    getFragmentManager().beginTransaction().replace(R.id.content,Work.newInstance(),null).commit();
+                    return true;
+                case R.id.navigation_setting:
+                    getFragmentManager().beginTransaction().replace(R.id.content,Setting.newInstance(),null).commit();
+                    return true;
             }
             return false;
         }
@@ -46,10 +51,9 @@ public class TabFragment extends BaseFragment {
     public View initView() {
 
         View view = View.inflate(getActivity(), R.layout.activity_tab, null);
-        mTextMessage = (TextView) view.findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) view.findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
+        getFragmentManager().beginTransaction().replace(R.id.content,FirstPage.newInstance(),null).commit();
         return view;
     }
 

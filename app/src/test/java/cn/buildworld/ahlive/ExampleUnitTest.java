@@ -2,6 +2,11 @@ package cn.buildworld.ahlive;
 
 import org.junit.Test;
 
+import cn.buildworld.ahlive.utils.net.GetDataService;
+import okhttp3.Call;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 import static org.junit.Assert.*;
 
 /**
@@ -13,5 +18,18 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
+//        System.out.println("hello world");
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://www.buildworld.xyz/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        GetDataService service = retrofit.create(GetDataService.class);
+
+
+
+
     }
+
 }

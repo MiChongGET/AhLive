@@ -1,13 +1,15 @@
 <resources>
     <string name="app_name">AhLive</string>
     <string name="title_activity_tab">TabActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">新闻中心</string>
     <string name="title_activity_sliding">SlidingActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">设置</string>
+    <string name="title_server">智慧服务</string>
+    <string name="title_works">政务</string>
+    <string name="title_setting">设置</string>
 </resources>
