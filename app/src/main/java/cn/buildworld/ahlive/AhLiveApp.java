@@ -1,6 +1,7 @@
 package cn.buildworld.ahlive;
 
 import android.app.Application;
+import android.util.Log;
 
 import org.xutils.x;
 
@@ -10,10 +11,14 @@ import org.xutils.x;
  */
 public class AhLiveApp extends Application {
 
+    private static final String TAG = "APP";
     @Override
     public void onCreate() {
         super.onCreate();
 
+        Log.i(TAG, "初始化");
         x.Ext.init(this);
+        x.Ext.setDebug(true);
+
     }
 }

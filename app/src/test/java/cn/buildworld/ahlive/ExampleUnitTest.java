@@ -2,12 +2,10 @@ package cn.buildworld.ahlive;
 
 import org.junit.Test;
 
-import cn.buildworld.ahlive.utils.net.GetDataService;
-import okhttp3.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -25,7 +23,6 @@ public class ExampleUnitTest {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        GetDataService service = retrofit.create(GetDataService.class);
 
 
 

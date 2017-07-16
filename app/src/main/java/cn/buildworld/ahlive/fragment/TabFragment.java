@@ -3,7 +3,6 @@ package cn.buildworld.ahlive.fragment;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,6 +23,15 @@ public class TabFragment extends BaseFragment {
     private FragmentTransaction transaction;
 
 
+    private Fragment mFragment;
+    private Fragment currentFragment;
+    public static final String TAG_FIRSTPAGE = "FIRSTPAGE";
+    public static final String TAG_NEWSCENTER = "NEWSCENTER";
+    public static final String TAG_SERVER = "SERVER";
+    public static final String TAG_WORK = "WORK";
+    public static final String TAG_SETTING = "SETTING";
+    private boolean isFristCreated;
+
     public static TabFragment newInstance(){
         return new TabFragment();
     }
@@ -34,35 +42,34 @@ public class TabFragment extends BaseFragment {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-            transaction = getFragmentManager().beginTransaction();
+
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                   // mTextMessage.setText(R.string.title_home);
-//                    getFragmentManager().beginTransaction().replace(R.id.content,FirstPage.newInstance(),null).commit();
-
-//                    if (mFirstPage == null) {
-//                        mFirstPage = new FirstPage();
-//                        transaction.add(R.id.content,mFirstPage);
-//                    }
-//                    hidefragment(transaction);
-//                    transaction.show(mFirstPage);
-//                    transaction.commit();
-
-                    getFragment(mFirstPage,"firstpage");
-
+                    addfragment(TAG_FIRSTPAGE);
                     return true;
 
                 case R.id.navigation_news:
-                    getFragmentManager().beginTransaction().replace(R.id.content,NewsCenter.newInstance(),null).commit();
+//                    getFragmentManager().beginTransaction().replace(R.id.content,NewsCenter.newInstance(),null).commit();
+                    addfragment(TAG_NEWSCENTER);
+
                     return true;
                 case R.id.navigation_server:
-                    getFragmentManager().beginTransaction().replace(R.id.content,Server.newInstance(),null).commit();
+//                    getFragmentManager().beginTransaction().replace(R.id.content,Server.newInstance(),null).commit();
+
+                    addfragment(TAG_SERVER);
+
                     return true;
                 case R.id.navigation_work:
-                    getFragmentManager().beginTransaction().replace(R.id.content,Work.newInstance(),null).commit();
+//                    getFragmentManager().beginTransaction().replace(R.id.content,Work.newInstance(),null).commit();
+
+                    addfragment(TAG_WORK);
+
                     return true;
                 case R.id.navigation_setting:
-                    getFragmentManager().beginTransaction().replace(R.id.content,Setting.newInstance(),null).commit();
+//                    getFragmentManager().beginTransaction().replace(R.id.content,Setting.newInstance(),null).commit();
+                    addfragment(TAG_SETTING);
+
+
                     return true;
             }
             return false;
@@ -71,46 +78,44 @@ public class TabFragment extends BaseFragment {
     };
 
 
+    public void addfragment(String tag){
+        mFragment = getFragmentManager().findFragmentByTag(tag);
+        if (mFragment == null){
+            transaction = getFragmentManager().beginTransaction();
 
-    //传入fragment
-    public void getFragment(Fragment fragment,String tag){
+            if (tag.equals("FIRSTPAGE")){
+                mFragment = new FirstPage();
+            }else if (tag.equals("NEWSCENTER")){
+                mFragment = new NewsCenter();
+            }else if (tag.equals("SERVER")){
+                mFragment = new Server();
+            }else if (tag.equals("WORK")){
+                mFragment = new Work();
+            }else if (tag.equals("SETTING")){
+                mFragment = new Setting();
+            }
 
-        if (fragment == null) {
-            fragment = new FirstPage();
-            transaction.add(R.id.content,fragment,tag);
-//            fragment = FragmentManager.
-        }
-        hidefragment(transaction);
-        transaction.show(fragment);
-        transaction.commit();
+            if (currentFragment != null){
+                transaction.hide(currentFragment);
+            }
+            transaction.add(R.id.content,mFragment,tag);
+            transaction.commit();
 
-    }
+            currentFragment = mFragment;
 
-    //隐藏其它fragment
-    private void hidefragment(FragmentTransaction transaction){
+        }else {
+            transaction = getFragmentManager().beginTransaction();
+            transaction.show(mFragment);
+            transaction.hide(currentFragment);
+            currentFragment = mFragment;
+            transaction.commit();
 
-        if (mFirstPage != null){
-            transaction.hide(mFirstPage);
-        }
-
-        if (mServer != null){
-            transaction.hide(mServer);
-        }
-
-        if (mWork != null){
-            transaction.hide(mWork);
-        }
-
-        if (mSetting != null){
-            transaction.hide(mSetting);
-        }
-
-        if (mNewsCenter != null){
-            transaction.hide(mNewsCenter);
         }
 
 
     }
+
+
 
     @Override
     public View initView() {
@@ -119,7 +124,10 @@ public class TabFragment extends BaseFragment {
         BottomNavigationView navigation = (BottomNavigationView) view.findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        getFragmentManager().beginTransaction().replace(R.id.content,FirstPage.newInstance(),null).commit();
+//        getFragmentManager().beginTransaction().replace(R.id.content,FirstPage.newInstance(),null).commit();
+
+        addfragment(TAG_FIRSTPAGE);
+
         return view;
     }
 

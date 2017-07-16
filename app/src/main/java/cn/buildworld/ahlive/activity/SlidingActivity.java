@@ -1,10 +1,7 @@
 package cn.buildworld.ahlive.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -20,13 +17,11 @@ import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.bean.Movie;
 import cn.buildworld.ahlive.fragment.TabFragment;
 import cn.buildworld.ahlive.utils.Fault;
-import cn.buildworld.ahlive.utils.net.MovieLoader;
 import rx.functions.Action1;
 
 public class SlidingActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private MovieLoader mMovieLoader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,40 +41,38 @@ public class SlidingActivity extends AppCompatActivity
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment, TabFragment.newInstance()).commit();
 
-        mMovieLoader = new MovieLoader();
-        getMovieList();
     }
 
 
-    /**
-     * 获取电影列表
-     */
-    private void getMovieList(){
-        mMovieLoader.getMovie(0,10).subscribe(new Action1<List<Movie>>() {
-            @Override
-            public void call(List<Movie> movies) {
-                Log.e("zhouwei","get data suceess");
-                System.out.println("哈哈哈哈哈"+movies);
-
-            }
-        }, new Action1<Throwable>() {
-            @Override
-            public void call(Throwable throwable) {
-                Log.e("TAG","error message:"+throwable.getMessage());
-                if(throwable instanceof Fault){
-                    Fault fault = (Fault) throwable;
-                    if(fault.getErrorCode() == 404){
-                        //错误处理
-                    }else if(fault.getErrorCode() == 500){
-                        //错误处理
-                    }else if(fault.getErrorCode() == 501){
-                        //错误处理
-                    }
-                }
-            }
-        });
-
-    }
+//    /**
+//     * 获取电影列表
+//     */
+//    private void getMovieList(){
+//        mMovieLoader.getMovie(0,10).subscribe(new Action1<List<Movie>>() {
+//            @Override
+//            public void call(List<Movie> movies) {
+//                Log.e("zhouwei","get data suceess");
+//                System.out.println("哈哈哈哈哈"+movies);
+//
+//            }
+//        }, new Action1<Throwable>() {
+//            @Override
+//            public void call(Throwable throwable) {
+//                Log.e("TAG","error message:"+throwable.getMessage());
+//                if(throwable instanceof Fault){
+//                    Fault fault = (Fault) throwable;
+//                    if(fault.getErrorCode() == 404){
+//                        //错误处理
+//                    }else if(fault.getErrorCode() == 500){
+//                        //错误处理
+//                    }else if(fault.getErrorCode() == 501){
+//                        //错误处理
+//                    }
+//                }
+//            }
+//        });
+//
+//    }
 
 
 
