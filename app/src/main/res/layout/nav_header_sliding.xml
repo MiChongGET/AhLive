@@ -11,27 +11,71 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <cn.buildworld.ahlive.utils.CircleImageView
-
-        android:id="@+id/imageView"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/header" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:text="Power By MiChong"
-        android:textColor="#eee"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
-
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#eee"
-        android:text="1564666023@qq.com" />
+        android:layout_height="wrap_content">
+        <cn.buildworld.ahlive.utils.CircleImageView
 
+            android:id="@+id/header_icon"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:src="@drawable/header" />
+
+        <TextView
+            android:textSize="30dp"
+            android:layout_gravity="center"
+            android:text="MiChong"
+            android:paddingLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="70"
+            android:maxLines="2"
+            android:text="吹牛逼的都是年轻人"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:visibility="visible"/>
+        <ImageView
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/sign"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLength="70"
+            android:maxLines="2"
+            android:text="position"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:visibility="visible"/>
+        <ImageView
+            android:layout_marginTop="3dp"
+            android:layout_gravity="center"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/position"/>
+    </LinearLayout>
 </LinearLayout>

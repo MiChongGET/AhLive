@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+   <android.support.design.widget.TextInputLayout
+       android:layout_width="300dp"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="173dp"
+       android:id="@+id/textInputLayout2">
+
+      <EditText
+          android:id="@+id/cityName"
+          android:text="淮南"
+          android:layout_width="300dp"
+          android:layout_height="wrap_content"
+          android:hint="请输入您的城市"/>
+   </android.support.design.widget.TextInputLayout>
+
+   <Button
+       android:id="@+id/button_cityname"
+       android:layout_margin="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/textInputLayout2"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="24dp"
+       android:text="确认"/>
+
+
+</RelativeLayout>

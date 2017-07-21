@@ -49,7 +49,7 @@
           android:gravity="center_horizontal|right"
           android:id="@+id/cv_author"
           android:layout_width="match_parent"
-          android:layout_height="16dp"/>
+          android:layout_height="wrap_content"/>
 
       <TextView
           android:id="@+id/cv_digest"

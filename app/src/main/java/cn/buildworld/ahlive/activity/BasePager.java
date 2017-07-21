@@ -13,6 +13,9 @@ public class BasePager {
 
     public BasePager(Activity activity) {
         this.activity = activity;
+
+
+
     }
 
 

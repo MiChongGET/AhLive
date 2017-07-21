@@ -1,78 +1,147 @@
 package cn.buildworld.ahlive.activity;
 
+import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.List;
+import com.amap.api.location.AMapLocation;
+import com.amap.api.location.AMapLocationClient;
+import com.amap.api.location.AMapLocationClientOption;
+import com.amap.api.location.AMapLocationListener;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.Locale;
 
 import cn.buildworld.ahlive.R;
-import cn.buildworld.ahlive.bean.Movie;
 import cn.buildworld.ahlive.fragment.TabFragment;
-import cn.buildworld.ahlive.utils.Fault;
-import rx.functions.Action1;
 
-public class SlidingActivity extends AppCompatActivity
+public class SlidingActivity extends CheckPermissionsActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
+    private String TAG = "侧边栏：";
+    //高德定位系统
+    public AMapLocationClient mLocationClient = null;
+    public AMapLocationListener mLocationListener = new AMapLocationListener() {
+        @Override
+        public void onLocationChanged(AMapLocation aMapLocation) {
+
+            if (aMapLocation != null) {
+                if (aMapLocation.getErrorCode() == 0) {
+                //可在其中解析amapLocation获取相应内容。
+
+
+                    Log.i(TAG, "onLocationChanged: "+  aMapLocation.getCountry()+"-------"+
+                    aMapLocation.getCity()+aMapLocation.getCityCode());
+
+                    mPosition.setText(aMapLocation.getCity()+"  "+aMapLocation.getCountry()
+                            );
+
+
+                }else {
+                    //定位失败时，可通过ErrCode（错误码）信息来确定失败的原因，errInfo是错误信息，详见错误码表。
+                    Log.e("AmapError","location Error, ErrCode:"
+                            + aMapLocation.getErrorCode() + ", errInfo:"
+                            + aMapLocation.getErrorInfo());
+                }
+            }
+
+        }
+    };
+    //声明AMapLocationClientOption对象
+    public AMapLocationClientOption mLocationOption = null;
+    private Toolbar mToolbar;
+    private DrawerLayout mDrawer;
+    private NavigationView mNavigationView;
+    private TextView mPosition;
+    private ImageView mHeaderIcon;
+    private View mHeaderview;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sliding);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar(mToolbar);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //界面初始化
+        init();
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+                this, mDrawer, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        mDrawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        mNavigationView.setNavigationItemSelectedListener(this);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment, TabFragment.newInstance()).commit();
+
+      //定位功能实现
+        getLocation();
+//        mPosition.setText("安徽省");
+        mHeaderIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(SlidingActivity.this, "个人中心", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+    }
+
+    public void init(){
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mNavigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        mHeaderview = mNavigationView.getHeaderView(0);
+        mPosition = (TextView) mHeaderview.findViewById(R.id.position);
+        mHeaderIcon = (ImageView) mHeaderview.findViewById(R.id.header_icon);
+
+
 
     }
 
 
-//    /**
-//     * 获取电影列表
-//     */
-//    private void getMovieList(){
-//        mMovieLoader.getMovie(0,10).subscribe(new Action1<List<Movie>>() {
-//            @Override
-//            public void call(List<Movie> movies) {
-//                Log.e("zhouwei","get data suceess");
-//                System.out.println("哈哈哈哈哈"+movies);
-//
-//            }
-//        }, new Action1<Throwable>() {
-//            @Override
-//            public void call(Throwable throwable) {
-//                Log.e("TAG","error message:"+throwable.getMessage());
-//                if(throwable instanceof Fault){
-//                    Fault fault = (Fault) throwable;
-//                    if(fault.getErrorCode() == 404){
-//                        //错误处理
-//                    }else if(fault.getErrorCode() == 500){
-//                        //错误处理
-//                    }else if(fault.getErrorCode() == 501){
-//                        //错误处理
-//                    }
-//                }
-//            }
-//        });
-//
-//    }
+    //高德地图定位功能
+
+    public void getLocation(){
+        //定位初始化
+        mLocationClient = new AMapLocationClient(getApplicationContext());
+        mLocationClient.setLocationListener(mLocationListener);
+        mLocationOption = new AMapLocationClientOption();
+
+        //高精度定位模式：会同时使用网络定位和GPS定位，优先返回最高精度的定位结果，以及对应的地址描述信息。
+        mLocationOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);
+
+        //低功耗定位模式：不会使用GPS和其他传感器，只会使用网络定位（Wi-Fi和基站定位）；
+        //mLocationOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Battery_Saving);
+        //仅用设备定位模式：不需要连接网络，只使用GPS进行定位，这种模式下不支持室内环境的定位，自 v2.9.0 版本支持返回地址描述信息。
+        //mLocationOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Device_Sensors);
+
+        //获取一次定位结果：
+        //该方法默认为false。
+        mLocationOption.setOnceLocation(true);
+
+        //给定位客户端对象设置定位参数
+        mLocationClient.setLocationOption(mLocationOption);
+        //启动定位
+        mLocationClient.startLocation();
+
+    }
 
 
 

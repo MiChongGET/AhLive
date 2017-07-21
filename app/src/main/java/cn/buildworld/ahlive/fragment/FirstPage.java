@@ -1,6 +1,9 @@
 package cn.buildworld.ahlive.fragment;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,7 +24,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.buildworld.ahlive.R;
+import cn.buildworld.ahlive.activity.ArticlePageActivity;
 import cn.buildworld.ahlive.bean.Article;
+import cn.buildworld.ahlive.bean.BundleArticle;
 import cn.buildworld.ahlive.bean.Data;
 import cn.buildworld.ahlive.utils.ApiUrl;
 import cn.buildworld.ahlive.utils.GSONUtil;
@@ -45,6 +50,8 @@ public class FirstPage extends BaseFragment {
     private TextView author;
     private TextView digest;
 
+    private CardView mCardView;
+
     public static FirstPage newInstance(){
         return new FirstPage();
     }
@@ -58,6 +65,26 @@ public class FirstPage extends BaseFragment {
          title = (TextView) view.findViewById(R.id.cv_title);
          author = (TextView) view.findViewById(R.id.cv_author);
          digest = (TextView) view.findViewById(R.id.cv_digest);
+         mCardView = (CardView) view.findViewById(R.id.cv_article);
+
+         mCardView.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+
+                 if (articleData != null) {
+
+                     Bundle bundle = new Bundle();
+                     BundleArticle article = new BundleArticle(articleData.getContent(), articleData.getAuthor()
+                             , articleData.getTitle());
+
+                     bundle.putSerializable("showArticle", article);
+                     Intent intent = new Intent();
+                     intent.putExtras(bundle);
+                     intent.setClass(getActivity(), ArticlePageActivity.class);
+                     startActivity(intent);
+                 }else Toast.makeText(getActivity(), "网络异常!!!", Toast.LENGTH_SHORT).show();
+             }
+         });
 
         //轮播图的显示
         mzBannerView = (MZBannerView) view.findViewById(R.id.banner);
@@ -89,6 +116,8 @@ public class FirstPage extends BaseFragment {
               }else Toast.makeText(getActivity(), "正在使用移动网络", Toast.LENGTH_SHORT).show();
               //获取网络文章
               getAticle();
+          }else {
+              Toast.makeText(getActivity(), "请检查您的网络！！！", Toast.LENGTH_SHORT).show();
           }
 
 
@@ -97,39 +126,9 @@ public class FirstPage extends BaseFragment {
 
 
 
-    private static final String URL = "https://interface.meiriyiwen.com/article/today?dev=1";
     public void getAticle(){
 
         Log.i(TAG, "网络请求！！！");
-
-//        RequestParams params = new RequestParams(URL);
-//        Callback.Cancelable cancelable = x.http().get(params,new Callback.CommonCallback<String>(){
-//
-////            @Override
-////            public void onSuccess(Object result) {
-////                Log.i(TAG, "onSuccess: "+result);
-////            }
-//
-//            @Override
-//            public void onSuccess(String result) {
-//                Log.i(TAG, "onSuccess: "+result);
-//            }
-//
-//            @Override
-//            public void onError(Throwable ex, boolean isOnCallback) {
-//                Log.i(TAG, "onError");
-//            }
-//
-//            @Override
-//            public void onCancelled(CancelledException cex) {
-//            }
-//
-//            @Override
-//            public void onFinished() {
-//                Log.i(TAG, "onFinished");
-//            }
-//        });
-////        cancelable.cancel();
 
         XUtils.Get(ApiUrl.ATICLE_URL,null,new MyCallBack<String>(){
 
@@ -142,12 +141,11 @@ public class FirstPage extends BaseFragment {
                 Article article = gson.fromJson(result,Article.class);
                 articleData = article.getData();
                 Article.DataBean.DateBean date = articleData.getDate();
-//                System.out.println("success: "+ articleData.getTitle());
-//                System.out.println("success: "+ articleData.getAuthor());
+
+//                Log.i(TAG, "onSuccess: "+articleData.toString());
 
 
                 if (articleData != null){
-
                     title.setText(articleData.getTitle());
                     author.setText("作者："+articleData.getAuthor());
                     digest.setText(articleData.getDigest());
@@ -165,28 +163,6 @@ public class FirstPage extends BaseFragment {
                 super.onFinished();
             }
         });
-    }
-
-    class Person {
-        private String name;
-        private String age;
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getAge() {
-            return age;
-        }
-
-        public void setAge(String age) {
-            this.age = age;
-        }
-
     }
 
 
@@ -221,4 +197,5 @@ public class FirstPage extends BaseFragment {
     }
 
 }
+
 

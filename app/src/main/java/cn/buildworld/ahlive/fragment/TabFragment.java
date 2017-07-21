@@ -103,7 +103,7 @@ public class TabFragment extends BaseFragment {
 
             currentFragment = mFragment;
 
-        }else {
+        }else if (currentFragment != mFragment){
             transaction = getFragmentManager().beginTransaction();
             transaction.show(mFragment);
             transaction.hide(currentFragment);
@@ -111,7 +111,6 @@ public class TabFragment extends BaseFragment {
             transaction.commit();
 
         }
-
 
     }
 

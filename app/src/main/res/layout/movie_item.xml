@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_gravity="center"
+        android:layout_margin="6dp"
+        android:layout_width="300dp"
+        android:layout_height="380dp">
+
+        <ImageView
+            android:id="@+id/newmoive"
+            android:background="@drawable/new_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            />
+
+            <ImageView
+                android:layout_gravity="center|top"
+                android:id="@+id/movie_item_img"
+                android:layout_width="180dp"
+                android:layout_height="240dp"
+                android:src="@mipmap/ic_launcher"/>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/name"
+                android:textSize="18dp"
+                android:text="《假如爱有天意》"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/commenSpecial"
+                android:text="一群麻瓜"
+                android:textSize="16dp"
+                android:textColor="#4BCD61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:textSize="16dp"
+                android:id="@+id/rday"
+                android:text="上映时间："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/directorName"
+                android:text="导演：张艺谋"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/actorName"
+                android:text="主演："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:textSize="14dp"
+                android:id="@+id/type"
+                android:text="影片类型"
+                android:textColor="#eee"
+                android:background="#DE5145"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+</LinearLayout>
