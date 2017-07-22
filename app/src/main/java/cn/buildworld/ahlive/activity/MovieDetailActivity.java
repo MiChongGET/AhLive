@@ -6,8 +6,14 @@ import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,12 +26,19 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.bean.HotMovieDetail;
 import cn.buildworld.ahlive.bean.MovieDetail;
+import cn.buildworld.ahlive.fragment.MovieContentFragment;
+import cn.buildworld.ahlive.fragment.MovieVideoFragment;
 import cn.buildworld.ahlive.utils.ApiUrl;
 import cn.buildworld.ahlive.utils.MyCallBack;
 import cn.buildworld.ahlive.utils.XUtils;
+
+import static android.R.id.list;
 
 public class MovieDetailActivity extends AppCompatActivity {
 
@@ -45,9 +58,14 @@ public class MovieDetailActivity extends AppCompatActivity {
     private TextView mTotalBoxDes;
     private TextView mMvStory;
 
-    private MovieDetail.DataBean.BasicBean mBasic;
-    private MovieDetail.DataBean mData;
-    private MovieDetail mMovieDetail;
+    private HotMovieDetail.DataBean.BasicBean mBasic;
+    private HotMovieDetail.DataBean mData;
+    private HotMovieDetail mMovieDetail;
+    private TabLayout mTabLayout;
+    private ViewPager mViewPager;
+    private List<Fragment> mList;
+    private String[] titles = {"简介","预告片"};
+    private MyAdapter mMyAdapter;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -109,7 +127,10 @@ public class MovieDetailActivity extends AppCompatActivity {
 //        mRanking = (TextView) findViewById(R.id.ranking);
 //        mTodayBoxDes = (TextView) findViewById(R.id.todayBoxDes);
 //        mTotalBoxDes = (TextView) findViewById(R.id.totalBoxDes);
-        mMvStory = (TextView) findViewById(R.id.movie_story);
+//        mMvStory = (TextView) findViewById(R.id.movie_story);
+
+        mTabLayout = (TabLayout) findViewById(R.id.toolbar_tab);
+        mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
 
     }
@@ -124,7 +145,7 @@ public class MovieDetailActivity extends AppCompatActivity {
                 super.onSuccess(result);
                 Log.i(TAG, "onSuccess: "+result);
                 Gson gson = new Gson();
-                mMovieDetail = gson.fromJson(result,MovieDetail.class);
+                mMovieDetail = gson.fromJson(result,HotMovieDetail.class);
                 mData = mMovieDetail.getData();
                 mBasic = mData.getBasic();
 //                MovieDetail.DataBean.BoxOfficeBean boxOffice = data.getBoxOffice();
@@ -146,11 +167,19 @@ public class MovieDetailActivity extends AppCompatActivity {
 //                    }
 //                }
 //                mType.setText(stringBuilder.toString());
-                mMvStory.setText(mBasic.getStory());
+                //mMvStory.setText(mBasic.getStory());
 //                mRanking.setText(boxOffice.getRanking());
 //                mTodayBoxDes.setText(boxOffice.getTodayBoxDes());
 //                mTotalBoxDes.setText(boxOffice.getTotalBoxDes());
 
+                mList = new ArrayList<Fragment>();
+                if (!TextUtils.isEmpty(mBasic.getStory())) {
+                    mList.add(new MovieContentFragment(mBasic.getStory()));
+                    mList.add(new MovieVideoFragment());
+                    mMyAdapter = new MyAdapter(getSupportFragmentManager());
+                    mViewPager.setAdapter(mMyAdapter);
+                    mTabLayout.setupWithViewPager(mViewPager);
+                }
 
 
             }
@@ -167,5 +196,29 @@ public class MovieDetailActivity extends AppCompatActivity {
         });
 
     }
+
+
+    class MyAdapter extends FragmentPagerAdapter {
+
+        public MyAdapter(FragmentManager fm) {
+            super(fm);
+        }
+        @Override
+        public Fragment getItem(int position) {
+            return mList.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mList.size();
+        }
+
+        //重写这个方法，将设置每个Tab的标题
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return titles[position];
+        }
+    }
+
 
 }

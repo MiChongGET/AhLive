@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+     
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <!-- 高德定位权限 -->
     <!-- 用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -70,6 +73,13 @@
             android:name=".activity.MovieDetailActivity"
             android:label="@string/title_activity_movie_detail"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity android:name=".activity.PlayVedioActivity"
+                  android:configChanges="orientation|keyboardHidden|screenSize"
+                  android:screenOrientation="portrait"
+                   >
+
         </activity>
     </application>
 

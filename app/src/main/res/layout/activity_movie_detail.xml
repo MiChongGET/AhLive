@@ -12,14 +12,14 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             android:orientation="vertical"
@@ -29,12 +29,13 @@
                 android:orientation="horizontal"
                 android:id="@+id/movie_layout"
                 android:layout_width="match_parent"
-                android:layout_height="250dp">
+                android:layout_height="270dp">
                 <ImageView
 
                     android:background="@mipmap/ic_launcher"
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="52dp"
                     android:layout_marginLeft="30dp"
+                    android:paddingBottom="15dp"
                     android:id="@+id/movie_detail_img"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"/>
@@ -146,6 +147,7 @@
                     <!--android:layout_height="wrap_content"/>-->
             <!--</LinearLayout>-->
             <!--</LinearLayout>-->
+
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
@@ -154,11 +156,27 @@
                 app:popupTheme="@style/AppTheme.PopupOverlay"/>
         </android.support.design.widget.CollapsingToolbarLayout>
 
+            <android.support.design.widget.TabLayout
+                android:id="@+id/toolbar_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="#ffffff"
+                android:fillViewport="false"
+                app:layout_scrollFlags="scroll"
+                app:tabIndicatorColor="#0835f8"
+                app:tabIndicatorHeight="2.0dp"
+                app:tabSelectedTextColor="#0835f8"
+                app:tabTextColor="#ced0d3"/>
     </android.support.design.widget.AppBarLayout>
 
+    <!--<include layout="@layout/content_movie_detail"/>-->
 
-    <include layout="@layout/content_movie_detail"/>
-
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
 
 </android.support.design.widget.CoordinatorLayout>

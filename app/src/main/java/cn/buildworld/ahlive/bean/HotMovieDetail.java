@@ -10,7 +10,7 @@ public class HotMovieDetail {
 
     /**
      * code : 1
-     * data : {"advertisement":{"advList":[{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"商城好物不过百+商城蜘蛛侠","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0720/SMgdt750210m.html"}],"count":1,"error":"","success":true},"basic":{"actors":[{"actorId":1646183,"img":"http://img31.mtime.cn/ph/2014/06/20/113215.19957262_1280X720X2.jpg","name":"大鹏","nameEn":"Peng Da","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143347.74946086.jpg","roleName":"范小兵"},{"actorId":1175791,"img":"http://img5.mtime.cn/ph/2016/11/23/165934.98372411_1280X720X2.jpg","name":"范伟","nameEn":"Wei Fan","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143414.90906166.jpg","roleName":"范英雄"},{"actorId":2181867,"img":"http://img5.mtime.cn/ph/2017/06/15/114630.57101572_1280X720X2.jpg","name":"张天爱","nameEn":"Crystal Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143423.54206069.jpg","roleName":"刘雯"},{"actorId":2116764,"img":"http://img31.mtime.cn/ph/2016/04/11/163625.32175813_1280X720X2.jpg","name":"乔杉","nameEn":"Shan Qiao","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143909.90663635.jpg","roleName":"方健"},{"actorId":985100,"img":"http://img31.mtime.cn/ph/2016/08/25/174654.40026794_1280X720X2.jpg","name":"邬君梅","nameEn":"Vivian Wu","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143922.81157678.jpg","roleName":"邬仙仙"},{"actorId":916259,"img":"http://img31.mtime.cn/ph/2015/10/30/100837.70157999_1280X720X2.jpg","name":"任达华","nameEn":"Simon Yam","roleImg":"http://img5.mtime.cn/mg/2017/07/17/144150.76455270.jpg","roleName":"OK哥"},{"actorId":2232848,"img":"http://img31.mtime.cn/ph/2016/09/09/120824.97552626_1280X720X2.jpg","name":"梁龙","nameEn":"Long Liang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/144157.58605149.jpg","roleName":"狗哥"}],"award":{"awardList":[],"totalNominateAward":0,"totalWinAward":0},"commentSpecial":"","community":{},"director":{"directorId":1252203,"img":"http://img31.mtime.cn/ph/2016/09/07/233609.62869572_1280X720X2.jpg","name":"袁卫东","nameEn":"Weidong Yuan"},"festivals":[],"hotRanking":3,"img":"http://img5.mtime.cn/mt/2017/07/12/180052.62520424_1280X720X2.jpg","is3D":false,"isDMAX":false,"isEggHunt":false,"isFilter":false,"isIMAX":false,"isIMAX3D":false,"isTicket":true,"message":"该操作将清除您对该片的评分！是否确认？","mins":"105分钟","movieId":237264,"name":"父子雄兵","nameEn":"Father And Son","overallRating":6,"personCount":18,"quizGame":{},"releaseArea":"中国","releaseDate":"20170721","showCinemaCount":11,"showDay":1500624000,"showtimeCount":79,"stageImg":{"count":127,"list":[{"imgId":7338579,"imgUrl":"http://img5.mtime.cn/pi/2017/03/14/170413.19793115_1280X720X2.jpg"},{"imgId":7363570,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221634.96605493_1280X720X2.jpg"},{"imgId":7363571,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221641.80639823_1280X720X2.jpg"},{"imgId":7363572,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221647.44343193_1280X720X2.jpg"}]},"story":"梦想靠大项目咸鱼翻身的范小兵（大鹏饰）始终无法摆脱一个阴影，那就是退伍军人出身的老爹范英雄（范伟饰）。小兵油嘴滑舌爱忽悠，英雄刚正不阿会武术，小兵斗英雄，天雷勾地火。 卤煮店小老板刘雯（张天爱饰）与小兵相识十年，两人友达之上恋爱未满，她是小兵唯一愿意吐露真心的港湾。范小兵欠下大老板OK哥（任达华饰）的钱，被追债小弟方健（乔杉饰）一路折磨，倒霉不断，还面临凶狠狗哥（梁龙饰）的生命威胁。范小兵不得已将弄钱对象转向老爹，不知情的范英雄此时正躲闪着邻居邬仙仙（邬君梅饰）如狼似虎的猛烈追求，殊不知儿子范小兵已经针对自己开启了一个搞笑又荒唐的惊天计划\u2026\u2026","style":{"isLeadPage":0,"leadImg":"https://img2.mtime.cn/mg/.jpg","leadUrl":""},"totalNominateAward":0,"totalWinAward":0,"type":["剧情","喜剧"],"url":"https://movie.mtime.com/237264/","video":{"count":14,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/10/mp4/170710120156390625.mp4","img":"http://img5.mtime.cn/mg/2017/07/10/120130.63233821_235X132X4.jpg","title":"父子雄兵 终极预告","url":"https://vfx.mtime.cn/Video/2017/07/10/mp4/170710120156390625_480.mp4","videoId":66519}},"boxOffice":{"movieId":237264,"ranking":1,"todayBox":1995708038,"todayBoxDes":"1995.71","todayBoxDesUnit":"今日实时(万)","totalBox":2635651385,"totalBoxDes":"2635.65","totalBoxUnit":"累计票房(万)"},"live":{"count":0,"img":"","liveId":0,"playNumTag":"","playTag":"","status":3,"title":""},"related":{"goodsCount":0,"goodsList":[],"relateId":0,"relatedUrl":"https://mall-wv.mtime.cn/#!/commerce/list/","type":0}}
+     * data : {"advertisement":{"advList":[{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"商城好物不过百+商城权力的游戏","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0720/qygdt750210m.html"}],"count":1,"error":"","success":true},"basic":{"actors":[{"actorId":925071,"img":"http://img31.mtime.cn/ph/2014/06/27/092600.22683345_1280X720X2.jpg","name":"张震","nameEn":"Chang Chen","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152634.36322213.jpg","roleName":"沈炼"},{"actorId":1249009,"img":"http://img5.mtime.cn/ph/2016/10/18/102915.98692348_1280X720X2.jpg","name":"杨幂","nameEn":"Mini Yang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152641.17445470.jpg","roleName":"北斋"},{"actorId":1311848,"img":"http://img5.mtime.cn/ph/2017/02/17/093429.48679538_1280X720X2.jpg","name":"张译","nameEn":"Yi Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152651.74374192.jpg","roleName":"陆文昭"},{"actorId":1321939,"img":"http://img21.mtime.cn/ph/2010/11/01/170346.17438095_1280X720X2.jpg","name":"雷佳音","nameEn":"Jiayin Lei","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152701.71668580.jpg","roleName":"裴纶"},{"actorId":1865764,"img":"http://img31.mtime.cn/ph/2016/01/21/160256.84796032_1280X720X2.jpg","name":"辛芷蕾","nameEn":"Zhilei Xin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152712.34736835.jpg","roleName":"丁白缨"},{"actorId":1258157,"img":"http://img5.mtime.cn/ph/2017/06/22/102852.86789028_1280X720X2.jpg","name":"李媛","nameEn":"Yuan Li","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152723.50244281.jpg","roleName":"丁翀"},{"actorId":987306,"img":"http://img31.mtime.cn/ph/2014/04/11/113007.66141318_1280X720X2.jpg","name":"金士杰","nameEn":"Shijie Jin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152732.76576740.jpg","roleName":"魏忠贤"},{"actorId":1844581,"img":"http://img5.mtime.cn/ph/2017/07/18/102653.29848902_1280X720X2.jpg","name":"刘端端","nameEn":"Duan-duan Liu","roleImg":"","roleName":"朱由检"},{"actorId":1897307,"img":"http://img31.mtime.cn/ph/2015/09/16/143108.62699521_1280X720X2.jpg","name":"武强","nameEn":"Qiang Wu","roleImg":"","roleName":"凌云恺"},{"actorId":1309341,"img":"http://img31.mtime.cn/ph/2014/08/22/152735.34278618_1280X720X2.jpg","name":"王仁君","nameEn":"Renjun Wang","roleImg":"","roleName":"朱由校"},{"actorId":1263025,"img":"http://img31.mtime.cn/ph/2014/03/25/101814.80085355_1280X720X2.jpg","name":"袁文康","nameEn":"Wenkang Yuan","roleImg":"","roleName":"静海"},{"actorId":2216618,"img":"http://img31.mtime.cn/ph/2016/07/08/114359.72243242_1280X720X2.jpg","name":"杨轶","nameEn":"Yi Yang","roleImg":"","roleName":"殷澄"},{"actorId":1255732,"img":"http://img31.mtime.cn/ph/2014/02/22/212941.86525879_1280X720X2.jpg","name":"吴晓亮","nameEn":"Xiaoliang Wu","roleImg":"","roleName":"丁泰"}],"award":{"awardList":[],"totalNominateAward":0,"totalWinAward":0},"commentSpecial":"张震杨幂演绎前传故事揭秘沈炼身世","community":{},"director":{"directorId":1766781,"img":"http://img31.mtime.cn/ph/2014/06/26/094023.20279113_1280X720X2.jpg","name":"路阳","nameEn":"Yang Lu"},"festivals":[],"hotRanking":-1,"img":"http://img5.mtime.cn/mt/2017/07/11/183729.97294820_1280X720X2.jpg","is3D":false,"isDMAX":true,"isEggHunt":true,"isFilter":false,"isIMAX":false,"isIMAX3D":false,"isTicket":true,"message":"该操作将清除您对该片的评分！是否确认？","mins":"120分钟","movieId":228267,"name":"绣春刀II修罗战场","nameEn":"Brotherhood of Blades 2","overallRating":7.8,"personCount":24,"quizGame":{},"releaseArea":"中国","releaseDate":"20170719","showCinemaCount":11,"showDay":1500710400,"showtimeCount":97,"stageImg":{"count":207,"list":[{"imgId":7342923,"imgUrl":"http://img5.mtime.cn/pi/2017/03/31/093040.85504825_1280X720X2.jpg"},{"imgId":7374109,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174428.78509408_1280X720X2.jpg"},{"imgId":7374110,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174432.70702845_1280X720X2.jpg"},{"imgId":7374111,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174437.42765017_1280X720X2.jpg"}]},"story":"影片故事讲述了北镇抚司锦衣卫沈炼在追查案件中身陷阴谋，为了证明清白，沈炼与少女北斋，同僚裴纶协力查明真相。","style":{"isLeadPage":0,"leadImg":"https://img2.mtime.cn/mg/.jpg","leadUrl":""},"totalNominateAward":0,"totalWinAward":0,"type":["动作","剧情","古装"],"url":"https://movie.mtime.com/228267/","video":{"count":11,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899.mp4","img":"http://img5.mtime.cn/mg/2017/07/16/214558.16862149_235X132X4.jpg","title":"绣春刀·修罗战场 终极预告","url":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899_480.mp4","videoId":66604}},"boxOffice":{"movieId":228267,"ranking":1,"todayBox":532594951,"todayBoxDes":"532.59","todayBoxDesUnit":"今日实时(万)","totalBox":9300461633,"totalBoxDes":"9300.46","totalBoxUnit":"累计票房(万)"},"live":{"count":0,"img":"","liveId":0,"playNumTag":"","playTag":"","status":3,"title":""},"related":{"goodsCount":0,"goodsList":[],"relateId":0,"relatedUrl":"https://mall-wv.mtime.cn/#!/commerce/list/","type":0}}
      * msg : 成功
      * showMsg :
      */
@@ -54,9 +54,9 @@ public class HotMovieDetail {
 
     public static class DataBean {
         /**
-         * advertisement : {"advList":[{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"商城好物不过百+商城蜘蛛侠","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0720/SMgdt750210m.html"}],"count":1,"error":"","success":true}
-         * basic : {"actors":[{"actorId":1646183,"img":"http://img31.mtime.cn/ph/2014/06/20/113215.19957262_1280X720X2.jpg","name":"大鹏","nameEn":"Peng Da","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143347.74946086.jpg","roleName":"范小兵"},{"actorId":1175791,"img":"http://img5.mtime.cn/ph/2016/11/23/165934.98372411_1280X720X2.jpg","name":"范伟","nameEn":"Wei Fan","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143414.90906166.jpg","roleName":"范英雄"},{"actorId":2181867,"img":"http://img5.mtime.cn/ph/2017/06/15/114630.57101572_1280X720X2.jpg","name":"张天爱","nameEn":"Crystal Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143423.54206069.jpg","roleName":"刘雯"},{"actorId":2116764,"img":"http://img31.mtime.cn/ph/2016/04/11/163625.32175813_1280X720X2.jpg","name":"乔杉","nameEn":"Shan Qiao","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143909.90663635.jpg","roleName":"方健"},{"actorId":985100,"img":"http://img31.mtime.cn/ph/2016/08/25/174654.40026794_1280X720X2.jpg","name":"邬君梅","nameEn":"Vivian Wu","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143922.81157678.jpg","roleName":"邬仙仙"},{"actorId":916259,"img":"http://img31.mtime.cn/ph/2015/10/30/100837.70157999_1280X720X2.jpg","name":"任达华","nameEn":"Simon Yam","roleImg":"http://img5.mtime.cn/mg/2017/07/17/144150.76455270.jpg","roleName":"OK哥"},{"actorId":2232848,"img":"http://img31.mtime.cn/ph/2016/09/09/120824.97552626_1280X720X2.jpg","name":"梁龙","nameEn":"Long Liang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/144157.58605149.jpg","roleName":"狗哥"}],"award":{"awardList":[],"totalNominateAward":0,"totalWinAward":0},"commentSpecial":"","community":{},"director":{"directorId":1252203,"img":"http://img31.mtime.cn/ph/2016/09/07/233609.62869572_1280X720X2.jpg","name":"袁卫东","nameEn":"Weidong Yuan"},"festivals":[],"hotRanking":3,"img":"http://img5.mtime.cn/mt/2017/07/12/180052.62520424_1280X720X2.jpg","is3D":false,"isDMAX":false,"isEggHunt":false,"isFilter":false,"isIMAX":false,"isIMAX3D":false,"isTicket":true,"message":"该操作将清除您对该片的评分！是否确认？","mins":"105分钟","movieId":237264,"name":"父子雄兵","nameEn":"Father And Son","overallRating":6,"personCount":18,"quizGame":{},"releaseArea":"中国","releaseDate":"20170721","showCinemaCount":11,"showDay":1500624000,"showtimeCount":79,"stageImg":{"count":127,"list":[{"imgId":7338579,"imgUrl":"http://img5.mtime.cn/pi/2017/03/14/170413.19793115_1280X720X2.jpg"},{"imgId":7363570,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221634.96605493_1280X720X2.jpg"},{"imgId":7363571,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221641.80639823_1280X720X2.jpg"},{"imgId":7363572,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221647.44343193_1280X720X2.jpg"}]},"story":"梦想靠大项目咸鱼翻身的范小兵（大鹏饰）始终无法摆脱一个阴影，那就是退伍军人出身的老爹范英雄（范伟饰）。小兵油嘴滑舌爱忽悠，英雄刚正不阿会武术，小兵斗英雄，天雷勾地火。 卤煮店小老板刘雯（张天爱饰）与小兵相识十年，两人友达之上恋爱未满，她是小兵唯一愿意吐露真心的港湾。范小兵欠下大老板OK哥（任达华饰）的钱，被追债小弟方健（乔杉饰）一路折磨，倒霉不断，还面临凶狠狗哥（梁龙饰）的生命威胁。范小兵不得已将弄钱对象转向老爹，不知情的范英雄此时正躲闪着邻居邬仙仙（邬君梅饰）如狼似虎的猛烈追求，殊不知儿子范小兵已经针对自己开启了一个搞笑又荒唐的惊天计划\u2026\u2026","style":{"isLeadPage":0,"leadImg":"https://img2.mtime.cn/mg/.jpg","leadUrl":""},"totalNominateAward":0,"totalWinAward":0,"type":["剧情","喜剧"],"url":"https://movie.mtime.com/237264/","video":{"count":14,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/10/mp4/170710120156390625.mp4","img":"http://img5.mtime.cn/mg/2017/07/10/120130.63233821_235X132X4.jpg","title":"父子雄兵 终极预告","url":"https://vfx.mtime.cn/Video/2017/07/10/mp4/170710120156390625_480.mp4","videoId":66519}}
-         * boxOffice : {"movieId":237264,"ranking":1,"todayBox":1995708038,"todayBoxDes":"1995.71","todayBoxDesUnit":"今日实时(万)","totalBox":2635651385,"totalBoxDes":"2635.65","totalBoxUnit":"累计票房(万)"}
+         * advertisement : {"advList":[{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"商城好物不过百+商城权力的游戏","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0720/qygdt750210m.html"}],"count":1,"error":"","success":true}
+         * basic : {"actors":[{"actorId":925071,"img":"http://img31.mtime.cn/ph/2014/06/27/092600.22683345_1280X720X2.jpg","name":"张震","nameEn":"Chang Chen","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152634.36322213.jpg","roleName":"沈炼"},{"actorId":1249009,"img":"http://img5.mtime.cn/ph/2016/10/18/102915.98692348_1280X720X2.jpg","name":"杨幂","nameEn":"Mini Yang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152641.17445470.jpg","roleName":"北斋"},{"actorId":1311848,"img":"http://img5.mtime.cn/ph/2017/02/17/093429.48679538_1280X720X2.jpg","name":"张译","nameEn":"Yi Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152651.74374192.jpg","roleName":"陆文昭"},{"actorId":1321939,"img":"http://img21.mtime.cn/ph/2010/11/01/170346.17438095_1280X720X2.jpg","name":"雷佳音","nameEn":"Jiayin Lei","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152701.71668580.jpg","roleName":"裴纶"},{"actorId":1865764,"img":"http://img31.mtime.cn/ph/2016/01/21/160256.84796032_1280X720X2.jpg","name":"辛芷蕾","nameEn":"Zhilei Xin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152712.34736835.jpg","roleName":"丁白缨"},{"actorId":1258157,"img":"http://img5.mtime.cn/ph/2017/06/22/102852.86789028_1280X720X2.jpg","name":"李媛","nameEn":"Yuan Li","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152723.50244281.jpg","roleName":"丁翀"},{"actorId":987306,"img":"http://img31.mtime.cn/ph/2014/04/11/113007.66141318_1280X720X2.jpg","name":"金士杰","nameEn":"Shijie Jin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152732.76576740.jpg","roleName":"魏忠贤"},{"actorId":1844581,"img":"http://img5.mtime.cn/ph/2017/07/18/102653.29848902_1280X720X2.jpg","name":"刘端端","nameEn":"Duan-duan Liu","roleImg":"","roleName":"朱由检"},{"actorId":1897307,"img":"http://img31.mtime.cn/ph/2015/09/16/143108.62699521_1280X720X2.jpg","name":"武强","nameEn":"Qiang Wu","roleImg":"","roleName":"凌云恺"},{"actorId":1309341,"img":"http://img31.mtime.cn/ph/2014/08/22/152735.34278618_1280X720X2.jpg","name":"王仁君","nameEn":"Renjun Wang","roleImg":"","roleName":"朱由校"},{"actorId":1263025,"img":"http://img31.mtime.cn/ph/2014/03/25/101814.80085355_1280X720X2.jpg","name":"袁文康","nameEn":"Wenkang Yuan","roleImg":"","roleName":"静海"},{"actorId":2216618,"img":"http://img31.mtime.cn/ph/2016/07/08/114359.72243242_1280X720X2.jpg","name":"杨轶","nameEn":"Yi Yang","roleImg":"","roleName":"殷澄"},{"actorId":1255732,"img":"http://img31.mtime.cn/ph/2014/02/22/212941.86525879_1280X720X2.jpg","name":"吴晓亮","nameEn":"Xiaoliang Wu","roleImg":"","roleName":"丁泰"}],"award":{"awardList":[],"totalNominateAward":0,"totalWinAward":0},"commentSpecial":"张震杨幂演绎前传故事揭秘沈炼身世","community":{},"director":{"directorId":1766781,"img":"http://img31.mtime.cn/ph/2014/06/26/094023.20279113_1280X720X2.jpg","name":"路阳","nameEn":"Yang Lu"},"festivals":[],"hotRanking":-1,"img":"http://img5.mtime.cn/mt/2017/07/11/183729.97294820_1280X720X2.jpg","is3D":false,"isDMAX":true,"isEggHunt":true,"isFilter":false,"isIMAX":false,"isIMAX3D":false,"isTicket":true,"message":"该操作将清除您对该片的评分！是否确认？","mins":"120分钟","movieId":228267,"name":"绣春刀II修罗战场","nameEn":"Brotherhood of Blades 2","overallRating":7.8,"personCount":24,"quizGame":{},"releaseArea":"中国","releaseDate":"20170719","showCinemaCount":11,"showDay":1500710400,"showtimeCount":97,"stageImg":{"count":207,"list":[{"imgId":7342923,"imgUrl":"http://img5.mtime.cn/pi/2017/03/31/093040.85504825_1280X720X2.jpg"},{"imgId":7374109,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174428.78509408_1280X720X2.jpg"},{"imgId":7374110,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174432.70702845_1280X720X2.jpg"},{"imgId":7374111,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174437.42765017_1280X720X2.jpg"}]},"story":"影片故事讲述了北镇抚司锦衣卫沈炼在追查案件中身陷阴谋，为了证明清白，沈炼与少女北斋，同僚裴纶协力查明真相。","style":{"isLeadPage":0,"leadImg":"https://img2.mtime.cn/mg/.jpg","leadUrl":""},"totalNominateAward":0,"totalWinAward":0,"type":["动作","剧情","古装"],"url":"https://movie.mtime.com/228267/","video":{"count":11,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899.mp4","img":"http://img5.mtime.cn/mg/2017/07/16/214558.16862149_235X132X4.jpg","title":"绣春刀·修罗战场 终极预告","url":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899_480.mp4","videoId":66604}}
+         * boxOffice : {"movieId":228267,"ranking":1,"todayBox":532594951,"todayBoxDes":"532.59","todayBoxDesUnit":"今日实时(万)","totalBox":9300461633,"totalBoxDes":"9300.46","totalBoxUnit":"累计票房(万)"}
          * live : {"count":0,"img":"","liveId":0,"playNumTag":"","playTag":"","status":3,"title":""}
          * related : {"goodsCount":0,"goodsList":[],"relateId":0,"relatedUrl":"https://mall-wv.mtime.cn/#!/commerce/list/","type":0}
          */
@@ -109,7 +109,7 @@ public class HotMovieDetail {
 
         public static class AdvertisementBean {
             /**
-             * advList : [{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"商城好物不过百+商城蜘蛛侠","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0720/SMgdt750210m.html"}]
+             * advList : [{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"商城好物不过百+商城权力的游戏","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0720/qygdt750210m.html"}]
              * count : 1
              * error :
              * success : true
@@ -159,10 +159,10 @@ public class HotMovieDetail {
                  * isHorizontalScreen : false
                  * isOpenH5 : false
                  * startDate : 1451577600
-                 * tag : 商城好物不过百+商城蜘蛛侠
+                 * tag : 商城好物不过百+商城权力的游戏
                  * type : 203
                  * typeName : 影片详情页banner2
-                 * url : https://static4da.mtime.cn/feature/mobile/banner/2017/0720/SMgdt750210m.html
+                 * url : https://static4da.mtime.cn/feature/mobile/banner/2017/0720/qygdt750210m.html
                  */
 
                 private String advTag;
@@ -251,42 +251,42 @@ public class HotMovieDetail {
 
         public static class BasicBean {
             /**
-             * actors : [{"actorId":1646183,"img":"http://img31.mtime.cn/ph/2014/06/20/113215.19957262_1280X720X2.jpg","name":"大鹏","nameEn":"Peng Da","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143347.74946086.jpg","roleName":"范小兵"},{"actorId":1175791,"img":"http://img5.mtime.cn/ph/2016/11/23/165934.98372411_1280X720X2.jpg","name":"范伟","nameEn":"Wei Fan","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143414.90906166.jpg","roleName":"范英雄"},{"actorId":2181867,"img":"http://img5.mtime.cn/ph/2017/06/15/114630.57101572_1280X720X2.jpg","name":"张天爱","nameEn":"Crystal Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143423.54206069.jpg","roleName":"刘雯"},{"actorId":2116764,"img":"http://img31.mtime.cn/ph/2016/04/11/163625.32175813_1280X720X2.jpg","name":"乔杉","nameEn":"Shan Qiao","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143909.90663635.jpg","roleName":"方健"},{"actorId":985100,"img":"http://img31.mtime.cn/ph/2016/08/25/174654.40026794_1280X720X2.jpg","name":"邬君梅","nameEn":"Vivian Wu","roleImg":"http://img5.mtime.cn/mg/2017/07/17/143922.81157678.jpg","roleName":"邬仙仙"},{"actorId":916259,"img":"http://img31.mtime.cn/ph/2015/10/30/100837.70157999_1280X720X2.jpg","name":"任达华","nameEn":"Simon Yam","roleImg":"http://img5.mtime.cn/mg/2017/07/17/144150.76455270.jpg","roleName":"OK哥"},{"actorId":2232848,"img":"http://img31.mtime.cn/ph/2016/09/09/120824.97552626_1280X720X2.jpg","name":"梁龙","nameEn":"Long Liang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/144157.58605149.jpg","roleName":"狗哥"}]
+             * actors : [{"actorId":925071,"img":"http://img31.mtime.cn/ph/2014/06/27/092600.22683345_1280X720X2.jpg","name":"张震","nameEn":"Chang Chen","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152634.36322213.jpg","roleName":"沈炼"},{"actorId":1249009,"img":"http://img5.mtime.cn/ph/2016/10/18/102915.98692348_1280X720X2.jpg","name":"杨幂","nameEn":"Mini Yang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152641.17445470.jpg","roleName":"北斋"},{"actorId":1311848,"img":"http://img5.mtime.cn/ph/2017/02/17/093429.48679538_1280X720X2.jpg","name":"张译","nameEn":"Yi Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152651.74374192.jpg","roleName":"陆文昭"},{"actorId":1321939,"img":"http://img21.mtime.cn/ph/2010/11/01/170346.17438095_1280X720X2.jpg","name":"雷佳音","nameEn":"Jiayin Lei","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152701.71668580.jpg","roleName":"裴纶"},{"actorId":1865764,"img":"http://img31.mtime.cn/ph/2016/01/21/160256.84796032_1280X720X2.jpg","name":"辛芷蕾","nameEn":"Zhilei Xin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152712.34736835.jpg","roleName":"丁白缨"},{"actorId":1258157,"img":"http://img5.mtime.cn/ph/2017/06/22/102852.86789028_1280X720X2.jpg","name":"李媛","nameEn":"Yuan Li","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152723.50244281.jpg","roleName":"丁翀"},{"actorId":987306,"img":"http://img31.mtime.cn/ph/2014/04/11/113007.66141318_1280X720X2.jpg","name":"金士杰","nameEn":"Shijie Jin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152732.76576740.jpg","roleName":"魏忠贤"},{"actorId":1844581,"img":"http://img5.mtime.cn/ph/2017/07/18/102653.29848902_1280X720X2.jpg","name":"刘端端","nameEn":"Duan-duan Liu","roleImg":"","roleName":"朱由检"},{"actorId":1897307,"img":"http://img31.mtime.cn/ph/2015/09/16/143108.62699521_1280X720X2.jpg","name":"武强","nameEn":"Qiang Wu","roleImg":"","roleName":"凌云恺"},{"actorId":1309341,"img":"http://img31.mtime.cn/ph/2014/08/22/152735.34278618_1280X720X2.jpg","name":"王仁君","nameEn":"Renjun Wang","roleImg":"","roleName":"朱由校"},{"actorId":1263025,"img":"http://img31.mtime.cn/ph/2014/03/25/101814.80085355_1280X720X2.jpg","name":"袁文康","nameEn":"Wenkang Yuan","roleImg":"","roleName":"静海"},{"actorId":2216618,"img":"http://img31.mtime.cn/ph/2016/07/08/114359.72243242_1280X720X2.jpg","name":"杨轶","nameEn":"Yi Yang","roleImg":"","roleName":"殷澄"},{"actorId":1255732,"img":"http://img31.mtime.cn/ph/2014/02/22/212941.86525879_1280X720X2.jpg","name":"吴晓亮","nameEn":"Xiaoliang Wu","roleImg":"","roleName":"丁泰"}]
              * award : {"awardList":[],"totalNominateAward":0,"totalWinAward":0}
-             * commentSpecial :
+             * commentSpecial : 张震杨幂演绎前传故事揭秘沈炼身世
              * community : {}
-             * director : {"directorId":1252203,"img":"http://img31.mtime.cn/ph/2016/09/07/233609.62869572_1280X720X2.jpg","name":"袁卫东","nameEn":"Weidong Yuan"}
+             * director : {"directorId":1766781,"img":"http://img31.mtime.cn/ph/2014/06/26/094023.20279113_1280X720X2.jpg","name":"路阳","nameEn":"Yang Lu"}
              * festivals : []
-             * hotRanking : 3
-             * img : http://img5.mtime.cn/mt/2017/07/12/180052.62520424_1280X720X2.jpg
+             * hotRanking : -1
+             * img : http://img5.mtime.cn/mt/2017/07/11/183729.97294820_1280X720X2.jpg
              * is3D : false
-             * isDMAX : false
-             * isEggHunt : false
+             * isDMAX : true
+             * isEggHunt : true
              * isFilter : false
              * isIMAX : false
              * isIMAX3D : false
              * isTicket : true
              * message : 该操作将清除您对该片的评分！是否确认？
-             * mins : 105分钟
-             * movieId : 237264
-             * name : 父子雄兵
-             * nameEn : Father And Son
-             * overallRating : 6
-             * personCount : 18
+             * mins : 120分钟
+             * movieId : 228267
+             * name : 绣春刀II修罗战场
+             * nameEn : Brotherhood of Blades 2
+             * overallRating : 7.8
+             * personCount : 24
              * quizGame : {}
              * releaseArea : 中国
-             * releaseDate : 20170721
+             * releaseDate : 20170719
              * showCinemaCount : 11
-             * showDay : 1500624000
-             * showtimeCount : 79
-             * stageImg : {"count":127,"list":[{"imgId":7338579,"imgUrl":"http://img5.mtime.cn/pi/2017/03/14/170413.19793115_1280X720X2.jpg"},{"imgId":7363570,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221634.96605493_1280X720X2.jpg"},{"imgId":7363571,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221641.80639823_1280X720X2.jpg"},{"imgId":7363572,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221647.44343193_1280X720X2.jpg"}]}
-             * story : 梦想靠大项目咸鱼翻身的范小兵（大鹏饰）始终无法摆脱一个阴影，那就是退伍军人出身的老爹范英雄（范伟饰）。小兵油嘴滑舌爱忽悠，英雄刚正不阿会武术，小兵斗英雄，天雷勾地火。 卤煮店小老板刘雯（张天爱饰）与小兵相识十年，两人友达之上恋爱未满，她是小兵唯一愿意吐露真心的港湾。范小兵欠下大老板OK哥（任达华饰）的钱，被追债小弟方健（乔杉饰）一路折磨，倒霉不断，还面临凶狠狗哥（梁龙饰）的生命威胁。范小兵不得已将弄钱对象转向老爹，不知情的范英雄此时正躲闪着邻居邬仙仙（邬君梅饰）如狼似虎的猛烈追求，殊不知儿子范小兵已经针对自己开启了一个搞笑又荒唐的惊天计划……
+             * showDay : 1500710400
+             * showtimeCount : 97
+             * stageImg : {"count":207,"list":[{"imgId":7342923,"imgUrl":"http://img5.mtime.cn/pi/2017/03/31/093040.85504825_1280X720X2.jpg"},{"imgId":7374109,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174428.78509408_1280X720X2.jpg"},{"imgId":7374110,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174432.70702845_1280X720X2.jpg"},{"imgId":7374111,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174437.42765017_1280X720X2.jpg"}]}
+             * story : 影片故事讲述了北镇抚司锦衣卫沈炼在追查案件中身陷阴谋，为了证明清白，沈炼与少女北斋，同僚裴纶协力查明真相。
              * style : {"isLeadPage":0,"leadImg":"https://img2.mtime.cn/mg/.jpg","leadUrl":""}
              * totalNominateAward : 0
              * totalWinAward : 0
-             * type : ["剧情","喜剧"]
-             * url : https://movie.mtime.com/237264/
-             * video : {"count":14,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/10/mp4/170710120156390625.mp4","img":"http://img5.mtime.cn/mg/2017/07/10/120130.63233821_235X132X4.jpg","title":"父子雄兵 终极预告","url":"https://vfx.mtime.cn/Video/2017/07/10/mp4/170710120156390625_480.mp4","videoId":66519}
+             * type : ["动作","剧情","古装"]
+             * url : https://movie.mtime.com/228267/
+             * video : {"count":11,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899.mp4","img":"http://img5.mtime.cn/mg/2017/07/16/214558.16862149_235X132X4.jpg","title":"绣春刀·修罗战场 终极预告","url":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899_480.mp4","videoId":66604}
              */
 
             private AwardBean award;
@@ -307,7 +307,7 @@ public class HotMovieDetail {
             private int movieId;
             private String name;
             private String nameEn;
-            private int overallRating;
+            private double overallRating;
             private int personCount;
             private QuizGameBean quizGame;
             private String releaseArea;
@@ -470,11 +470,11 @@ public class HotMovieDetail {
                 this.nameEn = nameEn;
             }
 
-            public int getOverallRating() {
+            public double getOverallRating() {
                 return overallRating;
             }
 
-            public void setOverallRating(int overallRating) {
+            public void setOverallRating(double overallRating) {
                 this.overallRating = overallRating;
             }
 
@@ -628,8 +628,8 @@ public class HotMovieDetail {
 
             public static class StageImgBean {
                 /**
-                 * count : 127
-                 * list : [{"imgId":7338579,"imgUrl":"http://img5.mtime.cn/pi/2017/03/14/170413.19793115_1280X720X2.jpg"},{"imgId":7363570,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221634.96605493_1280X720X2.jpg"},{"imgId":7363571,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221641.80639823_1280X720X2.jpg"},{"imgId":7363572,"imgUrl":"http://img5.mtime.cn/pi/2017/06/07/221647.44343193_1280X720X2.jpg"}]
+                 * count : 207
+                 * list : [{"imgId":7342923,"imgUrl":"http://img5.mtime.cn/pi/2017/03/31/093040.85504825_1280X720X2.jpg"},{"imgId":7374109,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174428.78509408_1280X720X2.jpg"},{"imgId":7374110,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174432.70702845_1280X720X2.jpg"},{"imgId":7374111,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174437.42765017_1280X720X2.jpg"}]
                  */
 
                 private int count;
@@ -653,8 +653,8 @@ public class HotMovieDetail {
 
                 public static class ListBean {
                     /**
-                     * imgId : 7338579
-                     * imgUrl : http://img5.mtime.cn/pi/2017/03/14/170413.19793115_1280X720X2.jpg
+                     * imgId : 7342923
+                     * imgUrl : http://img5.mtime.cn/pi/2017/03/31/093040.85504825_1280X720X2.jpg
                      */
 
                     private int imgId;
@@ -716,12 +716,12 @@ public class HotMovieDetail {
 
             public static class VideoBean {
                 /**
-                 * count : 14
-                 * hightUrl : https://vfx.mtime.cn/Video/2017/07/10/mp4/170710120156390625.mp4
-                 * img : http://img5.mtime.cn/mg/2017/07/10/120130.63233821_235X132X4.jpg
-                 * title : 父子雄兵 终极预告
-                 * url : https://vfx.mtime.cn/Video/2017/07/10/mp4/170710120156390625_480.mp4
-                 * videoId : 66519
+                 * count : 11
+                 * hightUrl : https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899.mp4
+                 * img : http://img5.mtime.cn/mg/2017/07/16/214558.16862149_235X132X4.jpg
+                 * title : 绣春刀·修罗战场 终极预告
+                 * url : https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899_480.mp4
+                 * videoId : 66604
                  */
 
                 private int count;
@@ -782,12 +782,12 @@ public class HotMovieDetail {
 
             public static class ActorsBean {
                 /**
-                 * actorId : 1646183
-                 * img : http://img31.mtime.cn/ph/2014/06/20/113215.19957262_1280X720X2.jpg
-                 * name : 大鹏
-                 * nameEn : Peng Da
-                 * roleImg : http://img5.mtime.cn/mg/2017/07/17/143347.74946086.jpg
-                 * roleName : 范小兵
+                 * actorId : 925071
+                 * img : http://img31.mtime.cn/ph/2014/06/27/092600.22683345_1280X720X2.jpg
+                 * name : 张震
+                 * nameEn : Chang Chen
+                 * roleImg : http://img5.mtime.cn/mg/2017/07/17/152634.36322213.jpg
+                 * roleName : 沈炼
                  */
 
                 private int actorId;
@@ -849,13 +849,13 @@ public class HotMovieDetail {
 
         public static class BoxOfficeBean {
             /**
-             * movieId : 237264
+             * movieId : 228267
              * ranking : 1
-             * todayBox : 1995708038
-             * todayBoxDes : 1995.71
+             * todayBox : 532594951
+             * todayBoxDes : 532.59
              * todayBoxDesUnit : 今日实时(万)
-             * totalBox : 2635651385
-             * totalBoxDes : 2635.65
+             * totalBox : 9300461633
+             * totalBoxDes : 9300.46
              * totalBoxUnit : 累计票房(万)
              */
 
