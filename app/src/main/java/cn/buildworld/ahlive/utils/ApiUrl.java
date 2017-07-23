@@ -14,6 +14,6 @@ public class ApiUrl {
     public static final String TimeMoive = "https://api-m.mtime.cn/PageSubArea/HotPlayMovies.api?locationId=304";
     public static final String NowShowMoive = "https://api-m.mtime.cn/Showtime/LocationMovies.api?locationId=304";
     public static final String MoiveDetail = "https://ticket-api-m.mtime.cn/movie/detail.api?locationId=304&movieId=";
-
+    public static final String userComment = "https://api-m.mtime.cn/Showtime/HotMovieComments.api?pageIndex=1&movieId=";
 
 }

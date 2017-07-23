@@ -6,11 +6,22 @@
     android:layout_height="match_parent"
     tools:context="cn.buildworld.ahlive.activity.PlayVedioActivity">
 
-    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
-        android:id="@+id/StandardGSYVideoPlayer"
-        android:layout_centerInParent="true"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer>
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.Toolbar>
 
+    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/JCVideoPlayerStandard"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+       >
+    </fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard>
+
+    
 </RelativeLayout>

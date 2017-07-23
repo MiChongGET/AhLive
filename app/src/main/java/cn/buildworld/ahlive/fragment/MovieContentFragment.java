@@ -1,5 +1,6 @@
 package cn.buildworld.ahlive.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -27,6 +28,8 @@ public class MovieContentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getActivity(), R.layout.fm_movie_content,null);
+
+
         TextView textView = (TextView) view.findViewById(R.id.movie_story);
         textView.setText(content);
 

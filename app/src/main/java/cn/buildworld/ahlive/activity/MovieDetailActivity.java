@@ -69,13 +69,24 @@ public class MovieDetailActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
+        getMenuInflater().inflate(R.menu.user_comment, menu);
+        return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home){
             onBackPressed();
+        }
+        if (item.getItemId() == R.id.user_comments_menu){
+
+            Bundle bundle = new Bundle();
+            bundle.putString("movie_id", String.valueOf(mMovieId));
+            Intent intent = new Intent();
+            intent.putExtras(bundle);
+            intent.setClass(this,UserCommentActivity.class);
+            startActivity(intent);
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -175,7 +186,7 @@ public class MovieDetailActivity extends AppCompatActivity {
                 mList = new ArrayList<Fragment>();
                 if (!TextUtils.isEmpty(mBasic.getStory())) {
                     mList.add(new MovieContentFragment(mBasic.getStory()));
-                    mList.add(new MovieVideoFragment());
+                    mList.add(new MovieVideoFragment(mBasic.getVideo().getImg(),mBasic.getVideo().getTitle(),mBasic.getVideo().getHightUrl()));
                     mMyAdapter = new MyAdapter(getSupportFragmentManager());
                     mViewPager.setAdapter(mMyAdapter);
                     mTabLayout.setupWithViewPager(mViewPager);
