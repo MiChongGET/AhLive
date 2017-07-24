@@ -78,40 +78,4 @@ public class MovieVideoFragment extends Fragment {
         return view;
     }
 
-
-
-
-
-//    @Override
-//    public void onPause() {
-//        super.onPause();
-//        if (mPlayer != null) {
-//            mPlayer.onPause();
-//        }
-//    }
-//
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        if (mPlayer != null) {
-//            mPlayer.onResume();
-//        }
-//    }
-//
-//    @Override
-//    public void onDestroy() {
-//        super.onDestroy();
-//        if (mPlayer != null) {
-//            mPlayer.onDestroy();
-//        }
-//    }
-//
-//    @Override
-//    public void onConfigurationChanged(Configuration newConfig) {
-//        super.onConfigurationChanged(newConfig);
-//        if (mPlayer != null) {
-//            mPlayer.onConfigurationChanged(newConfig);
-//        }
-//    }
-
 }

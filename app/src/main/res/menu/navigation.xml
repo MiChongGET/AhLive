@@ -18,7 +18,7 @@
 
     <item
         android:id="@+id/navigation_work"
-        android:icon="@drawable/ic_language_black_24dp"
+        android:icon="@drawable/ic_sentiment_satisfied_black_24dp"
         android:title="@string/title_works" />
     <item
         android:id="@+id/navigation_setting"

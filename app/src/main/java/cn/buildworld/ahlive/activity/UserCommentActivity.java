@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -22,6 +21,7 @@ import cn.buildworld.ahlive.adapter.HotMovieComments;
 import cn.buildworld.ahlive.bean.UserCommentBean;
 import cn.buildworld.ahlive.utils.ApiUrl;
 import cn.buildworld.ahlive.utils.MyCallBack;
+import cn.buildworld.ahlive.utils.MyDecoration;
 import cn.buildworld.ahlive.utils.XUtils;
 
 public class UserCommentActivity extends AppCompatActivity {
@@ -62,7 +62,7 @@ public class UserCommentActivity extends AppCompatActivity {
 
         init();
         initData();
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
+//        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
 
 
     }
@@ -71,6 +71,8 @@ public class UserCommentActivity extends AppCompatActivity {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.commentRv);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+
+        mRecyclerView.addItemDecoration(new MyDecoration(this, MyDecoration.VERTICAL_LIST));
 
     }
 
@@ -106,24 +108,6 @@ public class UserCommentActivity extends AppCompatActivity {
         });
 
     }
-
-
-
-    class MyItemDecoration extends RecyclerView.ItemDecoration {
-        /**
-         *
-         * @param outRect 边界
-         * @param view recyclerView ItemView
-         * @param parent recyclerView
-         * @param state recycler 内部数据管理
-         */
-        @Override
-        public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
-            //设定底部边距为1px
-            outRect.set(0, 0, 0, 1);
-        }
-    }
-
 
 
 }

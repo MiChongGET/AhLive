@@ -18,7 +18,7 @@ public class TabFragment extends BaseFragment {
     private FirstPage mFirstPage;
     private NewsCenter mNewsCenter;
     private Server mServer;
-    private Work mWork;
+    private GaoxiaoVideo mGaoxiaoVideo;
     private Setting mSetting;
     private FragmentTransaction transaction;
 
@@ -60,7 +60,7 @@ public class TabFragment extends BaseFragment {
 
                     return true;
                 case R.id.navigation_work:
-//                    getFragmentManager().beginTransaction().replace(R.id.content,Work.newInstance(),null).commit();
+//                    getFragmentManager().beginTransaction().replace(R.id.content,GaoxiaoVideo.newInstance(),null).commit();
 
                     addfragment(TAG_WORK);
 
@@ -90,7 +90,7 @@ public class TabFragment extends BaseFragment {
             }else if (tag.equals("SERVER")){
                 mFragment = new Server();
             }else if (tag.equals("WORK")){
-                mFragment = new Work();
+                mFragment = new GaoxiaoVideo();
             }else if (tag.equals("SETTING")){
                 mFragment = new Setting();
             }

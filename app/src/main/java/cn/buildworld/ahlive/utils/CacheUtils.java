@@ -1,5 +1,7 @@
 package cn.buildworld.ahlive.utils;
 
+import android.content.Context;
+
 /**
  * 作者：MiChong on 2017/7/18 0018 19:35
  * 邮箱：1564666023@qq.com
@@ -15,12 +17,26 @@ public class CacheUtils {
      * @param json
      */
 
-    public  void setCache(String url,String json){
+    /**
+     * 设置缓存
+     * @param url
+     * @param json
+     * @param context
+     */
+    public static void setCache(String url, String json, Context context){
+        Preferences.setString(context,url,json);
 
     }
 
-    public void getCache(){
+    /**
+     * 获取缓存
+     * @param url
+     * @param context
+     * @return
+     */
+    public static String getCache(String url,Context context){
 
+        return Preferences.getString(context,url,null);
     }
 
 }

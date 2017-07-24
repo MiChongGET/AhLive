@@ -2,6 +2,7 @@ package cn.buildworld.ahlive.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,7 @@ public class HotMovieComments extends RecyclerView.Adapter<HotMovieComments.View
 
     private List<UserCommentBean.DataBean.CtsBean> ctsBeen;
     private Context mContext;
+    private String TAG = "评论区数据适配器：";
 
     public HotMovieComments(List<UserCommentBean.DataBean.CtsBean> ctsBeen, Context context) {
         this.ctsBeen = ctsBeen;
@@ -45,9 +47,9 @@ public class HotMovieComments extends RecyclerView.Adapter<HotMovieComments.View
         Glide.with(mContext).load(ctsBeen.get(position).getCaimg()).into(holder.user_icon);
         holder.username.setText(ctsBeen.get(position).getCa());
 
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String sd = sdf.format(new Date(Long.parseLong(String.valueOf(ctsBeen.get(position).getCd()))));
-        holder.usertime.setText(sd);
+        Log.i(TAG, "onBindViewHolder: "+ctsBeen.get(position).getCd());
+
+        holder.usertime.setText(transForDate1(ctsBeen.get(position).getCd()));
 
         holder.comment_content.setText(ctsBeen.get(position).getCe());
         holder.commentCount.setText(ctsBeen.get(position).getCommentCount()+"");
@@ -81,12 +83,21 @@ public class HotMovieComments extends RecyclerView.Adapter<HotMovieComments.View
         }
     }
 
-    public static String stampToDate(String s){
-        String res;
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        long lt = new Long(s);
-        Date date = new Date(lt);
-        res = simpleDateFormat.format(date);
-        return res;
+    //时间戳转化为时间
+    public static String transForDate1(Integer ms){
+        String str = "";
+        if(ms!=null){
+            long msl=(long)ms*1000;
+            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+            if(ms!=null){
+                try {
+                    str=sdf.format(msl);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return str;
     }
 }
