@@ -67,7 +67,7 @@
             <TextView
                 android:text="100"
                 android:id="@+id/commentCount"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>

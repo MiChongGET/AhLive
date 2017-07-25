@@ -5,14 +5,20 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
 import org.junit.Test;
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Locale;
 
+import cn.buildworld.ahlive.utils.MyCallBack;
+import cn.buildworld.ahlive.utils.XUtils;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -28,54 +34,76 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
 
-        System.out.println(stampToDate("1500204756"));
-        System.out.println(transForDate3(1500204756).toString());
-        System.out.println(transForDate1(1500204756));
 
-    }
 
-    public static String stampToDate(String s){
-        String res;
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        long lt = new Long(s);
-        Date date = new Date(lt);
-        res = simpleDateFormat.format(date);
-        return res;
-    }
+//        X-Channel-Code:official
+//        X-Client-Agent:Xiaomi
+//        X-Client-Hash:2f3d6ffkda95dlz2fhju8d3s6dfges3t
+//        X-Client-ID:123456789123456
+//        X-Client-Version:2.3.2
+//        X-Long-Token:
+//        X-Platform-Type:0
+//        X-Platform-Version:5.0
+//        X-Serial-Num:1492140134
+//        X-User-ID:
 
-    public static Date transForDate3(Integer ms){
-        if(ms==null){
-            ms=0;
-        }
-        long msl=(long)ms*1000;
-        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        Date temp=null;
-        if(ms!=null){
-            try {
-                String str=sdf.format(msl);
-                temp=sdf.parse(str);
-            } catch (ParseException e) {
-                e.printStackTrace();
+        HashMap<String,String> hashMap = new HashMap<>();
+        hashMap.put("X-Channel-Code","official");
+        hashMap.put("X-Client-Agent","Xiaomi");
+        hashMap.put("X-Client-Hash","");
+        hashMap.put("X-Client-ID","");
+        hashMap.put("X-Client-Version","");
+        hashMap.put("X-Long-Token","");
+        hashMap.put("X-Platform-Type","");
+        hashMap.put("X-Platform-Version","");
+        hashMap.put("X-Serial-Num","1500949815");
+        hashMap.put("X-User-ID","");
+
+//        XUtils.GetWithHeader("http://app.pearvideo.com/clt/jsp/v2/getCategorys.jsp",hashMap,new MyCallBack<String>(){
+//
+//            @Override
+//            public void onSuccess(String result) {
+//                super.onSuccess(result);
+//                System.out.println(result);
+//            }
+//        });
+
+
+        RequestParams params = new RequestParams("http://app.pearvideo.com/clt/jsp/v2/getCategorys.jsp");
+        params.addHeader("X-Channel-Code","official");
+        params.addHeader("X-Client-Agent","Xiaomi");
+        params.addHeader("X-Client-Hash","");
+        params.addHeader("X-Client-ID","");
+        params.addHeader("X-Client-Version","");
+        params.addHeader("X-Long-Token","");
+        params.addHeader("X-Platform-Type","");
+        params.addHeader("X-Platform-Version","");
+        params.addHeader("X-Serial-Num","1500949815");
+        params.addHeader("X-User-ID","");
+
+        x.http().get(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                System.out.println(result);
             }
-        }
-        return temp;
-    }
 
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
 
-    public static String transForDate1(Integer ms){
-        String str = "";
-        if(ms!=null){
-            long msl=(long)ms*1000;
-            SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
-            if(ms!=null){
-                try {
-                    str=sdf.format(msl);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
             }
-        }
-        return str;
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+
+
     }
+
 }

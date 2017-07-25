@@ -25,6 +25,22 @@ public class XUtils {
         Callback.Cancelable cancelable = x.http().get(params, callback);
         return cancelable;
     }
+
+    /**
+     * 发送get请求带有Header请求头
+     * @param <T>
+     */
+    public static <T> Callback.Cancelable GetWithHeader(String url, Map<String,String> map, Callback.CommonCallback<T> callback){
+        RequestParams params=new RequestParams(url);
+        if(null!=map){
+            for(Map.Entry<String, String> entry : map.entrySet()){
+                params.addHeader(entry.getKey(), entry.getValue());
+            }
+        }
+        Callback.Cancelable cancelable = x.http().get(params, callback);
+        return cancelable;
+    }
+
     /**
      * 发送post请求
      * @param <T>

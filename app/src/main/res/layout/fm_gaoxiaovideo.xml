@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
    <android.support.v4.widget.SwipeRefreshLayout
@@ -20,12 +21,18 @@
    </android.support.v4.widget.SwipeRefreshLayout>
 
    <android.support.design.widget.FloatingActionButton
+       android:id="@+id/funvideo_floatbutton"
        android:src="@drawable/icon_refresh"
        android:layout_margin="20dp"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_alignParentBottom="true"
        android:layout_alignParentRight="true"
+       app:borderWidth="0dp"
+       app:backgroundTint="#FF4011"
+       app:rippleColor="#33728dff"
+       app:elevation="8dp"
+       app:pressedTranslationZ="16dp"
        />
 
 </RelativeLayout>

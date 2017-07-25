@@ -1,7 +1,6 @@
 package cn.buildworld.ahlive.activity;
 
 import android.content.Intent;
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,7 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.google.gson.Gson;
 
@@ -18,17 +16,26 @@ import java.util.List;
 
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.adapter.HotMovieComments;
+import cn.buildworld.ahlive.adapter.HotMovieCommentsAdapter;
 import cn.buildworld.ahlive.bean.UserCommentBean;
-import cn.buildworld.ahlive.utils.ApiUrl;
+import cn.buildworld.ahlive.listener.LoadMoreScrollListener;
+import cn.buildworld.ahlive.utils.LinearLayoutManagerWrapper;
 import cn.buildworld.ahlive.utils.MyCallBack;
 import cn.buildworld.ahlive.utils.MyDecoration;
 import cn.buildworld.ahlive.utils.XUtils;
 
-public class UserCommentActivity extends AppCompatActivity {
+public class UserCommentActivity extends AppCompatActivity implements HotMovieCommentsAdapter.LoadMoreListener{
 
+    private static final int STATE_NORMAL = 1;
+    private static final int STATE_MORE = 2;
     private String mMovieId;
     private String TAG = "电影评论：";
     private RecyclerView mRecyclerView;
+    private HotMovieComments mHotMovieComments;
+    private List<UserCommentBean.DataBean.CtsBean> mList;
+    private int state =1;
+    private int currentPage = 1;
+    private HotMovieCommentsAdapter mCommentsAdapter;
 
 
     @Override
@@ -61,28 +68,37 @@ public class UserCommentActivity extends AppCompatActivity {
         mMovieId = bundle.getString("movie_id");
 
         init();
-        initData();
 //        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
 
+        initData();
 
     }
 
     private void init() {
 
         mRecyclerView = (RecyclerView) findViewById(R.id.commentRv);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        LinearLayoutManager layoutManager = new LinearLayoutManagerWrapper(this, LinearLayoutManager.VERTICAL, false);
+        mRecyclerView.setLayoutManager(layoutManager);
 
         mRecyclerView.addItemDecoration(new MyDecoration(this, MyDecoration.VERTICAL_LIST));
+//        mRecyclerView.addOnScrollListener(new LoadMoreScrollListener(layoutManager) {
+//            @Override
+//            public void onLoadMore(int currentPage) {
+//                Log.i(TAG, "currentPage: "+currentPage);
+//                loadMoreData();
+//            }
+//        });
 
     }
 
     public void initData(){
 
-        String url = ApiUrl.userComment+mMovieId;
 
+        String url = "https://api-m.mtime.cn/Showtime/HotMovieComments.api?pageIndex="
+                +currentPage+"&movieId="+mMovieId;
+
+        Log.i(TAG, "网址： "+url);
         XUtils.Get(url,null,new MyCallBack<String>(){
-
-            private List<UserCommentBean.DataBean.CtsBean> mList;
 
             @Override
             public void onSuccess(String result) {
@@ -91,14 +107,24 @@ public class UserCommentActivity extends AppCompatActivity {
                 Log.i(TAG, "onSuccess: "+result);
                 Gson gson = new Gson();
                 UserCommentBean userCommentBean = gson.fromJson(result, UserCommentBean.class);
-//                Log.i(TAG, "onSuccess: "+userCommentBean.toString());
                 UserCommentBean.DataBean data = userCommentBean.getData();
                 mList = data.getCts();
-                HotMovieComments hotMovieComments = new HotMovieComments(mList, UserCommentActivity.this);
-                mRecyclerView.setAdapter(hotMovieComments);
 
-                Log.i(TAG, "用户名 "+ mList.get(0).getCa());
+//                mHotMovieComments = new HotMovieComments(mList, UserCommentActivity.this);
+//                mHotMovieComments.updateData(mList);
 
+                if (currentPage == 1) {
+                    mCommentsAdapter = new HotMovieCommentsAdapter(mList, UserCommentActivity.this, UserCommentActivity.this);
+                    mRecyclerView.setOnScrollListener(new LoadMoreScrollListener(mRecyclerView));
+                    mRecyclerView.setAdapter(mCommentsAdapter);
+//                    currentPage += currentPage;
+                }else mCommentsAdapter.addList(mList);
+
+
+                if (mList.size() == 0){
+                    mCommentsAdapter.setLastedStatus();
+                }
+                Log.i(TAG, "currentPage: "+currentPage);
             }
 
             @Override
@@ -110,4 +136,16 @@ public class UserCommentActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void loadMoreData() {
+        if (mCommentsAdapter.isLoading()){
+            return;
+        }
+        mCommentsAdapter.setLoading(true);
+        currentPage = currentPage+1;
+        initData();
+//        mCommentsAdapter.setLastedStatus();
+//        mCommentsAdapter.addList(mList);
+
+    }
 }
