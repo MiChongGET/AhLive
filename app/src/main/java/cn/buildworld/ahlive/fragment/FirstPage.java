@@ -16,10 +16,6 @@ import com.zhouwei.mzbanner.MZBannerView;
 import com.zhouwei.mzbanner.holder.MZHolderCreator;
 import com.zhouwei.mzbanner.holder.MZViewHolder;
 
-import org.xutils.common.Callback;
-import org.xutils.http.RequestParams;
-import org.xutils.x;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,9 +23,7 @@ import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.activity.ArticlePageActivity;
 import cn.buildworld.ahlive.bean.Article;
 import cn.buildworld.ahlive.bean.BundleArticle;
-import cn.buildworld.ahlive.bean.Data;
-import cn.buildworld.ahlive.utils.ApiUrl;
-import cn.buildworld.ahlive.utils.GSONUtil;
+import cn.buildworld.ahlive.api.ApiUrl;
 import cn.buildworld.ahlive.utils.MyCallBack;
 import cn.buildworld.ahlive.utils.NetUtils;
 import cn.buildworld.ahlive.utils.XUtils;

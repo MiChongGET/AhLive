@@ -38,19 +38,6 @@ public class HotMovieCommentsAdapter extends BaseLoadAdapter<UserCommentBean.Dat
     }
 
 
-//    @Override
-//    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-//        ViewHolder viewHolder = null;
-//        if (viewType == TYPE_OTHER){
-////        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.hotmoviecomments_item,parent,false);
-////        viewHolder = new ViewHolder(view);
-//          return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.hotmoviecomments_item,parent,false),TYPE_OTHER);
-//        }else {
-//
-//          return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.recylerview_foot_item,parent,false),TYPE_BOTTOM);
-//
-//        }
-//    }
 
     @Override
     protected RecyclerView.ViewHolder setItemViewHolder(ViewGroup parent, int viewType) {
@@ -70,32 +57,6 @@ public class HotMovieCommentsAdapter extends BaseLoadAdapter<UserCommentBean.Dat
         ((MyViewHolder)holder).commentCount.setText(list.get(position).getCommentCount() + "");
     }
 
-//    @Override
-//    public void onBindViewHolder(ViewHolder holder, int position) {
-//
-//        if (getItemViewType(position) == TYPE_OTHER) {
-//            Glide.with(mContext).load(ctsBeen.get(position).getCaimg()).into(holder.user_icon);
-//            holder.username.setText(ctsBeen.get(position).getCa());
-//
-//            Log.i(TAG, "onBindViewHolder: " + ctsBeen.get(position).getCd());
-//
-//            holder.usertime.setText(transForDate1(ctsBeen.get(position).getCd()));
-//
-//            holder.comment_content.setText(ctsBeen.get(position).getCe());
-//            holder.commentCount.setText(ctsBeen.get(position).getCommentCount() + "");
-//        }else {
-//
-//            holder.loading_text.setText("正在加载");
-//        }
-////        notifyDataSetChanged();
-//
-//    }
-
-//    @Override
-//    public int getItemCount() {
-//        //总共有20条数据，此时必须加载一个item来放置footitem。
-//        return ctsBeen.size() < max ? ctsBeen.size(): max+1;
-//    }
 
     @Override
     public void LoadingMore() {
@@ -131,13 +92,6 @@ public class HotMovieCommentsAdapter extends BaseLoadAdapter<UserCommentBean.Dat
         void loadMoreData();
     }
 
-//    @Override
-//    public int getItemViewType(int position) {
-//        if (position == max)
-//            return TYPE_BOTTOM;
-//        return TYPE_OTHER;
-//
-//    }
 
     //时间戳转化为时间
     public static String transForDate1(Integer ms){

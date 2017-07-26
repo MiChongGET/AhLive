@@ -4,8 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,7 +15,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -31,14 +28,11 @@ import java.util.List;
 
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.bean.HotMovieDetail;
-import cn.buildworld.ahlive.bean.MovieDetail;
 import cn.buildworld.ahlive.fragment.MovieContentFragment;
 import cn.buildworld.ahlive.fragment.MovieVideoFragment;
-import cn.buildworld.ahlive.utils.ApiUrl;
+import cn.buildworld.ahlive.api.ApiUrl;
 import cn.buildworld.ahlive.utils.MyCallBack;
 import cn.buildworld.ahlive.utils.XUtils;
-
-import static android.R.id.list;
 
 public class MovieDetailActivity extends AppCompatActivity {
 

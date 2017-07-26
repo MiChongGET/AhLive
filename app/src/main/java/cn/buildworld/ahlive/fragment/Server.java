@@ -3,34 +3,25 @@ package cn.buildworld.ahlive.fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.Preference;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.activity.MovieDetailActivity;
 import cn.buildworld.ahlive.adapter.MoiveList;
-import cn.buildworld.ahlive.bean.Article;
-import cn.buildworld.ahlive.bean.CityCode;
 import cn.buildworld.ahlive.bean.TimeMoive;
-import cn.buildworld.ahlive.utils.ApiUrl;
+import cn.buildworld.ahlive.api.ApiUrl;
 import cn.buildworld.ahlive.utils.MyCallBack;
-import cn.buildworld.ahlive.utils.Preferences;
 import cn.buildworld.ahlive.utils.XUtils;
-
-import static android.content.Context.MODE_PRIVATE;
 
 /**
  * 作者：MiChong on 2017/7/12 0012 20:16

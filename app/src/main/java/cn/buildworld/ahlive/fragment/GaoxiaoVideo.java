@@ -9,14 +9,19 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import com.alibaba.fastjson.JSON;
+
 import java.util.List;
 
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.adapter.FunVideoAdapter;
+import cn.buildworld.ahlive.bean.FunVideoBean;
 import cn.buildworld.ahlive.utils.MyCallBack;
+import cn.buildworld.ahlive.utils.MyDecoration;
+import cn.buildworld.ahlive.utils.StandardVideoPlayer;
 import cn.buildworld.ahlive.utils.XUtils;
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
 /**
  * 作者：MiChong on 2017/7/12 0012 20:16
@@ -28,6 +33,8 @@ public class GaoxiaoVideo extends BaseFragment {
     private String TAG = "搞笑视频：";
     private FloatingActionButton mActionButton;
     private Animation mAnimation;
+    private String mFunVedio;
+    private long min_time = 0;
 
     public static GaoxiaoVideo newInstance(){
         return new GaoxiaoVideo();
@@ -41,18 +48,74 @@ public class GaoxiaoVideo extends BaseFragment {
         mActionButton = (FloatingActionButton) view.findViewById(R.id.funvideo_floatbutton);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.gxvideo_recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        mRecyclerView.addItemDecoration(new MyDecoration(getActivity(), MyDecoration.VERTICAL_LIST));
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.gx_swiperefresh);
-
-
-
-
-        mActionButton.setOnClickListener(new View.OnClickListener() {
+        mActionButton.setOnClickListener(new  View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 getData();
             }
         });
+
+
+        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+
+            private int _firstItemPosition = -1, _lastItemPosition;
+            private View fistView, lastView;
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                RecyclerView.LayoutManager layoutManager = recyclerView.getLayoutManager();
+                //判断是当前layoutManager是否为LinearLayoutManager
+                // 只有LinearLayoutManager才有查找第一个和最后一个可见view位置的方法
+                if (layoutManager instanceof LinearLayoutManager) {
+                    LinearLayoutManager linearManager = (LinearLayoutManager) layoutManager;
+                    //获取最后一个可见view的位置
+                    int lastItemPosition = linearManager.findLastVisibleItemPosition();
+                    //获取第一个可见view的位置
+                    int firstItemPosition = linearManager.findFirstVisibleItemPosition();
+                    //获取可见view的总数
+                    int visibleItemCount = linearManager.getChildCount();
+
+                    if (_firstItemPosition < firstItemPosition) {
+                        _firstItemPosition = firstItemPosition;
+                        _lastItemPosition = lastItemPosition;
+                        GCView(fistView);
+                        fistView = recyclerView.getChildAt(0);
+                        lastView = recyclerView.getChildAt(visibleItemCount - 1);
+                    } else if (_lastItemPosition > lastItemPosition) {
+                        _firstItemPosition = firstItemPosition;
+                        _lastItemPosition = lastItemPosition;
+                        GCView(lastView);
+                        fistView = recyclerView.getChildAt(0);
+                        lastView = recyclerView.getChildAt(visibleItemCount - 1);
+                    }
+                }
+            }
+
+            /**
+             * 回收播放
+             * @param gcView
+             */
+            public void GCView(View gcView) {
+                if (gcView != null && gcView.findViewById(R.id.JCVideoPlayerStandard) != null) {
+                    StandardVideoPlayer video = (StandardVideoPlayer) gcView
+                            .findViewById(R.id.JCVideoPlayerStandard);
+                    if (video != null
+                            && (video.currentState == JCVideoPlayer.CURRENT_STATE_PLAYING || video.currentState == JCVideoPlayer.CURRENT_STATE_ERROR)) {
+                        video.setSystemUiVisibility(JCVideoPlayer.CURRENT_STATE_AUTO_COMPLETE);
+                        JCVideoPlayer.releaseAllVideos();
+                    }
+                }
+            }
+        });
+
 
         getData();
 
@@ -70,7 +133,7 @@ public class GaoxiaoVideo extends BaseFragment {
     private void getData() {
 
         //悬浮按钮刷新
-        mAnimation = new RotateAnimation(0.0f,+360f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+        mAnimation = new RotateAnimation(0.0f,+720f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
         mAnimation.setDuration(800);
         mAnimation.setFillAfter(true);
         mActionButton.setAnimation(mAnimation);
@@ -84,13 +147,46 @@ public class GaoxiaoVideo extends BaseFragment {
             }
         });
 
-        List<String> list = new ArrayList<>();
-        for (int i = 0; i < 20 ; i++) {
-            list.add("我是第"+i);
+
+        long millis = System.currentTimeMillis();
+
+        if (min_time == 0) {
+            mFunVedio = "http://iu.snssdk.com/neihan/stream/mix/v1/?mpic=1&webp=1&essence=1&content_type=-104&message_cursor=-1&am_loc_time=" + millis + "&count=30&min_time="+millis+"&screen_width=1450&do00le_col_mode=0&iid=3216590132&device_id=32613520945&ac=wifi&channel=360&aid=7&app_name=joke_essay&version_code=612&version_name=6.1.2&device_platform=android&ssmix=a&device_type=sansung&device_brand=xiaomi&os_api=28&os_version=6.10.1&uuid=326135942187625&openudid=3dg6s95rhg2a3dg5&manifest_version_code=612&resolution=1920*1080&dpi=620&update_version_code=6470";
+        }else {
+            mFunVedio = "http://iu.snssdk.com/neihan/stream/mix/v1/?mpic=1&webp=1&essence=1&content_type=-104&message_cursor=-1&am_loc_time=" + millis + "&count=30&min_time="+min_time+"&screen_width=1450&do00le_col_mode=0&iid=3216590132&device_id=32613520945&ac=wifi&channel=360&aid=7&app_name=joke_essay&version_code=612&version_name=6.1.2&device_platform=android&ssmix=a&device_type=sansung&device_brand=xiaomi&os_api=28&os_version=6.10.1&uuid=326135942187625&openudid=3dg6s95rhg2a3dg5&manifest_version_code=612&resolution=1920*1080&dpi=620&update_version_code=6470";
+            Log.i(TAG, "min_time"+min_time);
         }
+        min_time = millis;
 
+        XUtils.Get(mFunVedio,null,new MyCallBack<String>(){
 
-         mRecyclerView.setAdapter(new FunVideoAdapter(getContext(),list));
+            @Override
+            public void onSuccess(String result) {
+                super.onSuccess(result);
+                Log.i(TAG, "onSuccess: "+result);
+                com.alibaba.fastjson.JSONObject jsonObject = JSON.parseObject(result);
+                FunVideoBean.DataBeanX data = jsonObject.getObject("data", FunVideoBean.DataBeanX.class);
+                Log.i(TAG, "data:"+data.toString());
+                List<FunVideoBean.DataBeanX.DataBean> dataData = data.getData();
+                Log.i(TAG, "databean： "+dataData.size());
+                String mp4_url = dataData.get(0).getGroup().getMp4_url();
+
+                Log.i(TAG, "mp4_url: "+mp4_url);
+
+                mRecyclerView.setAdapter(new FunVideoAdapter(getContext(),dataData));
+
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+                super.onError(ex, isOnCallback);
+            }
+
+            @Override
+            public void onFinished() {
+                super.onFinished();
+            }
+        });
 
     }
 

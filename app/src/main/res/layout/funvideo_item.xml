@@ -1,21 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
+              android:paddingTop="30dp"
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/funvideo_title"
-        android:text="131231212334"
+
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp">
 
+        <cn.buildworld.ahlive.utils.CircleImageView
+            android:id="@+id/user_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_launcher"/>
 
-    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerSimple
+        <TextView
+            android:layout_marginLeft="25dp"
+            android:id="@+id/user_name"
+            android:text="131231212334"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/category_name"
+            android:text="搞笑视频"
+            android:background="#E96B00"
+            android:textColor="#eee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:gravity="center|left"
+            android:id="@+id/funvideo_title"
+            android:text="title"
+            android:textSize="18dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <cn.buildworld.ahlive.utils.StandardVideoPlayer
+        android:id="@+id/JCVideoPlayerStandard"
         android:layout_width="match_parent"
         android:layout_height="180dp">
 
-    </fm.jiecao.jcvideoplayer_lib.JCVideoPlayerSimple>
+    </cn.buildworld.ahlive.utils.StandardVideoPlayer>
 
+<LinearLayout
+    android:paddingLeft="20dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/dianzan"/>
+        <TextView
+            android:id="@+id/digg_count"
+            android:text="1000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/nodianzan"/>
+        <TextView
+            android:id="@+id/bury_count"
+            android:text="100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>
 
 </LinearLayout>
