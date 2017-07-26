@@ -11,6 +11,8 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 /**
  * 作者：MiChong on 2017/7/26 0026 19:04
  * 邮箱：1564666023@qq.com
+ *
+ * 封装视频播放器，是为了在fragment中实现视频暂停的功能
  */
 public class StandardVideoPlayer extends JCVideoPlayerStandard {
     // Set the flag for storing if user click the start button for pausing.

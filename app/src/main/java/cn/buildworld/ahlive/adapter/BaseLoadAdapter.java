@@ -32,6 +32,10 @@ public abstract class BaseLoadAdapter<T> extends RecyclerView.Adapter {
     private int pageCount = 20;//每一页和后台说定的条数
     public List<T> list;
 
+//
+//    public BaseLoadAdapter(int pageCount) {
+//        this.pageCount = pageCount;
+//    }
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

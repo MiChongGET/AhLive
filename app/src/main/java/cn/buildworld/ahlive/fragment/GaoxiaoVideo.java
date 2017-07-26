@@ -20,6 +20,7 @@ import cn.buildworld.ahlive.utils.MyCallBack;
 import cn.buildworld.ahlive.utils.MyDecoration;
 import cn.buildworld.ahlive.utils.StandardVideoPlayer;
 import cn.buildworld.ahlive.utils.XUtils;
+import fm.jiecao.jcvideoplayer_lib.JCMediaManager;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
@@ -84,15 +85,31 @@ public class GaoxiaoVideo extends BaseFragment {
                     int visibleItemCount = linearManager.getChildCount();
 
                     if (_firstItemPosition < firstItemPosition) {
+                        Log.i(TAG, "onScrolled: "+"视频划上去了");
                         _firstItemPosition = firstItemPosition;
                         _lastItemPosition = lastItemPosition;
                         GCView(fistView);
                         fistView = recyclerView.getChildAt(0);
                         lastView = recyclerView.getChildAt(visibleItemCount - 1);
                     } else if (_lastItemPosition > lastItemPosition) {
+                        Log.i(TAG, "onScrolled: "+"视频划下去了");
                         _firstItemPosition = firstItemPosition;
                         _lastItemPosition = lastItemPosition;
                         GCView(lastView);
+                        fistView = recyclerView.getChildAt(0);
+                        lastView = recyclerView.getChildAt(visibleItemCount - 1);
+                    }else if (_firstItemPosition > firstItemPosition){
+                        Log.i(TAG, "onScrolled: "+"视频从上滑倒下了");
+                        _firstItemPosition = firstItemPosition;
+                        _lastItemPosition = lastItemPosition;
+                        ResumeView(fistView);
+                        fistView = recyclerView.getChildAt(0);
+                        lastView = recyclerView.getChildAt(visibleItemCount - 1);
+                    }else if (_lastItemPosition < lastItemPosition){
+                        _firstItemPosition = firstItemPosition;
+                        _lastItemPosition = lastItemPosition;
+                        Log.i(TAG, "onScrolled: "+"视频从下滑倒上了");
+                        ResumeView(lastView);
                         fistView = recyclerView.getChildAt(0);
                         lastView = recyclerView.getChildAt(visibleItemCount - 1);
                     }
@@ -110,7 +127,23 @@ public class GaoxiaoVideo extends BaseFragment {
                     if (video != null
                             && (video.currentState == JCVideoPlayer.CURRENT_STATE_PLAYING || video.currentState == JCVideoPlayer.CURRENT_STATE_ERROR)) {
                         video.setSystemUiVisibility(JCVideoPlayer.CURRENT_STATE_AUTO_COMPLETE);
-                        JCVideoPlayer.releaseAllVideos();
+                        JCMediaManager.instance().mediaPlayer.pause();
+                    }
+                }
+            }
+
+            /**
+             * 恢复播放
+             * @param gcView
+             */
+            public void ResumeView(View gcView) {
+                if (gcView != null && gcView.findViewById(R.id.JCVideoPlayerStandard) != null) {
+                    StandardVideoPlayer video = (StandardVideoPlayer) gcView
+                            .findViewById(R.id.JCVideoPlayerStandard);
+                    if (video != null
+                            && (video.currentState == JCVideoPlayer.CURRENT_STATE_PLAYING || video.currentState == JCVideoPlayer.CURRENT_STATE_ERROR)) {
+                        video.setSystemUiVisibility(JCVideoPlayer.CURRENT_STATE_AUTO_COMPLETE);
+                        JCMediaManager.instance().mediaPlayer.start();
                     }
                 }
             }
@@ -147,6 +180,8 @@ public class GaoxiaoVideo extends BaseFragment {
             }
         });
 
+        //释放所有的视频
+        StandardVideoPlayer.releaseAllVideos();
 
         long millis = System.currentTimeMillis();
 
@@ -190,4 +225,16 @@ public class GaoxiaoVideo extends BaseFragment {
 
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        StandardVideoPlayer.pauseVideo();
+
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        StandardVideoPlayer.resumeVideo();
+    }
 }

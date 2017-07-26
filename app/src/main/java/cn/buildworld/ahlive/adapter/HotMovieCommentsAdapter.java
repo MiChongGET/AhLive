@@ -63,7 +63,6 @@ public class HotMovieCommentsAdapter extends BaseLoadAdapter<UserCommentBean.Dat
         if(loadMoreData == null){
             return;
         }
-//        max = max + 20;
         loadMoreData.loadMoreData();
     }
 
