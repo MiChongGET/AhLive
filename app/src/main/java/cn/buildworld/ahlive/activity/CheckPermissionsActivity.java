@@ -24,13 +24,6 @@ import cn.buildworld.ahlive.R;
 /**
  * 继承了Activity，实现Android6.0的运行时权限检测
  * 需要进行运行时权限检测的Activity可以继承这个类
- * 
- * @创建时间：2016年5月27日 下午3:01:31 
- * @项目名称： AMapLocationDemo
- * @author hongming.wang
- * @文件名称：PermissionsChecker.java
- * @类型名称：PermissionsChecker
- * @since 2.5.0
  */
 public class CheckPermissionsActivity extends AppCompatActivity
 		implements

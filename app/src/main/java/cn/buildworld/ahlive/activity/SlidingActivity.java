@@ -28,6 +28,8 @@ import java.util.Locale;
 
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.fragment.TabFragment;
+import cn.buildworld.ahlive.utils.StandardVideoPlayer;
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 
 public class SlidingActivity extends CheckPermissionsActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -147,12 +149,17 @@ public class SlidingActivity extends CheckPermissionsActivity
 
     @Override
     public void onBackPressed() {
+        if (JCVideoPlayer.backPress()) {
+            return;
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
+
+
     }
 
     @Override
@@ -202,4 +209,12 @@ public class SlidingActivity extends CheckPermissionsActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        StandardVideoPlayer.pauseVideo();
+    }
+
 }

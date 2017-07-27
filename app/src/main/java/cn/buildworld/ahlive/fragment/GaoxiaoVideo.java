@@ -225,16 +225,16 @@ public class GaoxiaoVideo extends BaseFragment {
 
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        StandardVideoPlayer.pauseVideo();
+//    @Override
+//    public void onPause() {
+//        super.onPause();
+//        StandardVideoPlayer.pauseVideo();
+//
+//    }
 
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        StandardVideoPlayer.resumeVideo();
-    }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        StandardVideoPlayer.resumeVideo();
+//    }
 }

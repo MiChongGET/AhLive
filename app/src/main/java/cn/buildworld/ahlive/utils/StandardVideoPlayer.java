@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 
 import fm.jiecao.jcvideoplayer_lib.JCMediaManager;
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
 /**
@@ -69,6 +70,7 @@ public class StandardVideoPlayer extends JCVideoPlayerStandard {
         try {
             if (JCMediaManager.instance().mediaPlayer != null &&
                     JCMediaManager.instance().mediaPlayer.isPlaying()) {
+
                 JCMediaManager.instance().mediaPlayer.pause();
                 isPauseByClick = false;
             }
@@ -84,8 +86,10 @@ public class StandardVideoPlayer extends JCVideoPlayerStandard {
     public static void resumeVideo() {
         try {
             if (JCMediaManager.instance().mediaPlayer != null && !JCMediaManager.instance().mediaPlayer
-                    .isPlaying() && !isPauseByClick) {
+                    .isPlaying() && !isPauseByClick ) {
+
                 JCMediaManager.instance().mediaPlayer.start();
+
             }
         } catch (RuntimeException e) {
             e.printStackTrace();
