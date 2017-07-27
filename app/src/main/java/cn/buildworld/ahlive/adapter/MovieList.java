@@ -19,13 +19,13 @@ import cn.buildworld.ahlive.bean.TimeMoive;
  * 作者：MiChong on 2017/7/20 0020 16:22
  * 邮箱：1564666023@qq.com
  */
-public class MoiveList extends RecyclerView.Adapter<MoiveList.ViewHolder> {
+public class MovieList extends RecyclerView.Adapter<MovieList.ViewHolder> {
 
     private List<TimeMoive.MoviesBean> mMoviesBeen;
     private Context mContext;
-    private MoiveList.OnImageViewListener mOnImageViewListener;
+    private MovieList.OnImageViewListener mOnImageViewListener;
 
-    public MoiveList(Context context,List<TimeMoive.MoviesBean> moviesbeen) {
+    public MovieList(Context context, List<TimeMoive.MoviesBean> moviesbeen) {
         mMoviesBeen = moviesbeen;
         mContext = context;
     }

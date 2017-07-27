@@ -19,6 +19,7 @@ public class StandardVideoPlayer extends JCVideoPlayerStandard {
     // Set the flag for storing if user click the start button for pausing.
     // For fixing the bug about the invalidation of status switching between resume and pause.
     private static boolean isPauseByClick = false;
+    private static boolean isPlaying = false;
     private static AudioManager.OnAudioFocusChangeListener onOriginAudioFocusChangeListener;
 
     public StandardVideoPlayer(Context context) {
@@ -59,6 +60,10 @@ public class StandardVideoPlayer extends JCVideoPlayerStandard {
                 // It will enter this case when click the start button for pausing.
                 isPauseByClick = true;
                 break;
+            case CURRENT_STATE_PLAYING:
+                isPlaying = true;
+
+
         }
     }
 
@@ -88,8 +93,10 @@ public class StandardVideoPlayer extends JCVideoPlayerStandard {
             if (JCMediaManager.instance().mediaPlayer != null && !JCMediaManager.instance().mediaPlayer
                     .isPlaying() && !isPauseByClick ) {
 
-                JCMediaManager.instance().mediaPlayer.start();
-
+                if (isPlaying){
+                    Log.i(TAG, "resumeVideo: "+isPlaying);
+                    JCMediaManager.instance().mediaPlayer.start();}
+                else return;
             }
         } catch (RuntimeException e) {
             e.printStackTrace();

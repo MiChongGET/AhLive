@@ -17,7 +17,7 @@ import java.util.List;
 
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.activity.MovieDetailActivity;
-import cn.buildworld.ahlive.adapter.MoiveList;
+import cn.buildworld.ahlive.adapter.MovieList;
 import cn.buildworld.ahlive.bean.TimeMoive;
 import cn.buildworld.ahlive.api.ApiUrl;
 import cn.buildworld.ahlive.utils.MyCallBack;
@@ -41,7 +41,7 @@ public class Server extends BaseFragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
     private SwipeRefreshLayout mSwipeRefreshLayout;
-    private MoiveList mMoiveList;
+    private MovieList mMovieList;
 
     public static Server newInstance() {
         return new Server();
@@ -127,11 +127,11 @@ public class Server extends BaseFragment {
                 final List<TimeMoive.MoviesBean> movies = timeMoive.getMovies();
                 Log.i(TAG, "电影列表："+movies.get(0).getTitleCn());
 
-                mMoiveList = new MoiveList(getContext(), movies);
+                mMovieList = new MovieList(getContext(), movies);
 
-                mRecyclerView.setAdapter(mMoiveList);
+                mRecyclerView.setAdapter(mMovieList);
 
-                mMoiveList.setOnImageViewListener(new MoiveList.OnImageViewListener() {
+                mMovieList.setOnImageViewListener(new MovieList.OnImageViewListener() {
                     @Override
                     public void OnClick(View view, int position) {
                         Log.i(TAG, "OnClick: "+position);

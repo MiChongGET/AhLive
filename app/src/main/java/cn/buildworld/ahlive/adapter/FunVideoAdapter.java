@@ -2,7 +2,6 @@ package cn.buildworld.ahlive.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,6 @@ import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.bean.FunVideoBean;
 import cn.buildworld.ahlive.utils.StandardVideoPlayer;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
 /**
  * 作者：MiChong on 2017/7/24 0024 20:17

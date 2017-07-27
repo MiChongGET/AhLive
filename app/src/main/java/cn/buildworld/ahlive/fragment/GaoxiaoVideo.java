@@ -1,6 +1,7 @@
 package cn.buildworld.ahlive.fragment;
 
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.FragmentTabHost;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -37,6 +38,7 @@ public class GaoxiaoVideo extends BaseFragment {
     private String mFunVedio;
     private long min_time = 0;
 
+
     public static GaoxiaoVideo newInstance(){
         return new GaoxiaoVideo();
     }
@@ -54,7 +56,6 @@ public class GaoxiaoVideo extends BaseFragment {
         mActionButton.setOnClickListener(new  View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 getData();
             }
         });

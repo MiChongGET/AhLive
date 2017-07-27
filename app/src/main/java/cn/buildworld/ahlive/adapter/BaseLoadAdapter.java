@@ -20,7 +20,6 @@ public abstract class BaseLoadAdapter<T> extends RecyclerView.Adapter {
 
     public static final int TYPE_ITEM = 1;
     public static final int TYPE_BOTTOM = 2;
-
     public int loadState;
     public static final int STATE_LOADING = 1;
     public static final int STATE_LASTED = 2;
