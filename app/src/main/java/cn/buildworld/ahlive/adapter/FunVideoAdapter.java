@@ -26,6 +26,12 @@ public class FunVideoAdapter extends RecyclerView.Adapter<FunVideoAdapter.ViewHo
     private Context mContext;
     private  List<FunVideoBean.DataBeanX.DataBean> mDataBeen;
     private String TAG = "搞笑视频数据适配器";
+    private OnImageShareListener mOnImageShareListener;
+
+
+    public void setOnImageShareListener(OnImageShareListener onImageShareListener){
+        this.mOnImageShareListener = onImageShareListener;
+    }
 
     public FunVideoAdapter(Context context,  List<FunVideoBean.DataBeanX.DataBean> mDataBeen) {
         this.mContext = context;
@@ -48,7 +54,7 @@ public class FunVideoAdapter extends RecyclerView.Adapter<FunVideoAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(FunVideoAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(final FunVideoAdapter.ViewHolder holder, final int position) {
 
         if (mDataBeen.get(position).getType() == 1) {
             holder.title.setText(mDataBeen.get(position).getGroup().getText());
@@ -62,6 +68,17 @@ public class FunVideoAdapter extends RecyclerView.Adapter<FunVideoAdapter.ViewHo
                     .into(holder.mJcVideoPlayerStandard.thumbImageView);
             holder.digg_count.setText(mDataBeen.get(position).getGroup().getDigg_count()+"");
             holder.bury_count.setText(mDataBeen.get(position).getGroup().getBury_count()+"");
+
+
+            holder.img_share.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mOnImageShareListener != null) {
+                        int po = holder.getLayoutPosition();
+                        mOnImageShareListener.OnClick(holder.img_share, po);
+                    }
+                }
+            });
         }
     }
 
@@ -86,6 +103,7 @@ public class FunVideoAdapter extends RecyclerView.Adapter<FunVideoAdapter.ViewHo
        TextView digg_count;
        TextView bury_count;
        TextView category_name;
+       ImageView img_share;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -96,6 +114,11 @@ public class FunVideoAdapter extends RecyclerView.Adapter<FunVideoAdapter.ViewHo
             digg_count = (TextView) itemView.findViewById(R.id.digg_count);
             bury_count = (TextView) itemView.findViewById(R.id.bury_count);
             category_name = (TextView) itemView.findViewById(R.id.category_name);
+            img_share = (ImageView) itemView.findViewById(R.id.img_share);
         }
+    }
+
+    public interface OnImageShareListener{
+        void OnClick(View view,int position);
     }
 }

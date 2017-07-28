@@ -31,8 +31,10 @@ import cn.buildworld.ahlive.bean.HotMovieDetail;
 import cn.buildworld.ahlive.fragment.MovieContentFragment;
 import cn.buildworld.ahlive.fragment.MovieVideoFragment;
 import cn.buildworld.ahlive.api.ApiUrl;
+import cn.buildworld.ahlive.fragment.UserCommentFrament;
 import cn.buildworld.ahlive.utils.MyCallBack;
 import cn.buildworld.ahlive.utils.XUtils;
+import cn.sharesdk.onekeyshare.OnekeyShare;
 
 public class MovieDetailActivity extends AppCompatActivity {
 
@@ -58,7 +60,7 @@ public class MovieDetailActivity extends AppCompatActivity {
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
     private List<Fragment> mList;
-    private String[] titles = {"简介","预告片"};
+    private String[] titles = {"简介","预告片","评论"};
     private MyAdapter mMyAdapter;
 
     @Override
@@ -72,14 +74,16 @@ public class MovieDetailActivity extends AppCompatActivity {
         if (item.getItemId() == android.R.id.home){
             onBackPressed();
         }
-        if (item.getItemId() == R.id.user_comments_menu){
+        if (item.getItemId() == R.id.user_share){
 
-            Bundle bundle = new Bundle();
-            bundle.putString("movie_id", String.valueOf(mMovieId));
-            Intent intent = new Intent();
-            intent.putExtras(bundle);
-            intent.setClass(this,UserCommentActivity.class);
-            startActivity(intent);
+//            Bundle bundle = new Bundle();
+//            bundle.putString("movie_id", String.valueOf(mMovieId));
+//            Intent intent = new Intent();
+//            intent.putExtras(bundle);
+//            intent.setClass(this,UserCommentActivity.class);
+//            startActivity(intent);
+            if (mMovieDetail != null)
+            showShare();
 
         }
         return super.onOptionsItemSelected(item);
@@ -129,11 +133,6 @@ public class MovieDetailActivity extends AppCompatActivity {
         mLength = (TextView) findViewById(R.id.length);
         mType = (TextView) findViewById(R.id.type);
         mMvScore = (TextView) findViewById(R.id.mv_score);
-//        mRanking = (TextView) findViewById(R.id.ranking);
-//        mTodayBoxDes = (TextView) findViewById(R.id.todayBoxDes);
-//        mTotalBoxDes = (TextView) findViewById(R.id.totalBoxDes);
-//        mMvStory = (TextView) findViewById(R.id.movie_story);
-
         mTabLayout = (TabLayout) findViewById(R.id.toolbar_tab);
         mViewPager = (ViewPager) findViewById(R.id.viewpager);
 
@@ -164,23 +163,13 @@ public class MovieDetailActivity extends AppCompatActivity {
                     mMvScore.setText("评分："+mBasic.getOverallRating() + "");
                 }else mMvScore.setText("0.0");
                 mLength.setText("片长："+mBasic.getMins());
-//                StringBuilder stringBuilder = null;
-//                for (int i = 0; i <mBasic.getType().size() ; i++) {
-//                    stringBuilder.append(mBasic.getType().get(i));
-//                    if (i<mBasic.getType().size()){
-//                        stringBuilder.append("/");
-//                    }
-//                }
-//                mType.setText(stringBuilder.toString());
-                //mMvStory.setText(mBasic.getStory());
-//                mRanking.setText(boxOffice.getRanking());
-//                mTodayBoxDes.setText(boxOffice.getTodayBoxDes());
-//                mTotalBoxDes.setText(boxOffice.getTotalBoxDes());
+
 
                 mList = new ArrayList<Fragment>();
                 if (!TextUtils.isEmpty(mBasic.getStory())) {
                     mList.add(new MovieContentFragment(mBasic.getStory()));
                     mList.add(new MovieVideoFragment(mBasic.getVideo().getImg(),mBasic.getVideo().getTitle(),mBasic.getVideo().getHightUrl()));
+                    mList.add(new UserCommentFrament(mMovieId));
                     mMyAdapter = new MyAdapter(getSupportFragmentManager());
                     mViewPager.setAdapter(mMyAdapter);
                     mTabLayout.setupWithViewPager(mViewPager);
@@ -201,6 +190,36 @@ public class MovieDetailActivity extends AppCompatActivity {
         });
 
     }
+
+
+    private void showShare() {
+        OnekeyShare oks = new OnekeyShare();
+        //关闭sso授权
+        oks.disableSSOWhenAuthorize();
+
+        // 分享时Notification的图标和文字  2.5.9以后的版本不     调用此方法
+        //oks.setNotification(R.drawable.ic_launcher, getString(R.string.app_name));
+        // title标题，印象笔记、邮箱、信息、微信、人人网和QQ空间使用
+        oks.setTitle(mBasic.getVideo().getTitle());
+        // titleUrl是标题的网络链接，仅在人人网和QQ空间使用
+        oks.setTitleUrl(mBasic.getVideo().getHightUrl());
+        // text是分享文本，所有平台都需要这个字段
+        oks.setText("上映电影分享");
+        // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
+        oks.setImageUrl(mBasic.getVideo().getImg());//确保SDcard下面存在此张图片
+        // url仅在微信（包括好友和朋友圈）中使用
+        oks.setUrl(mBasic.getVideo().getHightUrl());
+        // comment是我对这条分享的评论，仅在人人网和QQ空间使用
+        oks.setComment(mBasic.getVideo().getTitle());
+        // site是分享此内容的网站名称，仅在QQ空间使用
+        oks.setSite(getString(R.string.app_name));
+        // siteUrl是分享此内容的网站地址，仅在QQ空间使用
+        oks.setSiteUrl(mBasic.getVideo().getHightUrl());
+
+        // 启动分享GUI
+        oks.show(this);
+    }
+
 
 
     class MyAdapter extends FragmentPagerAdapter {

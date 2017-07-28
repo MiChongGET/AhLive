@@ -63,27 +63,30 @@
     android:paddingLeft="20dp"
     android:gravity="center"
     android:orientation="horizontal"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
+
     <LinearLayout
-        android:padding="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
         <ImageView
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:src="@drawable/dianzan"/>
+
         <TextView
             android:id="@+id/digg_count"
-            android:text="1000"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="1000"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_marginLeft="10dp"
-        android:padding="5dp"
-        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <ImageView
             android:layout_width="18dp"
@@ -94,6 +97,19 @@
             android:text="100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="10dp"
+        android:gravity="center|right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_share"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/video_share"/>
     </LinearLayout>
 
 </LinearLayout>

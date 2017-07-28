@@ -50,48 +50,10 @@ public class Server extends BaseFragment {
     @Override
     public View initView() {
 
-//        mSharedPreferences = getActivity().getSharedPreferences("config", MODE_PRIVATE);
-//        citycode = mSharedPreferences.getString("citycode", null);
-//        Log.i(TAG, "initView: " + citycode);
-//
-//        if (TextUtils.isEmpty(citycode)) {
-//
-//            mView = View.inflate(getActivity(), R.layout.fm_addcity, null);
-//
-//            mCityname = (EditText) mView.findViewById(R.id.cityName);
-//
-//            mToString = mCityname.getText().toString();
-//
-//            mButton = (Button) mView.findViewById(R.id.button_cityname);
-//            mButton.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    if (!TextUtils.isEmpty(mToString)) {
-//                        mEditor = mSharedPreferences.edit();
-//                        mEditor.putString("cityname", mToString);
-//                        mEditor.commit();
-//                        mView = View.inflate(getActivity(), R.layout.fm_server, null);
-//
-//                    } else {
-//                        Toast.makeText(getActivity(), "输入的城市为空", Toast.LENGTH_SHORT).show();
-//                    }
-//                }
-//            });
-//
-//
-//        } else {
-//
-//
-//        }
+
         mView = View.inflate(getActivity(), R.layout.fm_server, null);
         mRecyclerView = (RecyclerView) mView.findViewById(R.id.moive_list);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
-//        ArrayList<String> list = new ArrayList<String>();
-//        for (int i = 0; i < 20 ; i++) {
-//            list.add("我是第"+i);
-//        }
-//
-//        Log.i(TAG, "list: "+list.toString());
 
 
         mSwipeRefreshLayout = (SwipeRefreshLayout) mView.findViewById(R.id.SwipeRefreshLayout);

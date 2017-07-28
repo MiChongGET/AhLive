@@ -1,14 +1,9 @@
-package cn.buildworld.ahlive.activity;
+package cn.buildworld.ahlive.fragment;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
 
 import com.google.gson.Gson;
 
@@ -24,11 +19,11 @@ import cn.buildworld.ahlive.utils.MyCallBack;
 import cn.buildworld.ahlive.utils.MyDecoration;
 import cn.buildworld.ahlive.utils.XUtils;
 
-public class UserCommentActivity extends AppCompatActivity implements HotMovieCommentsAdapter.LoadMoreListener{
+public class UserCommentFrament extends BaseFragment implements HotMovieCommentsAdapter.LoadMoreListener{
 
     private static final int STATE_NORMAL = 1;
     private static final int STATE_MORE = 2;
-    private String mMovieId;
+    private int mMovieId;
     private String TAG = "电影评论：";
     private RecyclerView mRecyclerView;
     private HotMovieComments mHotMovieComments;
@@ -37,61 +32,49 @@ public class UserCommentActivity extends AppCompatActivity implements HotMovieCo
     private int currentPage = 1;
     private HotMovieCommentsAdapter mCommentsAdapter;
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        return super.onCreateOptionsMenu(menu);
+    public UserCommentFrament(int movieId) {
+        mMovieId = movieId;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home){
-            onBackPressed();
-        }
-        return super.onOptionsItemSelected(item);
-    }
+    //
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_user_comment);
+//
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
+//        toolbar.setTitle("电影评论区");
+//        setSupportActionBar(toolbar);
+//
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setHomeButtonEnabled(true);
+//
+//        Intent intent = getIntent();
+//        Bundle bundle = intent.getExtras();
+//        mMovieId = bundle.getString("movie_id");
+//
+//        init();
+////        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
+//
+//        initData();
+//
+//    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_comment);
+    public View initView() {
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
-        toolbar.setTitle("电影评论区");
-        setSupportActionBar(toolbar);
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
-
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
-        mMovieId = bundle.getString("movie_id");
-
-        init();
-//        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
-
-        initData();
-
-    }
-
-    private void init() {
-
-        mRecyclerView = (RecyclerView) findViewById(R.id.commentRv);
-        LinearLayoutManager layoutManager = new LinearLayoutManagerWrapper(this, LinearLayoutManager.VERTICAL, false);
+        View view = View.inflate(getActivity(),R.layout.fragment_user_comment,null);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.commentRv);
+        LinearLayoutManager layoutManager = new LinearLayoutManagerWrapper(getActivity(), LinearLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(layoutManager);
 
-        mRecyclerView.addItemDecoration(new MyDecoration(this, MyDecoration.VERTICAL_LIST));
-//        mRecyclerView.addOnScrollListener(new LoadMoreScrollListener(layoutManager) {
-//            @Override
-//            public void onLoadMore(int currentPage) {
-//                Log.i(TAG, "currentPage: "+currentPage);
-//                loadMoreData();
-//            }
-//        });
+        mRecyclerView.addItemDecoration(new MyDecoration(getActivity(), MyDecoration.VERTICAL_LIST));
 
+        return view;
     }
 
-    public void initData(){
+
+    public View initData(){
 
 
         String url = "https://api-m.mtime.cn/Showtime/HotMovieComments.api?pageIndex="
@@ -114,7 +97,7 @@ public class UserCommentActivity extends AppCompatActivity implements HotMovieCo
 //                mHotMovieComments.updateData(mList);
 
                 if (currentPage == 1) {
-                    mCommentsAdapter = new HotMovieCommentsAdapter(mList, UserCommentActivity.this, UserCommentActivity.this);
+                    mCommentsAdapter = new HotMovieCommentsAdapter(mList, getActivity(), UserCommentFrament.this);
                     mRecyclerView.setOnScrollListener(new LoadMoreScrollListener(mRecyclerView));
                     mRecyclerView.setAdapter(mCommentsAdapter);
 //                    currentPage += currentPage;
@@ -133,6 +116,7 @@ public class UserCommentActivity extends AppCompatActivity implements HotMovieCo
             }
         });
 
+        return null;
     }
 
 

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
+import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 
@@ -21,6 +22,7 @@ import cn.buildworld.ahlive.utils.MyCallBack;
 import cn.buildworld.ahlive.utils.MyDecoration;
 import cn.buildworld.ahlive.utils.StandardVideoPlayer;
 import cn.buildworld.ahlive.utils.XUtils;
+import cn.sharesdk.onekeyshare.OnekeyShare;
 import fm.jiecao.jcvideoplayer_lib.JCMediaManager;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
@@ -37,6 +39,12 @@ public class GaoxiaoVideo extends BaseFragment {
     private Animation mAnimation;
     private String mFunVedio;
     private long min_time = 0;
+    private FunVideoAdapter mFunVideoAdapter;
+    private FunVideoBean.DataBeanX mData;
+    private List<FunVideoBean.DataBeanX.DataBean> mDataBeen;
+    private String mShare_url;
+    private String mImgUrl;
+    private String mText;
 
 
     public static GaoxiaoVideo newInstance(){
@@ -201,15 +209,28 @@ public class GaoxiaoVideo extends BaseFragment {
                 super.onSuccess(result);
                 Log.i(TAG, "onSuccess: "+result);
                 com.alibaba.fastjson.JSONObject jsonObject = JSON.parseObject(result);
-                FunVideoBean.DataBeanX data = jsonObject.getObject("data", FunVideoBean.DataBeanX.class);
-                Log.i(TAG, "data:"+data.toString());
-                List<FunVideoBean.DataBeanX.DataBean> dataData = data.getData();
-                Log.i(TAG, "databean： "+dataData.size());
-                String mp4_url = dataData.get(0).getGroup().getMp4_url();
+                mData = jsonObject.getObject("data", FunVideoBean.DataBeanX.class);
+                Log.i(TAG, "data:"+ mData.toString());
+                mDataBeen = mData.getData();
+                Log.i(TAG, "databean： "+ mDataBeen.size());
+                String mp4_url = mDataBeen.get(0).getGroup().getMp4_url();
 
                 Log.i(TAG, "mp4_url: "+mp4_url);
 
-                mRecyclerView.setAdapter(new FunVideoAdapter(getContext(),dataData));
+                mFunVideoAdapter = new FunVideoAdapter(getContext(), mDataBeen);
+                mRecyclerView.setAdapter(mFunVideoAdapter);
+
+
+                mFunVideoAdapter.setOnImageShareListener(new FunVideoAdapter.OnImageShareListener() {
+                    @Override
+                    public void OnClick(View view, int position) {
+
+                        mShare_url = mDataBeen.get(position).getGroup().getShare_url();
+                        mImgUrl = mDataBeen.get(position).getGroup().getLarge_cover().getUrl_list().get(0).getUrl();
+                        mText = mDataBeen.get(position).getGroup().getText();
+                        showShare();
+                    }
+                });
 
             }
 
@@ -224,18 +245,34 @@ public class GaoxiaoVideo extends BaseFragment {
             }
         });
 
+
+
     }
+    private void showShare() {
+        OnekeyShare oks = new OnekeyShare();
+        //关闭sso授权
+        oks.disableSSOWhenAuthorize();
 
-//    @Override
-//    public void onPause() {
-//        super.onPause();
-//        StandardVideoPlayer.pauseVideo();
-//
-//    }
+        // 分享时Notification的图标和文字  2.5.9以后的版本不     调用此方法
+        //oks.setNotification(R.drawable.ic_launcher, getString(R.string.app_name));
+        // title标题，印象笔记、邮箱、信息、微信、人人网和QQ空间使用
+        oks.setTitle(mText);
+        // titleUrl是标题的网络链接，仅在人人网和QQ空间使用
+        oks.setTitleUrl(mShare_url);
+        // text是分享文本，所有平台都需要这个字段
+        oks.setText("内涵段子搞笑视频");
+        // imagePath是图片的本地路径，Linked-In以外的平台都支持此参数
+        oks.setImageUrl(mImgUrl);//确保SDcard下面存在此张图片
+        // url仅在微信（包括好友和朋友圈）中使用
+        oks.setUrl(mShare_url);
+        // comment是我对这条分享的评论，仅在人人网和QQ空间使用
+        oks.setComment(mText);
+        // site是分享此内容的网站名称，仅在QQ空间使用
+        oks.setSite(getString(R.string.app_name));
+        // siteUrl是分享此内容的网站地址，仅在QQ空间使用
+        oks.setSiteUrl(mShare_url);
 
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        StandardVideoPlayer.resumeVideo();
-//    }
+        // 启动分享GUI
+        oks.show(getActivity());
+    }
 }
