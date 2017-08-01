@@ -1,7 +1,6 @@
 package cn.buildworld.ahlive.adapter;
 
 import android.content.Context;
-import android.location.LocationListener;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -13,11 +12,10 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import cn.buildworld.ahlive.R;
-import cn.buildworld.ahlive.bean.UserCommentBean;
+import cn.buildworld.ahlive.bean.movie.UserCommentBean;
 
 /**
  * 作者：MiChong on 2017/7/23 0023 16:14

@@ -1,4 +1,4 @@
-package cn.buildworld.ahlive.bean;
+package cn.buildworld.ahlive.bean.news;
 
 import java.util.List;
 

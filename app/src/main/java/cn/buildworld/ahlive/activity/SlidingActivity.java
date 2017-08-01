@@ -9,6 +9,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,6 +29,7 @@ import java.util.Locale;
 
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.fragment.TabFragment;
+import cn.buildworld.ahlive.utils.Preferences;
 import cn.buildworld.ahlive.utils.StandardVideoPlayer;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 
@@ -50,8 +52,12 @@ public class SlidingActivity extends CheckPermissionsActivity
                     Log.i(TAG, "onLocationChanged: "+  aMapLocation.getCountry()+"-------"+
                     aMapLocation.getCity()+aMapLocation.getCityCode());
 
-                    mPosition.setText(aMapLocation.getCity()+"  "+aMapLocation.getCountry()
-                            );
+                    mPosition.setText(aMapLocation.getCity()+"  "+aMapLocation.getCountry());
+                    if (!(TextUtils.isEmpty(aMapLocation.getCity()) && TextUtils.isEmpty(aMapLocation.getCountry()))){
+
+                        Preferences.setString(SlidingActivity.this,"City",aMapLocation.getCity());
+                        Preferences.setString(SlidingActivity.this,"City",aMapLocation.getCountry());
+                    }
 
 
                 }else {
@@ -190,12 +196,12 @@ public class SlidingActivity extends CheckPermissionsActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_connection) {
             // Handle the camera action
 
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_introduce) {
 
         } else if (id == R.id.nav_manage) {
 

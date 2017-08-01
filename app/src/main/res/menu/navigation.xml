@@ -20,9 +20,9 @@
         android:id="@+id/navigation_work"
         android:icon="@drawable/ic_sentiment_satisfied_black_24dp"
         android:title="@string/title_works" />
-    <item
-        android:id="@+id/navigation_setting"
-        android:icon="@drawable/ic_settings_black_24dp"
-        android:title="@string/title_setting" />
+    <!--<item-->
+        <!--android:id="@+id/navigation_setting"-->
+        <!--android:icon="@drawable/ic_settings_black_24dp"-->
+        <!--android:title="@string/title_setting" />-->
 
 </menu>

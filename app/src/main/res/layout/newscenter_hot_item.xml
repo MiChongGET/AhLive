@@ -3,10 +3,14 @@
               android:orientation="vertical"
               android:padding="10dp"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+              android:id="@+id/layout_1"
+              >
 
     <TextView
         android:text="我是标题"
+        android:textColor="#000"
+        android:textSize="18dp"
         android:id="@+id/newscenter_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
@@ -49,8 +53,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
+            android:background="#F5B910"
             android:id="@+id/media_name"
             android:text="新浪网"
+            android:textColor="#eee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

@@ -1,4 +1,4 @@
-package cn.buildworld.ahlive.bean;
+package cn.buildworld.ahlive.bean.news;
 
 /**
  * 作者：MiChong on 2017/7/27 0027 21:19

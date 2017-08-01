@@ -1,6 +1,8 @@
-package cn.buildworld.ahlive.bean;
+package cn.buildworld.ahlive.bean.movie;
 
 import java.util.List;
+
+import cn.buildworld.ahlive.bean.movie.Movie;
 
 /**
  * Created by zhouwei on 16/11/9.

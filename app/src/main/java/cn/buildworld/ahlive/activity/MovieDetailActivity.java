@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.buildworld.ahlive.R;
-import cn.buildworld.ahlive.bean.HotMovieDetail;
+import cn.buildworld.ahlive.bean.movie.HotMovieDetail;
 import cn.buildworld.ahlive.fragment.MovieContentFragment;
 import cn.buildworld.ahlive.fragment.MovieVideoFragment;
 import cn.buildworld.ahlive.api.ApiUrl;
@@ -149,6 +149,15 @@ public class MovieDetailActivity extends AppCompatActivity {
                 super.onSuccess(result);
                 Log.i(TAG, "onSuccess: "+result);
                 Gson gson = new Gson();
+
+//
+//                //fastjson解析
+//                JSONObject jsonObject = JSON.parseObject(result);
+//                HotMovieDetail.DataBean dataBean = jsonObject.getObject("data", HotMovieDetail.DataBean.class);
+//                String title = dataBean.getLive().getTitle();
+//                Log.i(TAG, "title: "+title);
+
+
                 mMovieDetail = gson.fromJson(result,HotMovieDetail.class);
                 mData = mMovieDetail.getData();
                 mBasic = mData.getBasic();

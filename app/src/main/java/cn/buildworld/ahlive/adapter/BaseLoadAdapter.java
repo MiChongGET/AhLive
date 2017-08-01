@@ -12,7 +12,6 @@ import android.widget.TextView;
 import java.util.List;
 
 import cn.buildworld.ahlive.R;
-import cn.buildworld.ahlive.bean.UserCommentBean;
 
 
 public abstract class BaseLoadAdapter<T> extends RecyclerView.Adapter {
@@ -121,6 +120,8 @@ public abstract class BaseLoadAdapter<T> extends RecyclerView.Adapter {
 
 
     public abstract void LoadingMore();
+
+
 
     public void setErrorStatus() {
         loadState = STATE_ERROR;

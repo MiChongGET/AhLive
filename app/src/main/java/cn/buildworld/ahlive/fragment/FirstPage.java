@@ -21,7 +21,7 @@ import java.util.List;
 
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.activity.ArticlePageActivity;
-import cn.buildworld.ahlive.bean.Article;
+import cn.buildworld.ahlive.bean.article.Article;
 import cn.buildworld.ahlive.bean.BundleArticle;
 import cn.buildworld.ahlive.api.ApiUrl;
 import cn.buildworld.ahlive.utils.MyCallBack;

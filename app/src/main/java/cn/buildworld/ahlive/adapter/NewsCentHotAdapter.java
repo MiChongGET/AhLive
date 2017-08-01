@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -15,8 +16,8 @@ import com.google.gson.Gson;
 import java.util.List;
 
 import cn.buildworld.ahlive.R;
-import cn.buildworld.ahlive.bean.NewCenterHotContentBean;
-import cn.buildworld.ahlive.bean.NewsCenterHotBean;
+import cn.buildworld.ahlive.bean.news.NewCenterHotContentBean;
+import cn.buildworld.ahlive.bean.news.NewsCenterHotBean;
 import cn.buildworld.ahlive.utils.TransforDate;
 
 /**
@@ -34,16 +35,18 @@ public class NewsCentHotAdapter extends RecyclerView.Adapter<NewsCentHotAdapter.
     private NewCenterHotContentBean mHotContentBean;
     private String TAG = "热门新闻适配器：";
     private boolean mHas_image;
+    private OnNewsCenterListener mOnNewsCenterListener;
+    private String mArticleUrl;
 
     public NewsCentHotAdapter( List<NewsCenterHotBean.DataBean> data, Context context) {
-
-
-
         this.data = data;
         this.mContext = context;
     }
 
 
+    public void setOnNewsCenterListener(OnNewsCenterListener onNewsCenterListener){
+        this.mOnNewsCenterListener = onNewsCenterListener;
+    }
 
 
     @Override
@@ -58,12 +61,12 @@ public class NewsCentHotAdapter extends RecyclerView.Adapter<NewsCentHotAdapter.
         else {
            return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.newscenter_hot_item3,parent,false));
         }
-//        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.newscenter_hot_item,parent,false));
 
     }
 
     @Override
-    public void onBindViewHolder(NewsCentHotAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(final NewsCentHotAdapter.ViewHolder holder, int position) {
+
 
         if (mHas_image && mHotContentBean.getTitle() != null && mHotContentBean.getImage_list().size() >0){
 
@@ -75,12 +78,27 @@ public class NewsCentHotAdapter extends RecyclerView.Adapter<NewsCentHotAdapter.
             Glide.with(mContext).load(mHotContentBean.getImage_list().get(1).getUrl()).into(holder.newscenter_img2);
             Glide.with(mContext).load(mHotContentBean.getImage_list().get(2).getUrl()).into(holder.newscenter_img3);
 
+            holder.mLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int po = holder.getLayoutPosition();
+                    mOnNewsCenterListener.onClick(holder.mLayout,po,mArticleUrl);
+                }
+            });
+
+
         }else if (!mHas_image){
 
             holder.title3.setText(mHotContentBean.getTitle());
             holder.media_name3.setText(mHotContentBean.getMedia_name());
             holder.behot_time3.setText(TransforDate.transForDate1(mHotContentBean.getBehot_time()));
-
+            holder.mLayout3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int po = holder.getLayoutPosition();
+                    mOnNewsCenterListener.onClick(holder.mLayout3,po,mArticleUrl);
+                }
+            });
 
         }else {
 
@@ -89,7 +107,17 @@ public class NewsCentHotAdapter extends RecyclerView.Adapter<NewsCentHotAdapter.
             holder.media_name2.setText(mHotContentBean.getMedia_name());
             holder.behot_time2.setText(TransforDate.transForDate1(mHotContentBean.getBehot_time()));
             Glide.with(mContext).load(mHotContentBean.getMiddle_image().getUrl()).into(holder.newscenter_img12);
+            holder.mLayout2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int po = holder.getLayoutPosition();
+                    mOnNewsCenterListener.onClick(holder.mLayout2,po,mArticleUrl);
+                }
+            });
+
         }
+
+
 
     }
 
@@ -115,7 +143,9 @@ public class NewsCentHotAdapter extends RecyclerView.Adapter<NewsCentHotAdapter.
 //            Log.i(TAG, "mArticleType " + mHotContentBean.getArticle_type());
         }
         mHas_image = mHotContentBean.isHas_image();
-        Log.i(TAG, "isHas_image: "+ mHas_image);
+        mArticleUrl = mHotContentBean.getArticle_url();
+        Log.i(TAG, "网址： "+position+"----------"+mArticleUrl);
+//        Log.i(TAG, "isHas_image: "+ mHas_image);
 
             if (mHas_image) {
                 if (mHotContentBean.getImage_list().size() >0)
@@ -146,6 +176,9 @@ public class NewsCentHotAdapter extends RecyclerView.Adapter<NewsCentHotAdapter.
         TextView media_name3;
         TextView behot_time3;
 
+        LinearLayout mLayout;
+        LinearLayout mLayout2;
+        LinearLayout mLayout3;
         public ViewHolder(View itemView) {
             super(itemView);
 
@@ -166,6 +199,16 @@ public class NewsCentHotAdapter extends RecyclerView.Adapter<NewsCentHotAdapter.
             title3 = (TextView) itemView.findViewById(R.id.title3);
             media_name3 = (TextView) itemView.findViewById(R.id.media_name3);
             behot_time3 = (TextView) itemView.findViewById(R.id.behot_time3);
+
+            mLayout = (LinearLayout) itemView.findViewById(R.id.layout_1);
+            mLayout2 = (LinearLayout) itemView.findViewById(R.id.layout_2);
+            mLayout3 = (LinearLayout) itemView.findViewById(R.id.layout_3);
         }
     }
+
+    public interface OnNewsCenterListener{
+        void onClick(View view,int position,String url);
+    }
+
+
 }

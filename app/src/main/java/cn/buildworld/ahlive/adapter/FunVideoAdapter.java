@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import cn.buildworld.ahlive.R;
-import cn.buildworld.ahlive.bean.FunVideoBean;
+import cn.buildworld.ahlive.bean.funvideo.FunVideoBean;
 import cn.buildworld.ahlive.utils.StandardVideoPlayer;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 

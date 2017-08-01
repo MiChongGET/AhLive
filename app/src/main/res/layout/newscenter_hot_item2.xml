@@ -3,7 +3,8 @@
               android:orientation="vertical"
               android:padding="10dp"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+              android:id="@+id/layout_2">
 
 
     <LinearLayout
@@ -22,6 +23,8 @@
 
         <TextView
             android:id="@+id/title2"
+            android:textSize="18dp"
+            android:textColor="#000"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1000我是新闻"/>
@@ -36,6 +39,8 @@
         <TextView
             android:id="@+id/media_name2"
             android:text="新浪网"
+            android:background="#F5B910"
+            android:textColor="#eee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

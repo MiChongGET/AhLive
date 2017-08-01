@@ -1,7 +1,6 @@
 package cn.buildworld.ahlive.fragment;
 
 import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.FragmentTabHost;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
-import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 
@@ -17,7 +15,7 @@ import java.util.List;
 
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.adapter.FunVideoAdapter;
-import cn.buildworld.ahlive.bean.FunVideoBean;
+import cn.buildworld.ahlive.bean.funvideo.FunVideoBean;
 import cn.buildworld.ahlive.utils.MyCallBack;
 import cn.buildworld.ahlive.utils.MyDecoration;
 import cn.buildworld.ahlive.utils.StandardVideoPlayer;
@@ -25,7 +23,6 @@ import cn.buildworld.ahlive.utils.XUtils;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 import fm.jiecao.jcvideoplayer_lib.JCMediaManager;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
 /**
  * 作者：MiChong on 2017/7/12 0012 20:16

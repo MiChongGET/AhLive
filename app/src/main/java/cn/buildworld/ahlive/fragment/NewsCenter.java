@@ -35,13 +35,14 @@ public class NewsCenter extends BaseFragment {
 
         mList = new ArrayList<Fragment>();
         mList.add(new NewsCenterHot());
-        mList.add(new NewsCenterHot());
-        mList.add(new NewsCenterHot());
-        mList.add(new NewsCenterHot());
+        mList.add(new NewsCenterSociety());
+        mList.add(new NewsCenterJoke());
+        mList.add(new NewsCenterImage());
 
         MyAdapter myAdapter = new MyAdapter(getFragmentManager());
         mViewPager.setAdapter(myAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
+
 
 
         return view;

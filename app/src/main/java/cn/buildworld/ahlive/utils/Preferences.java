@@ -46,4 +46,16 @@ public class Preferences {
         config.edit().putInt(key, value).commit();
     }
 
+    public static long getLong(Context context, String key, long value){
+        SharedPreferences config = context.getSharedPreferences("config", Context.MODE_PRIVATE);
+        return config.getLong(key,value);
+    }
+
+
+    public static void setLong(Context context,String key,long value){
+        SharedPreferences config = context.getSharedPreferences("config", Context.MODE_PRIVATE);
+
+        config.edit().putLong(key, value).commit();
+    }
+
 }

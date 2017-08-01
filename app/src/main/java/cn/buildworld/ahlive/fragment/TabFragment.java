@@ -65,12 +65,12 @@ public class TabFragment extends BaseFragment {
                     addfragment(TAG_WORK);
 
                     return true;
-                case R.id.navigation_setting:
-//                    getFragmentManager().beginTransaction().replace(R.id.content,Setting.newInstance(),null).commit();
-                    addfragment(TAG_SETTING);
-
-
-                    return true;
+//                case R.id.navigation_setting:
+////                    getFragmentManager().beginTransaction().replace(R.id.content,Setting.newInstance(),null).commit();
+//                    addfragment(TAG_SETTING);
+//
+//
+//                    return true;
             }
             return false;
         }
@@ -91,9 +91,10 @@ public class TabFragment extends BaseFragment {
                 mFragment = new Server();
             }else if (tag.equals("WORK")){
                 mFragment = new GaoxiaoVideo();
-            }else if (tag.equals("SETTING")){
-                mFragment = new Setting();
             }
+// else if (tag.equals("SETTING")){
+//                mFragment = new Setting();
+//            }
 
             if (currentFragment != null){
                 transaction.hide(currentFragment);

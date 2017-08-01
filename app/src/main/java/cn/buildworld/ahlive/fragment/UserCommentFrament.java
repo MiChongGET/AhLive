@@ -12,7 +12,7 @@ import java.util.List;
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.adapter.HotMovieComments;
 import cn.buildworld.ahlive.adapter.HotMovieCommentsAdapter;
-import cn.buildworld.ahlive.bean.UserCommentBean;
+import cn.buildworld.ahlive.bean.movie.UserCommentBean;
 import cn.buildworld.ahlive.listener.LoadMoreScrollListener;
 import cn.buildworld.ahlive.utils.LinearLayoutManagerWrapper;
 import cn.buildworld.ahlive.utils.MyCallBack;
@@ -36,29 +36,6 @@ public class UserCommentFrament extends BaseFragment implements HotMovieComments
         mMovieId = movieId;
     }
 
-    //
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_user_comment);
-//
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
-//        toolbar.setTitle("电影评论区");
-//        setSupportActionBar(toolbar);
-//
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//        getSupportActionBar().setHomeButtonEnabled(true);
-//
-//        Intent intent = getIntent();
-//        Bundle bundle = intent.getExtras();
-//        mMovieId = bundle.getString("movie_id");
-//
-//        init();
-////        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.HORIZONTAL));
-//
-//        initData();
-//
-//    }
 
     @Override
     public View initView() {
