@@ -13,10 +13,9 @@ import java.util.List;
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.adapter.NewsCentJokeAdapter;
 import cn.buildworld.ahlive.bean.news.NewsCenterHotBean;
-import cn.buildworld.ahlive.utils.MyCallBack;
-import cn.buildworld.ahlive.utils.MyDecoration;
+import cn.buildworld.ahlive.utils.net.MyCallBack;
 import cn.buildworld.ahlive.utils.Preferences;
-import cn.buildworld.ahlive.utils.XUtils;
+import cn.buildworld.ahlive.utils.net.XUtils;
 
 /**
  * 作者：MiChong on 2017/7/12 0012 20:16

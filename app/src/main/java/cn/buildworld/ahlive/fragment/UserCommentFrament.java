@@ -15,9 +15,9 @@ import cn.buildworld.ahlive.adapter.HotMovieCommentsAdapter;
 import cn.buildworld.ahlive.bean.movie.UserCommentBean;
 import cn.buildworld.ahlive.listener.LoadMoreScrollListener;
 import cn.buildworld.ahlive.utils.LinearLayoutManagerWrapper;
-import cn.buildworld.ahlive.utils.MyCallBack;
+import cn.buildworld.ahlive.utils.net.MyCallBack;
 import cn.buildworld.ahlive.utils.MyDecoration;
-import cn.buildworld.ahlive.utils.XUtils;
+import cn.buildworld.ahlive.utils.net.XUtils;
 
 public class UserCommentFrament extends BaseFragment implements HotMovieCommentsAdapter.LoadMoreListener{
 

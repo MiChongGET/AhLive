@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vondear.rxtools.RxAnimationUtils;
+import com.vondear.rxtools.RxEncryptUtils;
 import com.vondear.rxtools.RxKeyboardUtils;
 import com.vondear.rxtools.activity.AndroidBug5497Workaround;
 
@@ -32,6 +33,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.buildworld.ahlive.R;
+import cn.buildworld.ahlive.utils.Preferences;
+import cn.buildworld.ahlive.utils.net.MyCallBack;
+import cn.buildworld.ahlive.utils.net.XUtils;
+import retrofit2.http.GET;
 
 import static cn.buildworld.ahlive.R.id.service_1;
 
@@ -82,7 +87,37 @@ public class AppLoginActivity extends AppCompatActivity {
         }
 
         initView();
-        initEvent();}
+        initEvent();
+
+
+
+
+    }
+
+    //网络登录
+    private void doLogin(final String name, final String passwd) {
+        String url = "http://www.buildworld.xyz/ahlivelogin/login.php?name="+name+"&passwd="+passwd;
+        XUtils.Get(url,null,new MyCallBack<String>(){
+            @Override
+            public void onSuccess(String result) {
+                super.onSuccess(result);
+                if (result.equals("0")){
+                    Toast.makeText(AppLoginActivity.this, "用户名不存在，请注册", Toast.LENGTH_SHORT).show();
+                }else if (result.equals("1")){
+                    Toast.makeText(AppLoginActivity.this, "密码错误！！！", Toast.LENGTH_SHORT).show();
+                }else if (result.equals("2")){
+                    RxKeyboardUtils.hideSoftInput(AppLoginActivity.this);
+                    Toast.makeText(AppLoginActivity.this, "登录成功！！！", Toast.LENGTH_SHORT).show();
+                    Preferences.setString(AppLoginActivity.this,"name",name);
+                    Preferences.setString(AppLoginActivity.this,"passwd",passwd);
+                    startActivity(new Intent(AppLoginActivity.this,SlidingActivity.class));
+                    finish();
+                }
+
+            }
+        });
+    }
+
     private void initView(){
         screenHeight = this.getResources().getDisplayMetrics().heightPixels; //获取屏幕高度
         keyHeight = screenHeight / 3;//弹起高度为屏幕高度的1/3
@@ -182,17 +217,16 @@ public class AppLoginActivity extends AppCompatActivity {
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                RxKeyboardUtils.hideSoftInput(AppLoginActivity.this);
+                if (!(TextUtils.isEmpty(mEtMobile.getText().toString())) && !(TextUtils.isEmpty(mEtPassword.getText().toString()))){
+                    RxKeyboardUtils.hideSoftInput(AppLoginActivity.this);
+                    doLogin(mEtMobile.getText().toString(),mEtPassword.getText().toString());
+                }else
+                    Toast.makeText(AppLoginActivity.this, "不能为空", Toast.LENGTH_SHORT).show();
+                    return;
+
             }
         });
 
-
-//        mForgetPassword.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(AppLoginActivity.this,AppRegistActivity.class));
-//            }
-//        });
 
         mRegist.setOnClickListener(new View.OnClickListener() {
             @Override

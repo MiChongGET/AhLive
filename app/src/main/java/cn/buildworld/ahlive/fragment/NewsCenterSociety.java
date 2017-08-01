@@ -7,7 +7,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -18,10 +17,10 @@ import cn.buildworld.ahlive.activity.NewsBrowserActivity;
 import cn.buildworld.ahlive.adapter.NewsCentHotAdapter;
 import cn.buildworld.ahlive.bean.news.NewCenterHotContentBean;
 import cn.buildworld.ahlive.bean.news.NewsCenterHotBean;
-import cn.buildworld.ahlive.utils.MyCallBack;
+import cn.buildworld.ahlive.utils.net.MyCallBack;
 import cn.buildworld.ahlive.utils.MyDecoration;
 import cn.buildworld.ahlive.utils.Preferences;
-import cn.buildworld.ahlive.utils.XUtils;
+import cn.buildworld.ahlive.utils.net.XUtils;
 
 /**
  * 作者：MiChong on 2017/7/12 0012 20:16

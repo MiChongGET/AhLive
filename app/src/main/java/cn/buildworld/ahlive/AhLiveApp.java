@@ -27,13 +27,6 @@ public class AhLiveApp extends Application {
         x.Ext.setDebug(true);
         RxUtils.init(this);
 
-        String id = Preferences.getString(getApplicationContext(), "deviceID", null);
-        if (TextUtils.isEmpty(id)) {
-            TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
-            String deviceID = TelephonyMgr.getDeviceId();
-//            Log.i(TAG, "设备序列号: " + deviceID);
-            Preferences.setString(getApplicationContext(),"deviceID",deviceID);
 
-        }
     }
 }

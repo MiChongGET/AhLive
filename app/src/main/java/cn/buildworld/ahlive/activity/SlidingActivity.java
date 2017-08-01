@@ -1,14 +1,17 @@
 package cn.buildworld.ahlive.activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -22,7 +25,9 @@ import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+import com.bumptech.glide.Glide;
 
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Locale;
@@ -105,6 +110,7 @@ public class SlidingActivity extends CheckPermissionsActivity
             @Override
             public void onClick(View v) {
                 Toast.makeText(SlidingActivity.this, "个人中心", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(SlidingActivity.this,PersonalActivity.class));
             }
         });
 
@@ -119,6 +125,22 @@ public class SlidingActivity extends CheckPermissionsActivity
         mPosition = (TextView) mHeaderview.findViewById(R.id.position);
         mHeaderIcon = (ImageView) mHeaderview.findViewById(R.id.header_icon);
 
+        String iconUrl = Preferences.getString(SlidingActivity.this, "header_icon_url", null);
+        if (!TextUtils.isEmpty(iconUrl)){
+            Uri uri = Uri.parse(iconUrl);
+            Glide.with(SlidingActivity.this)
+                    .load(uri)
+                    .into(mHeaderIcon);
+        }
+
+        String id = Preferences.getString(getApplicationContext(), "deviceID", null);
+        if (TextUtils.isEmpty(id)) {
+            TelephonyManager TelephonyMgr = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
+            String deviceID = TelephonyMgr.getDeviceId();
+//            Log.i(TAG, "设备序列号: " + deviceID);
+            Preferences.setString(getApplicationContext(),"deviceID",deviceID);
+
+        }
 
 
     }

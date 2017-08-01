@@ -1,4 +1,4 @@
-package cn.buildworld.ahlive.utils;
+package cn.buildworld.ahlive.utils.net;
 
 import com.google.gson.Gson;
 

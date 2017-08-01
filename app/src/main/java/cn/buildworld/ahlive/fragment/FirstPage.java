@@ -24,9 +24,9 @@ import cn.buildworld.ahlive.activity.ArticlePageActivity;
 import cn.buildworld.ahlive.bean.article.Article;
 import cn.buildworld.ahlive.bean.BundleArticle;
 import cn.buildworld.ahlive.api.ApiUrl;
-import cn.buildworld.ahlive.utils.MyCallBack;
-import cn.buildworld.ahlive.utils.NetUtils;
-import cn.buildworld.ahlive.utils.XUtils;
+import cn.buildworld.ahlive.utils.net.MyCallBack;
+import cn.buildworld.ahlive.utils.net.NetUtils;
+import cn.buildworld.ahlive.utils.net.XUtils;
 
 /**
  * 作者：MiChong on 2017/7/12 0012 20:16

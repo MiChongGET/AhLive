@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import java.util.ArrayList;
 
 import cn.buildworld.ahlive.R;
+import cn.buildworld.ahlive.SplashActivity;
 import cn.buildworld.ahlive.activity.SlidingActivity;
 import cn.buildworld.ahlive.utils.Preferences;
 
@@ -110,7 +111,7 @@ public class GuideActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Preferences.setBoolean(getApplicationContext(),"first_start",false);
-                startActivity(new Intent(GuideActivity.this, SlidingActivity.class));
+                startActivity(new Intent(GuideActivity.this, SplashActivity.class));
                 finish();
             }
         });

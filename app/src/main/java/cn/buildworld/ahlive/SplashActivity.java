@@ -3,6 +3,7 @@ package cn.buildworld.ahlive;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.WindowManager;
 
 import java.util.Timer;
@@ -32,12 +33,17 @@ public class SplashActivity extends AppCompatActivity {
                 if (Preferences.getBoolean(SplashActivity.this,"first_start",true)){
                     Preferences.setBoolean(SplashActivity.this,"first_start",false);
                     startActivity(new Intent(SplashActivity.this,GuideActivity.class));
-                }else {
-                    startActivity(new Intent(SplashActivity.this,AppRegistActivity.class));
+                    finish();
                 }
-//                startActivity(new Intent(SplashActivity.this,GuideActivity.class));
+                else if (TextUtils.isEmpty(Preferences.getString(SplashActivity.this,"name",null))){
+                    startActivity(new Intent(SplashActivity.this,AppLoginActivity.class));
+                    finish();
+                }
 
-                finish();
+                else {
+                    startActivity(new Intent(SplashActivity.this, SlidingActivity.class));
+                    finish();
+                }
             }
         };
 

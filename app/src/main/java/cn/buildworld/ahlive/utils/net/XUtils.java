@@ -1,4 +1,4 @@
-package cn.buildworld.ahlive.utils;
+package cn.buildworld.ahlive.utils.net;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;

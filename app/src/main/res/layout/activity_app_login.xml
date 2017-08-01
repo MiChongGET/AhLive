@@ -44,7 +44,7 @@
                 android:layout_marginTop="200dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingLeft="13dp">
+                android:paddingLeft="17dp">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -103,6 +103,7 @@
                 <EditText
                     android:id="@+id/et_password"
                     android:layout_width="0dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@null"

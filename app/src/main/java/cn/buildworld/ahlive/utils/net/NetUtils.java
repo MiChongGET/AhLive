@@ -1,4 +1,4 @@
-package cn.buildworld.ahlive.utils;
+package cn.buildworld.ahlive.utils.net;
 
 import android.app.Activity;
 import android.content.ComponentName;

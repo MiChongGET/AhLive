@@ -32,8 +32,8 @@ import cn.buildworld.ahlive.fragment.MovieContentFragment;
 import cn.buildworld.ahlive.fragment.MovieVideoFragment;
 import cn.buildworld.ahlive.api.ApiUrl;
 import cn.buildworld.ahlive.fragment.UserCommentFrament;
-import cn.buildworld.ahlive.utils.MyCallBack;
-import cn.buildworld.ahlive.utils.XUtils;
+import cn.buildworld.ahlive.utils.net.MyCallBack;
+import cn.buildworld.ahlive.utils.net.XUtils;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 
 public class MovieDetailActivity extends AppCompatActivity {

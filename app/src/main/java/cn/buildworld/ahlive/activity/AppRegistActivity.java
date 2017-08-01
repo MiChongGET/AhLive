@@ -2,6 +2,7 @@ package cn.buildworld.ahlive.activity;
 
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -217,7 +218,13 @@ public class AppRegistActivity extends AppCompatActivity {
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mEtPassword.getText().toString().equals(mEtPassword_a.getText().toString()) && !TextUtils.isEmpty(mEtMobile.getText().toString())){
+                if ((!TextUtils.isEmpty(mEtPassword.getText().toString())) &&
+                        (!TextUtils.isEmpty(mEtPassword_a.getText().toString())) &&
+                        (!TextUtils.isEmpty(mEtMobile.getText().toString()))){
+                    Toast.makeText(AppRegistActivity.this, "用户名密码不能为空！！！", Toast.LENGTH_SHORT).show();
+
+                }
+                else if (mEtPassword.getText().toString().equals(mEtPassword_a.getText().toString()) && !TextUtils.isEmpty(mEtMobile.getText().toString())){
                     RxKeyboardUtils.hideSoftInput(AppRegistActivity.this);
                     Toast.makeText(AppRegistActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
                 }else {
@@ -230,7 +237,8 @@ public class AppRegistActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(AppRegistActivity.this, "登录", Toast.LENGTH_SHORT).show();
-//                startActivity(new Intent(AppRegistActivity.this,AppLoginActivity.class));
+                startActivity(new Intent(AppRegistActivity.this,AppLoginActivity.class));
+                finish();
             }
         });
     }
@@ -255,7 +263,7 @@ public class AppRegistActivity extends AppCompatActivity {
                 break;
 //            case R.id.iv_show_pwd:
 //                if (mEtPassword.getInputType() != InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD) {
-//                    mEtPassword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+//                    mEtPa xssword.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
 //                    mIvShowPwd.setImageResource(R.drawable.pass_visuable);
 //                } else {
 //                    mEtPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
