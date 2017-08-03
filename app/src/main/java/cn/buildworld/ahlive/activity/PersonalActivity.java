@@ -470,8 +470,15 @@ public class PersonalActivity extends ActivityBase {
             @Override
             public void onClick(View v) {
                 RxFileUtils.cleanCustomCache(String.valueOf(resultUri));
+
+                //清空个人信息
                 Preferences.setString(PersonalActivity.this,"name",null);
+                Preferences.setString(PersonalActivity.this,"birthday", null);
+                Preferences.setString(PersonalActivity.this,"City", null);
+                Preferences.setString(PersonalActivity.this,"xingzuo", null);
+                Preferences.setString(PersonalActivity.this,"sign", null);
                 Preferences.setString(PersonalActivity.this,"header_icon_url", null);
+
 //                startActivity(new Intent(PersonalActivity.this,AppLoginActivity.class));
                 //干掉之前所有的activity
                 RxActivityUtils.skipActivityAndFinishAll(PersonalActivity.this,AppLoginActivity.class);

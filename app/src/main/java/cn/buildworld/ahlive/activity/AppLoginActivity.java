@@ -25,7 +25,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vondear.rxtools.RxAnimationUtils;
-import com.vondear.rxtools.RxEncryptUtils;
 import com.vondear.rxtools.RxKeyboardUtils;
 import com.vondear.rxtools.activity.AndroidBug5497Workaround;
 
@@ -36,7 +35,6 @@ import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.utils.Preferences;
 import cn.buildworld.ahlive.utils.net.MyCallBack;
 import cn.buildworld.ahlive.utils.net.XUtils;
-import retrofit2.http.GET;
 
 import static cn.buildworld.ahlive.R.id.service_1;
 
