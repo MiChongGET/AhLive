@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -23,6 +24,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.vondear.rxtools.RxActivityUtils;
 import com.vondear.rxtools.RxAnimationUtils;
 import com.vondear.rxtools.RxKeyboardUtils;
 import com.vondear.rxtools.activity.AndroidBug5497Workaround;
@@ -31,6 +33,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.buildworld.ahlive.R;
+import cn.buildworld.ahlive.utils.Preferences;
+import cn.buildworld.ahlive.utils.net.MyCallBack;
+import cn.buildworld.ahlive.utils.net.XUtils;
 
 import static cn.buildworld.ahlive.R.id.service_1;
 
@@ -91,7 +96,7 @@ public class AppRegistActivity extends AppCompatActivity {
     }
     private void initView(){
         screenHeight = this.getResources().getDisplayMetrics().heightPixels; //获取屏幕高度
-        keyHeight = screenHeight / 3;//弹起高度为屏幕高度的1/3
+        keyHeight = screenHeight / 4;//弹起高度为屏幕高度的1/3
     }
 
 
@@ -196,7 +201,7 @@ public class AppRegistActivity extends AppCompatActivity {
                         mAnimatorTranslateY.setDuration(300);
                         mAnimatorTranslateY.setInterpolator(new LinearInterpolator());
                         mAnimatorTranslateY.start();
-                        RxAnimationUtils.zoomIn(mLogo, 0.6f, dist);
+                        RxAnimationUtils.zoomIn(mLogo, 0.5f, dist);
                     }
                     mService.setVisibility(View.INVISIBLE);
 
@@ -208,7 +213,7 @@ public class AppRegistActivity extends AppCompatActivity {
                         mAnimatorTranslateY.setInterpolator(new LinearInterpolator());
                         mAnimatorTranslateY.start();
                         //键盘收回后，logo恢复原来大小，位置同样回到初始位置
-                        RxAnimationUtils.zoomOut(mLogo, 0.6f);
+                        RxAnimationUtils.zoomOut(mLogo, 0.5f);
                     }
                     mService.setVisibility(View.VISIBLE);
                 }
@@ -218,16 +223,36 @@ public class AppRegistActivity extends AppCompatActivity {
         mBtnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if ((!TextUtils.isEmpty(mEtPassword.getText().toString())) &&
-                        (!TextUtils.isEmpty(mEtPassword_a.getText().toString())) &&
-                        (!TextUtils.isEmpty(mEtMobile.getText().toString()))){
+                if (TextUtils.isEmpty(mEtMobile.getText().toString()) ||
+                        TextUtils.isEmpty(mEtPassword.getText().toString()) ||
+                        TextUtils.isEmpty(mEtPassword_a.getText().toString())
+                        ){
                     Toast.makeText(AppRegistActivity.this, "用户名密码不能为空！！！", Toast.LENGTH_SHORT).show();
 
                 }
-                else if (mEtPassword.getText().toString().equals(mEtPassword_a.getText().toString()) && !TextUtils.isEmpty(mEtMobile.getText().toString())){
+                else if (mEtPassword.getText().toString().equals(mEtPassword_a.getText().toString()) && (!TextUtils.isEmpty(mEtMobile.getText().toString()))){
                     RxKeyboardUtils.hideSoftInput(AppRegistActivity.this);
-                    Toast.makeText(AppRegistActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
-                }else {
+
+                    final String name = mEtMobile.getText().toString();
+                    String url = "http://www.buildworld.xyz/ahlivelogin/regist.php?name="+name+"&passwd="+mEtPassword.getText().toString();
+                    XUtils.Get(url,null,new MyCallBack<String>(){
+                        @Override
+                        public void onSuccess(String result) {
+                            super.onSuccess(result);
+
+                            if (result.equals("4")){
+                                Toast.makeText(AppRegistActivity.this, "用户名已经存在！！！", Toast.LENGTH_SHORT).show();
+                            }else if (result.equals("5")){
+                                Toast.makeText(AppRegistActivity.this, "创建失败，服务器错误！！！", Toast.LENGTH_SHORT).show();
+                            }else if (result.equals("6")){
+                                Toast.makeText(AppRegistActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
+                                Preferences.setString(AppRegistActivity.this,"name",name);
+                                RxActivityUtils.skipActivityAndFinishAll(AppRegistActivity.this,SlidingActivity.class);
+                            }
+                        }
+                    });
+
+                }else if (!mEtPassword.getText().toString().equals(mEtPassword_a.getText().toString())){
                     Toast.makeText(AppRegistActivity.this, "两次密码不一致", Toast.LENGTH_SHORT).show();
                 }
             }

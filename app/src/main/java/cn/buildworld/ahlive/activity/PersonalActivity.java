@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.vondear.rxtools.RxActivityUtils;
 import com.vondear.rxtools.RxBarUtils;
 import com.vondear.rxtools.RxFileUtils;
 import com.vondear.rxtools.RxImageUtils;
@@ -31,9 +32,15 @@ import com.vondear.rxtools.interfaces.onRequestPermissionsListener;
 import com.vondear.rxtools.view.RxTitle;
 import com.vondear.rxtools.view.dialog.RxDialog;
 import com.vondear.rxtools.view.dialog.RxDialogChooseImage;
+import com.vondear.rxtools.view.dialog.RxDialogEditSureCancel;
 import com.vondear.rxtools.view.dialog.RxDialogSureCancel;
+import com.vondear.rxtools.view.dialog.RxDialogWheelYearMonthDay;
 import com.yalantis.ucrop.UCrop;
 import com.yalantis.ucrop.UCropActivity;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -44,7 +51,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import cn.buildworld.ahlive.R;
+import cn.buildworld.ahlive.listener.MyEvent;
 import cn.buildworld.ahlive.utils.Preferences;
+import cn.buildworld.ahlive.utils.net.XUtils;
 import jp.wasabeef.glide.transformations.CropCircleTransformation;
 
 import static com.vondear.rxtools.view.dialog.RxDialogChooseImage.LayoutType.TITLE;
@@ -80,8 +89,16 @@ public class PersonalActivity extends ActivityBase {
     Button mBtnExit;
     @BindView(R.id.activity_user)
     LinearLayout mActivityUser;
+    @BindView(R.id.set_birthday)
+    LinearLayout set_birthday;
+    @BindView(R.id.xingzuo)
+    LinearLayout xingzuo;
+    @BindView(R.id.person_sign)
+    LinearLayout person_sign;
+
     private Uri resultUri;
     private String TAG = "个人中心";
+    private RxDialogWheelYearMonthDay mRxDialogWheelYearMonthDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,7 +106,99 @@ public class PersonalActivity extends ActivityBase {
         RxBarUtils.noTitle(this);
         setContentView(R.layout.activity_personal);
         ButterKnife.bind(this);
+
+        //注册EventBus
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
         initView();
+
+    }
+
+
+    //生日修改器
+    private void initWheelYearMonthDayDialog() {
+        // ------------------------------------------------------------------选择日期开始
+        mRxDialogWheelYearMonthDay = new RxDialogWheelYearMonthDay(this, 1990, 2017);
+        mRxDialogWheelYearMonthDay.getTv_sure().setOnClickListener(
+                new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View arg0) {
+                        if (mRxDialogWheelYearMonthDay.getCheckBox_day().isChecked()) {
+                            mTvBirthday.setText(
+                                    mRxDialogWheelYearMonthDay.getSelectorYear() + "/"
+                                            + mRxDialogWheelYearMonthDay.getSelectorMonth() + "/"
+                                            + mRxDialogWheelYearMonthDay.getSelectorDay() + "/");
+                            Preferences.setString(PersonalActivity.this,"birthday",mRxDialogWheelYearMonthDay.getSelectorYear() + "/"
+                                    + mRxDialogWheelYearMonthDay.getSelectorMonth() + "/"
+                                    + mRxDialogWheelYearMonthDay.getSelectorDay());
+                        } else {
+                            mTvBirthday.setText(
+                                    mRxDialogWheelYearMonthDay.getSelectorYear() + "/"
+                                            + mRxDialogWheelYearMonthDay.getSelectorMonth() + "/");
+                            Preferences.setString(PersonalActivity.this,"birthday",mRxDialogWheelYearMonthDay.getSelectorYear() + "/"
+                                    + mRxDialogWheelYearMonthDay.getSelectorMonth());
+                        }
+                        mRxDialogWheelYearMonthDay.cancel();
+                    }
+                });
+        mRxDialogWheelYearMonthDay.getTv_cancle().setOnClickListener(
+                new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View arg0) {
+                        mRxDialogWheelYearMonthDay.cancel();
+                    }
+                });
+        // ------------------------------------------------------------------选择日期结束
+    }
+
+    //填写星座
+    public void setXingzuo(){
+        final RxDialogEditSureCancel rxDialogEditSureCancel = new RxDialogEditSureCancel(PersonalActivity.this);//提示弹窗
+//               rxDialogEditSureCancel.setContent("123123");
+//        rxDialogEditSureCancel.setTitle("星座");
+        rxDialogEditSureCancel.getTvSure().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = rxDialogEditSureCancel.getEditText().getText().toString();
+                mTvConstellation.setText(s);
+                Preferences.setString(PersonalActivity.this,"xingzuo",s);
+                rxDialogEditSureCancel.dismiss();
+            }
+        });
+        rxDialogEditSureCancel.getTvCancel().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rxDialogEditSureCancel.cancel();
+            }
+        });
+        rxDialogEditSureCancel.show();
+    }
+
+    //填写星座
+    public void setSign(){
+        final RxDialogEditSureCancel rxDialogEditSureCancel = new RxDialogEditSureCancel(PersonalActivity.this);//提示弹窗
+//               rxDialogEditSureCancel.setContent("123123");
+//        rxDialogEditSureCancel.setTitle("星座");
+        rxDialogEditSureCancel.getTvSure().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = rxDialogEditSureCancel.getEditText().getText().toString();
+                mEditText2.setText(s);
+                Preferences.setString(PersonalActivity.this,"sign",s);
+                EventBus.getDefault().post(new MyEvent(s));
+                rxDialogEditSureCancel.dismiss();
+            }
+        });
+        rxDialogEditSureCancel.getTvCancel().setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rxDialogEditSureCancel.cancel();
+            }
+        });
+        rxDialogEditSureCancel.show();
     }
 
     protected void initView() {
@@ -122,6 +231,53 @@ public class PersonalActivity extends ActivityBase {
                 return false;
             }
         });
+
+
+        String birthday = Preferences.getString(PersonalActivity.this, "birthday", null);
+        if(!TextUtils.isEmpty(birthday)){
+            mTvBirthday.setText(birthday);
+        }
+        //设置年月日
+        set_birthday.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initWheelYearMonthDayDialog();
+                mRxDialogWheelYearMonthDay.show();
+            }
+        });
+
+        String name = Preferences.getString(PersonalActivity.this, "name", null);
+        if(!TextUtils.isEmpty(name)){
+            mTvName.setText(name);
+        }
+
+        String city = Preferences.getString(PersonalActivity.this, "City", null);
+        if (!TextUtils.isEmpty(city)){
+            mTvAddress.setText(city);
+        }
+
+       xingzuo.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               setXingzuo();
+           }
+       });
+
+
+        String xingzuo = Preferences.getString(PersonalActivity.this, "xingzuo", null);
+        if (!TextUtils.isEmpty(xingzuo))
+        mTvConstellation.setText(xingzuo);
+
+
+        person_sign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setSign();
+            }
+        });
+        String sign = Preferences.getString(PersonalActivity.this, "sign", null);
+        if (!TextUtils.isEmpty(sign))
+            mEditText2.setText(sign);
     }
 
     /**
@@ -219,6 +375,9 @@ public class PersonalActivity extends ActivityBase {
                     resultUri = UCrop.getOutput(data);
                     Preferences.setString(PersonalActivity.this,"header_icon_url", String.valueOf(resultUri));
                     Log.i(TAG, "onActivityResult: "+resultUri);
+                    if (resultUri != null) {
+                        EventBus.getDefault().post(new MyEvent(resultUri));
+                    }
                     roadImageView(resultUri, mIvAvatar);
                     RxSPUtils.putContent(mContext, "AVATAR", resultUri.toString());
                 } else if (resultCode == UCrop.RESULT_ERROR) {
@@ -312,10 +471,30 @@ public class PersonalActivity extends ActivityBase {
             public void onClick(View v) {
                 RxFileUtils.cleanCustomCache(String.valueOf(resultUri));
                 Preferences.setString(PersonalActivity.this,"name",null);
-                startActivity(new Intent(PersonalActivity.this,AppLoginActivity.class));
-                finish();
+                Preferences.setString(PersonalActivity.this,"header_icon_url", null);
+//                startActivity(new Intent(PersonalActivity.this,AppLoginActivity.class));
+                //干掉之前所有的activity
+                RxActivityUtils.skipActivityAndFinishAll(PersonalActivity.this,AppLoginActivity.class);
             }
         });
         rxDialogSureCancel.show();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventMainThread(MyEvent event){
+
+    }
+
+//    public void upload(){
+//        XUtils.UpLoadFile()
+//
+//    }
+
 }

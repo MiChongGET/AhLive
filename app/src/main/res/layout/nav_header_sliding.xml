@@ -23,6 +23,7 @@
             android:src="@drawable/header" />
 
         <TextView
+            android:id="@+id/user_name"
             android:textSize="30dp"
             android:layout_gravity="center"
             android:text="MiChong"

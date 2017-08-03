@@ -1,9 +1,6 @@
 package cn.buildworld.ahlive.activity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -27,13 +24,13 @@ import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.bumptech.glide.Glide;
 
-import java.net.URL;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.Locale;
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.fragment.TabFragment;
+import cn.buildworld.ahlive.listener.MyEvent;
 import cn.buildworld.ahlive.utils.Preferences;
 import cn.buildworld.ahlive.utils.StandardVideoPlayer;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
@@ -61,7 +58,7 @@ public class SlidingActivity extends CheckPermissionsActivity
                     if (!(TextUtils.isEmpty(aMapLocation.getCity()) && TextUtils.isEmpty(aMapLocation.getCountry()))){
 
                         Preferences.setString(SlidingActivity.this,"City",aMapLocation.getCity());
-                        Preferences.setString(SlidingActivity.this,"City",aMapLocation.getCountry());
+                        Preferences.setString(SlidingActivity.this,"Country",aMapLocation.getCountry());
                     }
 
 
@@ -83,6 +80,8 @@ public class SlidingActivity extends CheckPermissionsActivity
     private TextView mPosition;
     private ImageView mHeaderIcon;
     private View mHeaderview;
+    private TextView mUserName;
+    private TextView mSign;
 
 
     @Override
@@ -91,6 +90,10 @@ public class SlidingActivity extends CheckPermissionsActivity
         setContentView(R.layout.activity_sliding);
         setSupportActionBar(mToolbar);
 
+        //注册EventBus
+        if (!EventBus.getDefault().isRegistered(this)) {
+            EventBus.getDefault().register(this);
+        }
         //界面初始化
         init();
 
@@ -117,6 +120,8 @@ public class SlidingActivity extends CheckPermissionsActivity
     }
 
     public void init(){
+
+
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -124,12 +129,20 @@ public class SlidingActivity extends CheckPermissionsActivity
         mHeaderview = mNavigationView.getHeaderView(0);
         mPosition = (TextView) mHeaderview.findViewById(R.id.position);
         mHeaderIcon = (ImageView) mHeaderview.findViewById(R.id.header_icon);
+        mUserName = (TextView) mHeaderview.findViewById(R.id.user_name);
+        mSign = (TextView) mHeaderview.findViewById(R.id.sign);
+
+        String name = Preferences.getString(SlidingActivity.this, "name", null);
+        if(!TextUtils.isEmpty(name)){
+            mUserName.setText(name);
+        }
 
         String iconUrl = Preferences.getString(SlidingActivity.this, "header_icon_url", null);
         if (!TextUtils.isEmpty(iconUrl)){
             Uri uri = Uri.parse(iconUrl);
             Glide.with(SlidingActivity.this)
                     .load(uri)
+                    .error(R.drawable.header)
                     .into(mHeaderIcon);
         }
 
@@ -142,6 +155,10 @@ public class SlidingActivity extends CheckPermissionsActivity
 
         }
 
+        String sign = Preferences.getString(SlidingActivity.this, "sign", null);
+        if (!TextUtils.isEmpty(sign)){
+            mSign.setText(sign);
+        }
 
     }
 
@@ -244,5 +261,24 @@ public class SlidingActivity extends CheckPermissionsActivity
         super.onPause();
         StandardVideoPlayer.pauseVideo();
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEventMainThread(MyEvent event){
+        if (event.getIcon_url() != null) {
+            Glide.with(this).load(event.getIcon_url()).into(mHeaderIcon);
+            Log.i(TAG, "onEventMainThread: " + "头像更改完成！！！");
+        }
+
+        if (!TextUtils.isEmpty(event.getSign()))
+        mSign.setText(event.getSign());
+    }
+
 
 }

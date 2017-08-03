@@ -119,6 +119,7 @@
 
 
     <LinearLayout
+        android:id="@+id/xingzuo"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/white"
@@ -147,6 +148,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/set_birthday"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/white"
@@ -234,6 +236,7 @@
 
 
     <LinearLayout
+        android:id="@+id/person_sign"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginTop="2dp"
