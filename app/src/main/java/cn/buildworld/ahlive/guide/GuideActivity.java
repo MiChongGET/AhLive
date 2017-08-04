@@ -95,7 +95,7 @@ public class GuideActivity extends AppCompatActivity {
 
         //计算两个圆点的距离
         //移动距离 = 第二个圆点的left值 - 第一个圆点的值
-        //  dis = container.getChildAt(1).getLeft() - container.getChildAt(0).getLeft();
+        //  dis = container.getChildAt(one).getLeft() - container.getChildAt(0).getLeft();
 
         //监听layout方法结束的事件，位置确定好之后获取圆点间距
         red_point.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {

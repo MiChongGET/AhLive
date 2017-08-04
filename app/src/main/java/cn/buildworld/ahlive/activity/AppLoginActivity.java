@@ -101,7 +101,7 @@ public class AppLoginActivity extends AppCompatActivity {
                 super.onSuccess(result);
                 if (result.equals("0")){
                     Toast.makeText(AppLoginActivity.this, "用户名不存在，请注册", Toast.LENGTH_SHORT).show();
-                }else if (result.equals("1")){
+                }else if (result.equals("one")){
                     Toast.makeText(AppLoginActivity.this, "密码错误！！！", Toast.LENGTH_SHORT).show();
                 }else if (result.equals("2")){
                     RxKeyboardUtils.hideSoftInput(AppLoginActivity.this);

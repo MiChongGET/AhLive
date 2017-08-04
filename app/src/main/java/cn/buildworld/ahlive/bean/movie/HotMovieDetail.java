@@ -8,9 +8,10 @@ import java.util.List;
  */
 public class HotMovieDetail {
 
+
     /**
      * code : 1
-     * data : {"advertisement":{"advList":[{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"商城好物不过百+商城权力的游戏","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0720/qygdt750210m.html"}],"count":1,"error":"","success":true},"basic":{"actors":[{"actorId":925071,"img":"http://img31.mtime.cn/ph/2014/06/27/092600.22683345_1280X720X2.jpg","name":"张震","nameEn":"Chang Chen","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152634.36322213.jpg","roleName":"沈炼"},{"actorId":1249009,"img":"http://img5.mtime.cn/ph/2016/10/18/102915.98692348_1280X720X2.jpg","name":"杨幂","nameEn":"Mini Yang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152641.17445470.jpg","roleName":"北斋"},{"actorId":1311848,"img":"http://img5.mtime.cn/ph/2017/02/17/093429.48679538_1280X720X2.jpg","name":"张译","nameEn":"Yi Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152651.74374192.jpg","roleName":"陆文昭"},{"actorId":1321939,"img":"http://img21.mtime.cn/ph/2010/11/01/170346.17438095_1280X720X2.jpg","name":"雷佳音","nameEn":"Jiayin Lei","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152701.71668580.jpg","roleName":"裴纶"},{"actorId":1865764,"img":"http://img31.mtime.cn/ph/2016/01/21/160256.84796032_1280X720X2.jpg","name":"辛芷蕾","nameEn":"Zhilei Xin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152712.34736835.jpg","roleName":"丁白缨"},{"actorId":1258157,"img":"http://img5.mtime.cn/ph/2017/06/22/102852.86789028_1280X720X2.jpg","name":"李媛","nameEn":"Yuan Li","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152723.50244281.jpg","roleName":"丁翀"},{"actorId":987306,"img":"http://img31.mtime.cn/ph/2014/04/11/113007.66141318_1280X720X2.jpg","name":"金士杰","nameEn":"Shijie Jin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152732.76576740.jpg","roleName":"魏忠贤"},{"actorId":1844581,"img":"http://img5.mtime.cn/ph/2017/07/18/102653.29848902_1280X720X2.jpg","name":"刘端端","nameEn":"Duan-duan Liu","roleImg":"","roleName":"朱由检"},{"actorId":1897307,"img":"http://img31.mtime.cn/ph/2015/09/16/143108.62699521_1280X720X2.jpg","name":"武强","nameEn":"Qiang Wu","roleImg":"","roleName":"凌云恺"},{"actorId":1309341,"img":"http://img31.mtime.cn/ph/2014/08/22/152735.34278618_1280X720X2.jpg","name":"王仁君","nameEn":"Renjun Wang","roleImg":"","roleName":"朱由校"},{"actorId":1263025,"img":"http://img31.mtime.cn/ph/2014/03/25/101814.80085355_1280X720X2.jpg","name":"袁文康","nameEn":"Wenkang Yuan","roleImg":"","roleName":"静海"},{"actorId":2216618,"img":"http://img31.mtime.cn/ph/2016/07/08/114359.72243242_1280X720X2.jpg","name":"杨轶","nameEn":"Yi Yang","roleImg":"","roleName":"殷澄"},{"actorId":1255732,"img":"http://img31.mtime.cn/ph/2014/02/22/212941.86525879_1280X720X2.jpg","name":"吴晓亮","nameEn":"Xiaoliang Wu","roleImg":"","roleName":"丁泰"}],"award":{"awardList":[],"totalNominateAward":0,"totalWinAward":0},"commentSpecial":"张震杨幂演绎前传故事揭秘沈炼身世","community":{},"director":{"directorId":1766781,"img":"http://img31.mtime.cn/ph/2014/06/26/094023.20279113_1280X720X2.jpg","name":"路阳","nameEn":"Yang Lu"},"festivals":[],"hotRanking":-1,"img":"http://img5.mtime.cn/mt/2017/07/11/183729.97294820_1280X720X2.jpg","is3D":false,"isDMAX":true,"isEggHunt":true,"isFilter":false,"isIMAX":false,"isIMAX3D":false,"isTicket":true,"message":"该操作将清除您对该片的评分！是否确认？","mins":"120分钟","movieId":228267,"name":"绣春刀II修罗战场","nameEn":"Brotherhood of Blades 2","overallRating":7.8,"personCount":24,"quizGame":{},"releaseArea":"中国","releaseDate":"20170719","showCinemaCount":11,"showDay":1500710400,"showtimeCount":97,"stageImg":{"count":207,"list":[{"imgId":7342923,"imgUrl":"http://img5.mtime.cn/pi/2017/03/31/093040.85504825_1280X720X2.jpg"},{"imgId":7374109,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174428.78509408_1280X720X2.jpg"},{"imgId":7374110,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174432.70702845_1280X720X2.jpg"},{"imgId":7374111,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174437.42765017_1280X720X2.jpg"}]},"story":"影片故事讲述了北镇抚司锦衣卫沈炼在追查案件中身陷阴谋，为了证明清白，沈炼与少女北斋，同僚裴纶协力查明真相。","style":{"isLeadPage":0,"leadImg":"https://img2.mtime.cn/mg/.jpg","leadUrl":""},"totalNominateAward":0,"totalWinAward":0,"type":["动作","剧情","古装"],"url":"https://movie.mtime.com/228267/","video":{"count":11,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899.mp4","img":"http://img5.mtime.cn/mg/2017/07/16/214558.16862149_235X132X4.jpg","title":"绣春刀·修罗战场 终极预告","url":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899_480.mp4","videoId":66604}},"boxOffice":{"movieId":228267,"ranking":1,"todayBox":532594951,"todayBoxDes":"532.59","todayBoxDesUnit":"今日实时(万)","totalBox":9300461633,"totalBoxDes":"9300.46","totalBoxUnit":"累计票房(万)"},"live":{"count":0,"img":"","liveId":0,"playNumTag":"","playTag":"","status":3,"title":""},"related":{"goodsCount":0,"goodsList":[],"relateId":0,"relatedUrl":"https://mall-wv.mtime.cn/#!/commerce/list/","type":0}}
+     * data : {"advertisement":{"advList":[{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"舆情调查问卷","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0726/yqwj750210.html"}],"count":1,"error":"","success":true},"basic":{"actors":[{"actorId":956786,"img":"http://img31.mtime.cn/ph/2014/03/16/192819.71851115_1280X720X2.jpg","name":"吴京","nameEn":"Jing Wu","roleImg":"http://img5.mtime.cn/mg/2017/07/27/164927.98569009.jpg","roleName":"冷锋"},{"actorId":934883,"img":"http://img31.mtime.cn/ph/2014/03/17/070800.55917732_1280X720X2.jpg","name":"弗兰克·格里罗","nameEn":"Frank Grillo","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174723.44781032.jpg","roleName":"老爹"},{"actorId":1249271,"img":"http://img5.mtime.cn/ph/2017/04/21/161257.62213729_1280X720X2.jpg","name":"吴刚","nameEn":"Gang Wu","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174747.16042199.jpg","roleName":"何建国"},{"actorId":1598541,"img":"http://img31.mtime.cn/ph/2014/07/10/163307.26852592_1280X720X2.jpg","name":"张翰","nameEn":"Han Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174758.51799209.jpg","roleName":"卓亦凡"},{"actorId":1533504,"img":"http://img31.mtime.cn/ph/2016/09/02/144901.23751364_1280X720X2.jpg","name":"卢靖姗","nameEn":"Celina Jade","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174737.34089170.jpg","roleName":"瑞秋"},{"actorId":987361,"img":"http://img31.mtime.cn/ph/2014/08/15/104233.34401787_1280X720X2.jpg","name":"丁海峰","nameEn":"Haifeng Ding","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174809.89297347.jpg","roleName":"舰长"},{"actorId":1252055,"img":"http://img31.mtime.cn/ph/2013/05/31/165409.58959998_1280X720X2.jpg","name":"淳于珊珊","nameEn":"Shanshan Chunyu","roleImg":"","roleName":"林志雄"},{"actorId":925356,"img":"http://img31.mtime.cn/ph/2014/03/14/152830.90994067_1280X720X2.jpg","name":"余男","nameEn":"Nan Yu","roleImg":"http://img5.mtime.cn/mg/2017/07/27/164936.13266708.jpg","roleName":"龙小云"},{"actorId":1257967,"img":"http://img31.mtime.cn/ph/2016/08/29/213343.15165853_1280X720X2.jpg","name":"于谦","nameEn":"Qian Yu","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174838.29018537.jpg","roleName":"钱必达"},{"actorId":1087579,"img":"http://img31.mtime.cn/ph/2015/04/03/115824.73215633_1280X720X2.jpg","name":"石兆琪","nameEn":"Zhaoqi Shi","roleImg":"","roleName":"石青松"},{"actorId":2271140,"img":"http://img31.mtime.cn/ph/1140/2271140/2271140_1280X720X2.jpg","name":"","nameEn":"Diana Sylla","roleImg":"","roleName":""},{"actorId":2271141,"img":"http://img31.mtime.cn/ph/1141/2271141/2271141_1280X720X2.jpg","name":"","nameEn":"Nwachukwu Kennedy Chukwuebuka","roleImg":"","roleName":""},{"actorId":1016974,"img":"http://img31.mtime.cn/ph/2015/04/03/120049.10038624_1280X720X2.jpg","name":"倪大红","nameEn":"Dahong Ni","roleImg":"","roleName":"Min Deng"},{"actorId":1176901,"img":"http://img31.mtime.cn/ph/901/1176901/1176901_1280X720X2.jpg","name":"肖竹","nameEn":"Zhu Xiao","roleImg":"","roleName":"Wu Ji"},{"actorId":2288478,"img":"http://img31.mtime.cn/ph/478/2288478/2288478_1280X720X2.jpg","name":"","nameEn":"Qiang Ma","roleImg":"","roleName":"Li Zhijun"},{"actorId":2288479,"img":"http://img31.mtime.cn/ph/479/2288479/2288479_1280X720X2.jpg","name":"","nameEn":"Zibin Fang","roleImg":"","roleName":"Hostage"},{"actorId":2288480,"img":"http://img31.mtime.cn/ph/480/2288480/2288480_1280X720X2.jpg","name":"","nameEn":"Sen Wang","roleImg":"","roleName":"38Shi"},{"actorId":2288481,"img":"http://img31.mtime.cn/ph/481/2288481/2288481_1280X720X2.jpg","name":"","nameEn":"Tengyuan Liu","roleImg":"","roleName":"Yu Fei"},{"actorId":2288482,"img":"http://img31.mtime.cn/ph/482/2288482/2288482_1280X720X2.jpg","name":"","nameEn":"Yongda Zhang","roleImg":"","roleName":"Shao Bing"},{"actorId":1995437,"img":"http://img31.mtime.cn/ph/1437/1995437/1995437_1280X720X2.jpg","name":"","nameEn":"Xiaolong Zhang","roleImg":"","roleName":"Ban Zhaun"}],"award":{"awardList":[],"totalNominateAward":0,"totalWinAward":0},"commentSpecial":"吴京领衔坦克版速度与激情","community":{},"director":{"directorId":956786,"img":"http://img31.mtime.cn/ph/2014/03/16/192819.71851115_1280X720X2.jpg","name":"吴京","nameEn":"Jing Wu"},"festivals":[],"hotRanking":-1,"img":"http://img5.mtime.cn/mt/2017/07/21/162643.51070350_1280X720X2.jpg","is3D":true,"isDMAX":true,"isEggHunt":false,"isFilter":false,"isIMAX":false,"isIMAX3D":false,"isTicket":true,"message":"该操作将清除您对该片的评分！是否确认？","mins":"123分钟","movieId":229733,"name":"战狼2","nameEn":"Wolf Warriors Ⅱ","overallRating":7.5,"personCount":45,"quizGame":{},"releaseArea":"中国","releaseDate":"20170727","showCinemaCount":161,"showDay":1501833600,"showtimeCount":2483,"stageImg":{"count":134,"list":[{"imgId":7326746,"imgUrl":"http://img5.mtime.cn/pi/2017/01/24/154512.14742978_1280X720X2.jpg"},{"imgId":7383461,"imgUrl":"http://img5.mtime.cn/pi/2017/07/31/160016.68206608_1280X720X2.jpg"},{"imgId":7384418,"imgUrl":"http://img5.mtime.cn/pi/2017/08/02/105815.93505652_1280X720X2.jpg"},{"imgId":7384425,"imgUrl":"http://img5.mtime.cn/pi/2017/08/02/105809.98960214_1280X720X2.jpg"}]},"story":"冷锋突然被卷入了一场非洲国家叛乱，本可以安全撤离，却因无法忘记曾经为军人的使命，孤身犯险冲回沦陷区，带领身陷屠杀中的同胞和难民，展开生死逃亡。","style":{"isLeadPage":0,"leadImg":"https://img2.mtime.cn/mg/.jpg","leadUrl":""},"totalNominateAward":0,"totalWinAward":0,"type":["动作","战争"],"url":"https://movie.mtime.com/229733/","video":{"count":18,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/05/mp4/170705093334085272.mp4","img":"http://img5.mtime.cn/mg/2017/07/05/092337.23826562_235X132X4.jpg","title":"战狼2 \u201c开战版\u201d预告","url":"https://vfx.mtime.cn/Video/2017/07/05/mp4/170705093334085272_480.mp4","videoId":66456}},"boxOffice":{"movieId":229733,"ranking":1,"todayBox":17094431548,"todayBoxDes":"1.71","todayBoxDesUnit":"今日实时(亿)","totalBox":222458665290,"totalBoxDes":"22.25","totalBoxUnit":"累计票房(亿)"},"live":{"count":0,"img":"","liveId":0,"playNumTag":"","playTag":"","status":3,"title":""},"related":{"goodsCount":4,"goodsList":[{"background":"#25ACBD","goodsId":106202,"goodsUrl":"https://mall-wv.mtime.cn/#!/commerce/item/106202/?pvkey=3_2603","iconText":"新品","image":"http://img5.mtime.cn/mg/2017/07/27/163758.72779474_294X294X4.jpg","longName":"品漫会 战狼2 iphone7/7plus手机壳","marketPrice":9800,"marketPriceFormat":"98.00","minSalePrice":5900,"minSalePriceFormat":"59.00","name":"战狼2iphone7/7plus手机壳 iPhone7P"},{"background":"#25ACBD","goodsId":106152,"goodsUrl":"https://mall-wv.mtime.cn/#!/commerce/item/106152/","iconText":"新品","image":"http://img5.mtime.cn/mg/2017/07/10/112801.69029898_294X294X4.jpg","longName":"品漫会 战狼2 抱枕","marketPrice":7800,"marketPriceFormat":"78.00","minSalePrice":6800,"minSalePriceFormat":"68.00","name":"战狼2 抱枕"},{"background":"#25ACBD","goodsId":106202,"goodsUrl":"https://mall-wv.mtime.cn/#!/commerce/item/106202/?pvkey=3_2602","iconText":"新品","image":"http://img5.mtime.cn/mg/2017/07/27/163717.19888532_294X294X4.jpg","longName":"品漫会 战狼2 iphone7/7plus手机壳","marketPrice":9800,"marketPriceFormat":"98.00","minSalePrice":5900,"minSalePriceFormat":"59.00","name":"战狼2iphone7/7plus手机壳 iPhone7"}],"relateId":0,"relatedUrl":"https://mall-wv.mtime.cn/?mid=229733&relatedNativeType=1&utm_source=app_movie_btn_more#!/commerce/list/","type":0}}
      * msg : 成功
      * showMsg :
      */
@@ -54,11 +55,11 @@ public class HotMovieDetail {
 
     public static class DataBean {
         /**
-         * advertisement : {"advList":[{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"商城好物不过百+商城权力的游戏","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0720/qygdt750210m.html"}],"count":1,"error":"","success":true}
-         * basic : {"actors":[{"actorId":925071,"img":"http://img31.mtime.cn/ph/2014/06/27/092600.22683345_1280X720X2.jpg","name":"张震","nameEn":"Chang Chen","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152634.36322213.jpg","roleName":"沈炼"},{"actorId":1249009,"img":"http://img5.mtime.cn/ph/2016/10/18/102915.98692348_1280X720X2.jpg","name":"杨幂","nameEn":"Mini Yang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152641.17445470.jpg","roleName":"北斋"},{"actorId":1311848,"img":"http://img5.mtime.cn/ph/2017/02/17/093429.48679538_1280X720X2.jpg","name":"张译","nameEn":"Yi Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152651.74374192.jpg","roleName":"陆文昭"},{"actorId":1321939,"img":"http://img21.mtime.cn/ph/2010/11/01/170346.17438095_1280X720X2.jpg","name":"雷佳音","nameEn":"Jiayin Lei","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152701.71668580.jpg","roleName":"裴纶"},{"actorId":1865764,"img":"http://img31.mtime.cn/ph/2016/01/21/160256.84796032_1280X720X2.jpg","name":"辛芷蕾","nameEn":"Zhilei Xin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152712.34736835.jpg","roleName":"丁白缨"},{"actorId":1258157,"img":"http://img5.mtime.cn/ph/2017/06/22/102852.86789028_1280X720X2.jpg","name":"李媛","nameEn":"Yuan Li","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152723.50244281.jpg","roleName":"丁翀"},{"actorId":987306,"img":"http://img31.mtime.cn/ph/2014/04/11/113007.66141318_1280X720X2.jpg","name":"金士杰","nameEn":"Shijie Jin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152732.76576740.jpg","roleName":"魏忠贤"},{"actorId":1844581,"img":"http://img5.mtime.cn/ph/2017/07/18/102653.29848902_1280X720X2.jpg","name":"刘端端","nameEn":"Duan-duan Liu","roleImg":"","roleName":"朱由检"},{"actorId":1897307,"img":"http://img31.mtime.cn/ph/2015/09/16/143108.62699521_1280X720X2.jpg","name":"武强","nameEn":"Qiang Wu","roleImg":"","roleName":"凌云恺"},{"actorId":1309341,"img":"http://img31.mtime.cn/ph/2014/08/22/152735.34278618_1280X720X2.jpg","name":"王仁君","nameEn":"Renjun Wang","roleImg":"","roleName":"朱由校"},{"actorId":1263025,"img":"http://img31.mtime.cn/ph/2014/03/25/101814.80085355_1280X720X2.jpg","name":"袁文康","nameEn":"Wenkang Yuan","roleImg":"","roleName":"静海"},{"actorId":2216618,"img":"http://img31.mtime.cn/ph/2016/07/08/114359.72243242_1280X720X2.jpg","name":"杨轶","nameEn":"Yi Yang","roleImg":"","roleName":"殷澄"},{"actorId":1255732,"img":"http://img31.mtime.cn/ph/2014/02/22/212941.86525879_1280X720X2.jpg","name":"吴晓亮","nameEn":"Xiaoliang Wu","roleImg":"","roleName":"丁泰"}],"award":{"awardList":[],"totalNominateAward":0,"totalWinAward":0},"commentSpecial":"张震杨幂演绎前传故事揭秘沈炼身世","community":{},"director":{"directorId":1766781,"img":"http://img31.mtime.cn/ph/2014/06/26/094023.20279113_1280X720X2.jpg","name":"路阳","nameEn":"Yang Lu"},"festivals":[],"hotRanking":-1,"img":"http://img5.mtime.cn/mt/2017/07/11/183729.97294820_1280X720X2.jpg","is3D":false,"isDMAX":true,"isEggHunt":true,"isFilter":false,"isIMAX":false,"isIMAX3D":false,"isTicket":true,"message":"该操作将清除您对该片的评分！是否确认？","mins":"120分钟","movieId":228267,"name":"绣春刀II修罗战场","nameEn":"Brotherhood of Blades 2","overallRating":7.8,"personCount":24,"quizGame":{},"releaseArea":"中国","releaseDate":"20170719","showCinemaCount":11,"showDay":1500710400,"showtimeCount":97,"stageImg":{"count":207,"list":[{"imgId":7342923,"imgUrl":"http://img5.mtime.cn/pi/2017/03/31/093040.85504825_1280X720X2.jpg"},{"imgId":7374109,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174428.78509408_1280X720X2.jpg"},{"imgId":7374110,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174432.70702845_1280X720X2.jpg"},{"imgId":7374111,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174437.42765017_1280X720X2.jpg"}]},"story":"影片故事讲述了北镇抚司锦衣卫沈炼在追查案件中身陷阴谋，为了证明清白，沈炼与少女北斋，同僚裴纶协力查明真相。","style":{"isLeadPage":0,"leadImg":"https://img2.mtime.cn/mg/.jpg","leadUrl":""},"totalNominateAward":0,"totalWinAward":0,"type":["动作","剧情","古装"],"url":"https://movie.mtime.com/228267/","video":{"count":11,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899.mp4","img":"http://img5.mtime.cn/mg/2017/07/16/214558.16862149_235X132X4.jpg","title":"绣春刀·修罗战场 终极预告","url":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899_480.mp4","videoId":66604}}
-         * boxOffice : {"movieId":228267,"ranking":1,"todayBox":532594951,"todayBoxDes":"532.59","todayBoxDesUnit":"今日实时(万)","totalBox":9300461633,"totalBoxDes":"9300.46","totalBoxUnit":"累计票房(万)"}
+         * advertisement : {"advList":[{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"舆情调查问卷","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0726/yqwj750210.html"}],"count":1,"error":"","success":true}
+         * basic : {"actors":[{"actorId":956786,"img":"http://img31.mtime.cn/ph/2014/03/16/192819.71851115_1280X720X2.jpg","name":"吴京","nameEn":"Jing Wu","roleImg":"http://img5.mtime.cn/mg/2017/07/27/164927.98569009.jpg","roleName":"冷锋"},{"actorId":934883,"img":"http://img31.mtime.cn/ph/2014/03/17/070800.55917732_1280X720X2.jpg","name":"弗兰克·格里罗","nameEn":"Frank Grillo","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174723.44781032.jpg","roleName":"老爹"},{"actorId":1249271,"img":"http://img5.mtime.cn/ph/2017/04/21/161257.62213729_1280X720X2.jpg","name":"吴刚","nameEn":"Gang Wu","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174747.16042199.jpg","roleName":"何建国"},{"actorId":1598541,"img":"http://img31.mtime.cn/ph/2014/07/10/163307.26852592_1280X720X2.jpg","name":"张翰","nameEn":"Han Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174758.51799209.jpg","roleName":"卓亦凡"},{"actorId":1533504,"img":"http://img31.mtime.cn/ph/2016/09/02/144901.23751364_1280X720X2.jpg","name":"卢靖姗","nameEn":"Celina Jade","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174737.34089170.jpg","roleName":"瑞秋"},{"actorId":987361,"img":"http://img31.mtime.cn/ph/2014/08/15/104233.34401787_1280X720X2.jpg","name":"丁海峰","nameEn":"Haifeng Ding","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174809.89297347.jpg","roleName":"舰长"},{"actorId":1252055,"img":"http://img31.mtime.cn/ph/2013/05/31/165409.58959998_1280X720X2.jpg","name":"淳于珊珊","nameEn":"Shanshan Chunyu","roleImg":"","roleName":"林志雄"},{"actorId":925356,"img":"http://img31.mtime.cn/ph/2014/03/14/152830.90994067_1280X720X2.jpg","name":"余男","nameEn":"Nan Yu","roleImg":"http://img5.mtime.cn/mg/2017/07/27/164936.13266708.jpg","roleName":"龙小云"},{"actorId":1257967,"img":"http://img31.mtime.cn/ph/2016/08/29/213343.15165853_1280X720X2.jpg","name":"于谦","nameEn":"Qian Yu","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174838.29018537.jpg","roleName":"钱必达"},{"actorId":1087579,"img":"http://img31.mtime.cn/ph/2015/04/03/115824.73215633_1280X720X2.jpg","name":"石兆琪","nameEn":"Zhaoqi Shi","roleImg":"","roleName":"石青松"},{"actorId":2271140,"img":"http://img31.mtime.cn/ph/1140/2271140/2271140_1280X720X2.jpg","name":"","nameEn":"Diana Sylla","roleImg":"","roleName":""},{"actorId":2271141,"img":"http://img31.mtime.cn/ph/1141/2271141/2271141_1280X720X2.jpg","name":"","nameEn":"Nwachukwu Kennedy Chukwuebuka","roleImg":"","roleName":""},{"actorId":1016974,"img":"http://img31.mtime.cn/ph/2015/04/03/120049.10038624_1280X720X2.jpg","name":"倪大红","nameEn":"Dahong Ni","roleImg":"","roleName":"Min Deng"},{"actorId":1176901,"img":"http://img31.mtime.cn/ph/901/1176901/1176901_1280X720X2.jpg","name":"肖竹","nameEn":"Zhu Xiao","roleImg":"","roleName":"Wu Ji"},{"actorId":2288478,"img":"http://img31.mtime.cn/ph/478/2288478/2288478_1280X720X2.jpg","name":"","nameEn":"Qiang Ma","roleImg":"","roleName":"Li Zhijun"},{"actorId":2288479,"img":"http://img31.mtime.cn/ph/479/2288479/2288479_1280X720X2.jpg","name":"","nameEn":"Zibin Fang","roleImg":"","roleName":"Hostage"},{"actorId":2288480,"img":"http://img31.mtime.cn/ph/480/2288480/2288480_1280X720X2.jpg","name":"","nameEn":"Sen Wang","roleImg":"","roleName":"38Shi"},{"actorId":2288481,"img":"http://img31.mtime.cn/ph/481/2288481/2288481_1280X720X2.jpg","name":"","nameEn":"Tengyuan Liu","roleImg":"","roleName":"Yu Fei"},{"actorId":2288482,"img":"http://img31.mtime.cn/ph/482/2288482/2288482_1280X720X2.jpg","name":"","nameEn":"Yongda Zhang","roleImg":"","roleName":"Shao Bing"},{"actorId":1995437,"img":"http://img31.mtime.cn/ph/1437/1995437/1995437_1280X720X2.jpg","name":"","nameEn":"Xiaolong Zhang","roleImg":"","roleName":"Ban Zhaun"}],"award":{"awardList":[],"totalNominateAward":0,"totalWinAward":0},"commentSpecial":"吴京领衔坦克版速度与激情","community":{},"director":{"directorId":956786,"img":"http://img31.mtime.cn/ph/2014/03/16/192819.71851115_1280X720X2.jpg","name":"吴京","nameEn":"Jing Wu"},"festivals":[],"hotRanking":-1,"img":"http://img5.mtime.cn/mt/2017/07/21/162643.51070350_1280X720X2.jpg","is3D":true,"isDMAX":true,"isEggHunt":false,"isFilter":false,"isIMAX":false,"isIMAX3D":false,"isTicket":true,"message":"该操作将清除您对该片的评分！是否确认？","mins":"123分钟","movieId":229733,"name":"战狼2","nameEn":"Wolf Warriors Ⅱ","overallRating":7.5,"personCount":45,"quizGame":{},"releaseArea":"中国","releaseDate":"20170727","showCinemaCount":161,"showDay":1501833600,"showtimeCount":2483,"stageImg":{"count":134,"list":[{"imgId":7326746,"imgUrl":"http://img5.mtime.cn/pi/2017/01/24/154512.14742978_1280X720X2.jpg"},{"imgId":7383461,"imgUrl":"http://img5.mtime.cn/pi/2017/07/31/160016.68206608_1280X720X2.jpg"},{"imgId":7384418,"imgUrl":"http://img5.mtime.cn/pi/2017/08/02/105815.93505652_1280X720X2.jpg"},{"imgId":7384425,"imgUrl":"http://img5.mtime.cn/pi/2017/08/02/105809.98960214_1280X720X2.jpg"}]},"story":"冷锋突然被卷入了一场非洲国家叛乱，本可以安全撤离，却因无法忘记曾经为军人的使命，孤身犯险冲回沦陷区，带领身陷屠杀中的同胞和难民，展开生死逃亡。","style":{"isLeadPage":0,"leadImg":"https://img2.mtime.cn/mg/.jpg","leadUrl":""},"totalNominateAward":0,"totalWinAward":0,"type":["动作","战争"],"url":"https://movie.mtime.com/229733/","video":{"count":18,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/05/mp4/170705093334085272.mp4","img":"http://img5.mtime.cn/mg/2017/07/05/092337.23826562_235X132X4.jpg","title":"战狼2 \u201c开战版\u201d预告","url":"https://vfx.mtime.cn/Video/2017/07/05/mp4/170705093334085272_480.mp4","videoId":66456}}
+         * boxOffice : {"movieId":229733,"ranking":1,"todayBox":17094431548,"todayBoxDes":"1.71","todayBoxDesUnit":"今日实时(亿)","totalBox":222458665290,"totalBoxDes":"22.25","totalBoxUnit":"累计票房(亿)"}
          * live : {"count":0,"img":"","liveId":0,"playNumTag":"","playTag":"","status":3,"title":""}
-         * related : {"goodsCount":0,"goodsList":[],"relateId":0,"relatedUrl":"https://mall-wv.mtime.cn/#!/commerce/list/","type":0}
+         * related : {"goodsCount":4,"goodsList":[{"background":"#25ACBD","goodsId":106202,"goodsUrl":"https://mall-wv.mtime.cn/#!/commerce/item/106202/?pvkey=3_2603","iconText":"新品","image":"http://img5.mtime.cn/mg/2017/07/27/163758.72779474_294X294X4.jpg","longName":"品漫会 战狼2 iphone7/7plus手机壳","marketPrice":9800,"marketPriceFormat":"98.00","minSalePrice":5900,"minSalePriceFormat":"59.00","name":"战狼2iphone7/7plus手机壳 iPhone7P"},{"background":"#25ACBD","goodsId":106152,"goodsUrl":"https://mall-wv.mtime.cn/#!/commerce/item/106152/","iconText":"新品","image":"http://img5.mtime.cn/mg/2017/07/10/112801.69029898_294X294X4.jpg","longName":"品漫会 战狼2 抱枕","marketPrice":7800,"marketPriceFormat":"78.00","minSalePrice":6800,"minSalePriceFormat":"68.00","name":"战狼2 抱枕"},{"background":"#25ACBD","goodsId":106202,"goodsUrl":"https://mall-wv.mtime.cn/#!/commerce/item/106202/?pvkey=3_2602","iconText":"新品","image":"http://img5.mtime.cn/mg/2017/07/27/163717.19888532_294X294X4.jpg","longName":"品漫会 战狼2 iphone7/7plus手机壳","marketPrice":9800,"marketPriceFormat":"98.00","minSalePrice":5900,"minSalePriceFormat":"59.00","name":"战狼2iphone7/7plus手机壳 iPhone7"}],"relateId":0,"relatedUrl":"https://mall-wv.mtime.cn/?mid=229733&relatedNativeType=1&utm_source=app_movie_btn_more#!/commerce/list/","type":0}
          */
 
         private AdvertisementBean advertisement;
@@ -109,7 +110,7 @@ public class HotMovieDetail {
 
         public static class AdvertisementBean {
             /**
-             * advList : [{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"商城好物不过百+商城权力的游戏","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0720/qygdt750210m.html"}]
+             * advList : [{"advTag":"","endDate":1512057599,"isHorizontalScreen":false,"isOpenH5":false,"startDate":1451577600,"tag":"舆情调查问卷","type":"203","typeName":"影片详情页banner2","url":"https://static4da.mtime.cn/feature/mobile/banner/2017/0726/yqwj750210.html"}]
              * count : 1
              * error :
              * success : true
@@ -159,10 +160,10 @@ public class HotMovieDetail {
                  * isHorizontalScreen : false
                  * isOpenH5 : false
                  * startDate : 1451577600
-                 * tag : 商城好物不过百+商城权力的游戏
+                 * tag : 舆情调查问卷
                  * type : 203
                  * typeName : 影片详情页banner2
-                 * url : https://static4da.mtime.cn/feature/mobile/banner/2017/0720/qygdt750210m.html
+                 * url : https://static4da.mtime.cn/feature/mobile/banner/2017/0726/yqwj750210.html
                  */
 
                 private String advTag;
@@ -251,42 +252,42 @@ public class HotMovieDetail {
 
         public static class BasicBean {
             /**
-             * actors : [{"actorId":925071,"img":"http://img31.mtime.cn/ph/2014/06/27/092600.22683345_1280X720X2.jpg","name":"张震","nameEn":"Chang Chen","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152634.36322213.jpg","roleName":"沈炼"},{"actorId":1249009,"img":"http://img5.mtime.cn/ph/2016/10/18/102915.98692348_1280X720X2.jpg","name":"杨幂","nameEn":"Mini Yang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152641.17445470.jpg","roleName":"北斋"},{"actorId":1311848,"img":"http://img5.mtime.cn/ph/2017/02/17/093429.48679538_1280X720X2.jpg","name":"张译","nameEn":"Yi Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152651.74374192.jpg","roleName":"陆文昭"},{"actorId":1321939,"img":"http://img21.mtime.cn/ph/2010/11/01/170346.17438095_1280X720X2.jpg","name":"雷佳音","nameEn":"Jiayin Lei","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152701.71668580.jpg","roleName":"裴纶"},{"actorId":1865764,"img":"http://img31.mtime.cn/ph/2016/01/21/160256.84796032_1280X720X2.jpg","name":"辛芷蕾","nameEn":"Zhilei Xin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152712.34736835.jpg","roleName":"丁白缨"},{"actorId":1258157,"img":"http://img5.mtime.cn/ph/2017/06/22/102852.86789028_1280X720X2.jpg","name":"李媛","nameEn":"Yuan Li","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152723.50244281.jpg","roleName":"丁翀"},{"actorId":987306,"img":"http://img31.mtime.cn/ph/2014/04/11/113007.66141318_1280X720X2.jpg","name":"金士杰","nameEn":"Shijie Jin","roleImg":"http://img5.mtime.cn/mg/2017/07/17/152732.76576740.jpg","roleName":"魏忠贤"},{"actorId":1844581,"img":"http://img5.mtime.cn/ph/2017/07/18/102653.29848902_1280X720X2.jpg","name":"刘端端","nameEn":"Duan-duan Liu","roleImg":"","roleName":"朱由检"},{"actorId":1897307,"img":"http://img31.mtime.cn/ph/2015/09/16/143108.62699521_1280X720X2.jpg","name":"武强","nameEn":"Qiang Wu","roleImg":"","roleName":"凌云恺"},{"actorId":1309341,"img":"http://img31.mtime.cn/ph/2014/08/22/152735.34278618_1280X720X2.jpg","name":"王仁君","nameEn":"Renjun Wang","roleImg":"","roleName":"朱由校"},{"actorId":1263025,"img":"http://img31.mtime.cn/ph/2014/03/25/101814.80085355_1280X720X2.jpg","name":"袁文康","nameEn":"Wenkang Yuan","roleImg":"","roleName":"静海"},{"actorId":2216618,"img":"http://img31.mtime.cn/ph/2016/07/08/114359.72243242_1280X720X2.jpg","name":"杨轶","nameEn":"Yi Yang","roleImg":"","roleName":"殷澄"},{"actorId":1255732,"img":"http://img31.mtime.cn/ph/2014/02/22/212941.86525879_1280X720X2.jpg","name":"吴晓亮","nameEn":"Xiaoliang Wu","roleImg":"","roleName":"丁泰"}]
+             * actors : [{"actorId":956786,"img":"http://img31.mtime.cn/ph/2014/03/16/192819.71851115_1280X720X2.jpg","name":"吴京","nameEn":"Jing Wu","roleImg":"http://img5.mtime.cn/mg/2017/07/27/164927.98569009.jpg","roleName":"冷锋"},{"actorId":934883,"img":"http://img31.mtime.cn/ph/2014/03/17/070800.55917732_1280X720X2.jpg","name":"弗兰克·格里罗","nameEn":"Frank Grillo","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174723.44781032.jpg","roleName":"老爹"},{"actorId":1249271,"img":"http://img5.mtime.cn/ph/2017/04/21/161257.62213729_1280X720X2.jpg","name":"吴刚","nameEn":"Gang Wu","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174747.16042199.jpg","roleName":"何建国"},{"actorId":1598541,"img":"http://img31.mtime.cn/ph/2014/07/10/163307.26852592_1280X720X2.jpg","name":"张翰","nameEn":"Han Zhang","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174758.51799209.jpg","roleName":"卓亦凡"},{"actorId":1533504,"img":"http://img31.mtime.cn/ph/2016/09/02/144901.23751364_1280X720X2.jpg","name":"卢靖姗","nameEn":"Celina Jade","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174737.34089170.jpg","roleName":"瑞秋"},{"actorId":987361,"img":"http://img31.mtime.cn/ph/2014/08/15/104233.34401787_1280X720X2.jpg","name":"丁海峰","nameEn":"Haifeng Ding","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174809.89297347.jpg","roleName":"舰长"},{"actorId":1252055,"img":"http://img31.mtime.cn/ph/2013/05/31/165409.58959998_1280X720X2.jpg","name":"淳于珊珊","nameEn":"Shanshan Chunyu","roleImg":"","roleName":"林志雄"},{"actorId":925356,"img":"http://img31.mtime.cn/ph/2014/03/14/152830.90994067_1280X720X2.jpg","name":"余男","nameEn":"Nan Yu","roleImg":"http://img5.mtime.cn/mg/2017/07/27/164936.13266708.jpg","roleName":"龙小云"},{"actorId":1257967,"img":"http://img31.mtime.cn/ph/2016/08/29/213343.15165853_1280X720X2.jpg","name":"于谦","nameEn":"Qian Yu","roleImg":"http://img5.mtime.cn/mg/2017/07/24/174838.29018537.jpg","roleName":"钱必达"},{"actorId":1087579,"img":"http://img31.mtime.cn/ph/2015/04/03/115824.73215633_1280X720X2.jpg","name":"石兆琪","nameEn":"Zhaoqi Shi","roleImg":"","roleName":"石青松"},{"actorId":2271140,"img":"http://img31.mtime.cn/ph/1140/2271140/2271140_1280X720X2.jpg","name":"","nameEn":"Diana Sylla","roleImg":"","roleName":""},{"actorId":2271141,"img":"http://img31.mtime.cn/ph/1141/2271141/2271141_1280X720X2.jpg","name":"","nameEn":"Nwachukwu Kennedy Chukwuebuka","roleImg":"","roleName":""},{"actorId":1016974,"img":"http://img31.mtime.cn/ph/2015/04/03/120049.10038624_1280X720X2.jpg","name":"倪大红","nameEn":"Dahong Ni","roleImg":"","roleName":"Min Deng"},{"actorId":1176901,"img":"http://img31.mtime.cn/ph/901/1176901/1176901_1280X720X2.jpg","name":"肖竹","nameEn":"Zhu Xiao","roleImg":"","roleName":"Wu Ji"},{"actorId":2288478,"img":"http://img31.mtime.cn/ph/478/2288478/2288478_1280X720X2.jpg","name":"","nameEn":"Qiang Ma","roleImg":"","roleName":"Li Zhijun"},{"actorId":2288479,"img":"http://img31.mtime.cn/ph/479/2288479/2288479_1280X720X2.jpg","name":"","nameEn":"Zibin Fang","roleImg":"","roleName":"Hostage"},{"actorId":2288480,"img":"http://img31.mtime.cn/ph/480/2288480/2288480_1280X720X2.jpg","name":"","nameEn":"Sen Wang","roleImg":"","roleName":"38Shi"},{"actorId":2288481,"img":"http://img31.mtime.cn/ph/481/2288481/2288481_1280X720X2.jpg","name":"","nameEn":"Tengyuan Liu","roleImg":"","roleName":"Yu Fei"},{"actorId":2288482,"img":"http://img31.mtime.cn/ph/482/2288482/2288482_1280X720X2.jpg","name":"","nameEn":"Yongda Zhang","roleImg":"","roleName":"Shao Bing"},{"actorId":1995437,"img":"http://img31.mtime.cn/ph/1437/1995437/1995437_1280X720X2.jpg","name":"","nameEn":"Xiaolong Zhang","roleImg":"","roleName":"Ban Zhaun"}]
              * award : {"awardList":[],"totalNominateAward":0,"totalWinAward":0}
-             * commentSpecial : 张震杨幂演绎前传故事揭秘沈炼身世
+             * commentSpecial : 吴京领衔坦克版速度与激情
              * community : {}
-             * director : {"directorId":1766781,"img":"http://img31.mtime.cn/ph/2014/06/26/094023.20279113_1280X720X2.jpg","name":"路阳","nameEn":"Yang Lu"}
+             * director : {"directorId":956786,"img":"http://img31.mtime.cn/ph/2014/03/16/192819.71851115_1280X720X2.jpg","name":"吴京","nameEn":"Jing Wu"}
              * festivals : []
              * hotRanking : -1
-             * img : http://img5.mtime.cn/mt/2017/07/11/183729.97294820_1280X720X2.jpg
-             * is3D : false
+             * img : http://img5.mtime.cn/mt/2017/07/21/162643.51070350_1280X720X2.jpg
+             * is3D : true
              * isDMAX : true
-             * isEggHunt : true
+             * isEggHunt : false
              * isFilter : false
              * isIMAX : false
              * isIMAX3D : false
              * isTicket : true
              * message : 该操作将清除您对该片的评分！是否确认？
-             * mins : 120分钟
-             * movieId : 228267
-             * name : 绣春刀II修罗战场
-             * nameEn : Brotherhood of Blades 2
-             * overallRating : 7.8
-             * personCount : 24
+             * mins : 123分钟
+             * movieId : 229733
+             * name : 战狼2
+             * nameEn : Wolf Warriors Ⅱ
+             * overallRating : 7.5
+             * personCount : 45
              * quizGame : {}
              * releaseArea : 中国
-             * releaseDate : 20170719
-             * showCinemaCount : 11
-             * showDay : 1500710400
-             * showtimeCount : 97
-             * stageImg : {"count":207,"list":[{"imgId":7342923,"imgUrl":"http://img5.mtime.cn/pi/2017/03/31/093040.85504825_1280X720X2.jpg"},{"imgId":7374109,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174428.78509408_1280X720X2.jpg"},{"imgId":7374110,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174432.70702845_1280X720X2.jpg"},{"imgId":7374111,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174437.42765017_1280X720X2.jpg"}]}
-             * story : 影片故事讲述了北镇抚司锦衣卫沈炼在追查案件中身陷阴谋，为了证明清白，沈炼与少女北斋，同僚裴纶协力查明真相。
+             * releaseDate : 20170727
+             * showCinemaCount : 161
+             * showDay : 1501833600
+             * showtimeCount : 2483
+             * stageImg : {"count":134,"list":[{"imgId":7326746,"imgUrl":"http://img5.mtime.cn/pi/2017/01/24/154512.14742978_1280X720X2.jpg"},{"imgId":7383461,"imgUrl":"http://img5.mtime.cn/pi/2017/07/31/160016.68206608_1280X720X2.jpg"},{"imgId":7384418,"imgUrl":"http://img5.mtime.cn/pi/2017/08/02/105815.93505652_1280X720X2.jpg"},{"imgId":7384425,"imgUrl":"http://img5.mtime.cn/pi/2017/08/02/105809.98960214_1280X720X2.jpg"}]}
+             * story : 冷锋突然被卷入了一场非洲国家叛乱，本可以安全撤离，却因无法忘记曾经为军人的使命，孤身犯险冲回沦陷区，带领身陷屠杀中的同胞和难民，展开生死逃亡。
              * style : {"isLeadPage":0,"leadImg":"https://img2.mtime.cn/mg/.jpg","leadUrl":""}
              * totalNominateAward : 0
              * totalWinAward : 0
-             * type : ["动作","剧情","古装"]
-             * url : https://movie.mtime.com/228267/
-             * video : {"count":11,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899.mp4","img":"http://img5.mtime.cn/mg/2017/07/16/214558.16862149_235X132X4.jpg","title":"绣春刀·修罗战场 终极预告","url":"https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899_480.mp4","videoId":66604}
+             * type : ["动作","战争"]
+             * url : https://movie.mtime.com/229733/
+             * video : {"count":18,"hightUrl":"https://vfx.mtime.cn/Video/2017/07/05/mp4/170705093334085272.mp4","img":"http://img5.mtime.cn/mg/2017/07/05/092337.23826562_235X132X4.jpg","title":"战狼2 \u201c开战版\u201d预告","url":"https://vfx.mtime.cn/Video/2017/07/05/mp4/170705093334085272_480.mp4","videoId":66456}
              */
 
             private AwardBean award;
@@ -628,8 +629,8 @@ public class HotMovieDetail {
 
             public static class StageImgBean {
                 /**
-                 * count : 207
-                 * list : [{"imgId":7342923,"imgUrl":"http://img5.mtime.cn/pi/2017/03/31/093040.85504825_1280X720X2.jpg"},{"imgId":7374109,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174428.78509408_1280X720X2.jpg"},{"imgId":7374110,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174432.70702845_1280X720X2.jpg"},{"imgId":7374111,"imgUrl":"http://img5.mtime.cn/pi/2017/07/06/174437.42765017_1280X720X2.jpg"}]
+                 * count : 134
+                 * list : [{"imgId":7326746,"imgUrl":"http://img5.mtime.cn/pi/2017/01/24/154512.14742978_1280X720X2.jpg"},{"imgId":7383461,"imgUrl":"http://img5.mtime.cn/pi/2017/07/31/160016.68206608_1280X720X2.jpg"},{"imgId":7384418,"imgUrl":"http://img5.mtime.cn/pi/2017/08/02/105815.93505652_1280X720X2.jpg"},{"imgId":7384425,"imgUrl":"http://img5.mtime.cn/pi/2017/08/02/105809.98960214_1280X720X2.jpg"}]
                  */
 
                 private int count;
@@ -653,8 +654,8 @@ public class HotMovieDetail {
 
                 public static class ListBean {
                     /**
-                     * imgId : 7342923
-                     * imgUrl : http://img5.mtime.cn/pi/2017/03/31/093040.85504825_1280X720X2.jpg
+                     * imgId : 7326746
+                     * imgUrl : http://img5.mtime.cn/pi/2017/01/24/154512.14742978_1280X720X2.jpg
                      */
 
                     private int imgId;
@@ -716,12 +717,12 @@ public class HotMovieDetail {
 
             public static class VideoBean {
                 /**
-                 * count : 11
-                 * hightUrl : https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899.mp4
-                 * img : http://img5.mtime.cn/mg/2017/07/16/214558.16862149_235X132X4.jpg
-                 * title : 绣春刀·修罗战场 终极预告
-                 * url : https://vfx.mtime.cn/Video/2017/07/16/mp4/170716214607948899_480.mp4
-                 * videoId : 66604
+                 * count : 18
+                 * hightUrl : https://vfx.mtime.cn/Video/2017/07/05/mp4/170705093334085272.mp4
+                 * img : http://img5.mtime.cn/mg/2017/07/05/092337.23826562_235X132X4.jpg
+                 * title : 战狼2 “开战版”预告
+                 * url : https://vfx.mtime.cn/Video/2017/07/05/mp4/170705093334085272_480.mp4
+                 * videoId : 66456
                  */
 
                 private int count;
@@ -782,12 +783,12 @@ public class HotMovieDetail {
 
             public static class ActorsBean {
                 /**
-                 * actorId : 925071
-                 * img : http://img31.mtime.cn/ph/2014/06/27/092600.22683345_1280X720X2.jpg
-                 * name : 张震
-                 * nameEn : Chang Chen
-                 * roleImg : http://img5.mtime.cn/mg/2017/07/17/152634.36322213.jpg
-                 * roleName : 沈炼
+                 * actorId : 956786
+                 * img : http://img31.mtime.cn/ph/2014/03/16/192819.71851115_1280X720X2.jpg
+                 * name : 吴京
+                 * nameEn : Jing Wu
+                 * roleImg : http://img5.mtime.cn/mg/2017/07/27/164927.98569009.jpg
+                 * roleName : 冷锋
                  */
 
                 private int actorId;
@@ -849,19 +850,19 @@ public class HotMovieDetail {
 
         public static class BoxOfficeBean {
             /**
-             * movieId : 228267
+             * movieId : 229733
              * ranking : 1
-             * todayBox : 532594951
-             * todayBoxDes : 532.59
-             * todayBoxDesUnit : 今日实时(万)
-             * totalBox : 9300461633
-             * totalBoxDes : 9300.46
-             * totalBoxUnit : 累计票房(万)
+             * todayBox : 17094431548
+             * todayBoxDes : 1.71
+             * todayBoxDesUnit : 今日实时(亿)
+             * totalBox : 222458665290
+             * totalBoxDes : 22.25
+             * totalBoxUnit : 累计票房(亿)
              */
 
             private int movieId;
             private int ranking;
-            private int todayBox;
+            private long todayBox;
             private String todayBoxDes;
             private String todayBoxDesUnit;
             private long totalBox;
@@ -884,11 +885,11 @@ public class HotMovieDetail {
                 this.ranking = ranking;
             }
 
-            public int getTodayBox() {
+            public long getTodayBox() {
                 return todayBox;
             }
 
-            public void setTodayBox(int todayBox) {
+            public void setTodayBox(long todayBox) {
                 this.todayBox = todayBox;
             }
 
@@ -1011,10 +1012,10 @@ public class HotMovieDetail {
 
         public static class RelatedBean {
             /**
-             * goodsCount : 0
-             * goodsList : []
+             * goodsCount : 4
+             * goodsList : [{"background":"#25ACBD","goodsId":106202,"goodsUrl":"https://mall-wv.mtime.cn/#!/commerce/item/106202/?pvkey=3_2603","iconText":"新品","image":"http://img5.mtime.cn/mg/2017/07/27/163758.72779474_294X294X4.jpg","longName":"品漫会 战狼2 iphone7/7plus手机壳","marketPrice":9800,"marketPriceFormat":"98.00","minSalePrice":5900,"minSalePriceFormat":"59.00","name":"战狼2iphone7/7plus手机壳 iPhone7P"},{"background":"#25ACBD","goodsId":106152,"goodsUrl":"https://mall-wv.mtime.cn/#!/commerce/item/106152/","iconText":"新品","image":"http://img5.mtime.cn/mg/2017/07/10/112801.69029898_294X294X4.jpg","longName":"品漫会 战狼2 抱枕","marketPrice":7800,"marketPriceFormat":"78.00","minSalePrice":6800,"minSalePriceFormat":"68.00","name":"战狼2 抱枕"},{"background":"#25ACBD","goodsId":106202,"goodsUrl":"https://mall-wv.mtime.cn/#!/commerce/item/106202/?pvkey=3_2602","iconText":"新品","image":"http://img5.mtime.cn/mg/2017/07/27/163717.19888532_294X294X4.jpg","longName":"品漫会 战狼2 iphone7/7plus手机壳","marketPrice":9800,"marketPriceFormat":"98.00","minSalePrice":5900,"minSalePriceFormat":"59.00","name":"战狼2iphone7/7plus手机壳 iPhone7"}]
              * relateId : 0
-             * relatedUrl : https://mall-wv.mtime.cn/#!/commerce/list/
+             * relatedUrl : https://mall-wv.mtime.cn/?mid=229733&relatedNativeType=1&utm_source=app_movie_btn_more#!/commerce/list/
              * type : 0
              */
 
@@ -1022,7 +1023,7 @@ public class HotMovieDetail {
             private int relateId;
             private String relatedUrl;
             private int type;
-            private List<?> goodsList;
+            private List<GoodsListBean> goodsList;
 
             public int getGoodsCount() {
                 return goodsCount;
@@ -1056,12 +1057,128 @@ public class HotMovieDetail {
                 this.type = type;
             }
 
-            public List<?> getGoodsList() {
+            public List<GoodsListBean> getGoodsList() {
                 return goodsList;
             }
 
-            public void setGoodsList(List<?> goodsList) {
+            public void setGoodsList(List<GoodsListBean> goodsList) {
                 this.goodsList = goodsList;
+            }
+
+            public static class GoodsListBean {
+                /**
+                 * background : #25ACBD
+                 * goodsId : 106202
+                 * goodsUrl : https://mall-wv.mtime.cn/#!/commerce/item/106202/?pvkey=3_2603
+                 * iconText : 新品
+                 * image : http://img5.mtime.cn/mg/2017/07/27/163758.72779474_294X294X4.jpg
+                 * longName : 品漫会 战狼2 iphone7/7plus手机壳
+                 * marketPrice : 9800
+                 * marketPriceFormat : 98.00
+                 * minSalePrice : 5900
+                 * minSalePriceFormat : 59.00
+                 * name : 战狼2iphone7/7plus手机壳 iPhone7P
+                 */
+
+                private String background;
+                private int goodsId;
+                private String goodsUrl;
+                private String iconText;
+                private String image;
+                private String longName;
+                private int marketPrice;
+                private String marketPriceFormat;
+                private int minSalePrice;
+                private String minSalePriceFormat;
+                private String name;
+
+                public String getBackground() {
+                    return background;
+                }
+
+                public void setBackground(String background) {
+                    this.background = background;
+                }
+
+                public int getGoodsId() {
+                    return goodsId;
+                }
+
+                public void setGoodsId(int goodsId) {
+                    this.goodsId = goodsId;
+                }
+
+                public String getGoodsUrl() {
+                    return goodsUrl;
+                }
+
+                public void setGoodsUrl(String goodsUrl) {
+                    this.goodsUrl = goodsUrl;
+                }
+
+                public String getIconText() {
+                    return iconText;
+                }
+
+                public void setIconText(String iconText) {
+                    this.iconText = iconText;
+                }
+
+                public String getImage() {
+                    return image;
+                }
+
+                public void setImage(String image) {
+                    this.image = image;
+                }
+
+                public String getLongName() {
+                    return longName;
+                }
+
+                public void setLongName(String longName) {
+                    this.longName = longName;
+                }
+
+                public int getMarketPrice() {
+                    return marketPrice;
+                }
+
+                public void setMarketPrice(int marketPrice) {
+                    this.marketPrice = marketPrice;
+                }
+
+                public String getMarketPriceFormat() {
+                    return marketPriceFormat;
+                }
+
+                public void setMarketPriceFormat(String marketPriceFormat) {
+                    this.marketPriceFormat = marketPriceFormat;
+                }
+
+                public int getMinSalePrice() {
+                    return minSalePrice;
+                }
+
+                public void setMinSalePrice(int minSalePrice) {
+                    this.minSalePrice = minSalePrice;
+                }
+
+                public String getMinSalePriceFormat() {
+                    return minSalePriceFormat;
+                }
+
+                public void setMinSalePriceFormat(String minSalePriceFormat) {
+                    this.minSalePriceFormat = minSalePriceFormat;
+                }
+
+                public String getName() {
+                    return name;
+                }
+
+                public void setName(String name) {
+                    this.name = name;
+                }
             }
         }
     }

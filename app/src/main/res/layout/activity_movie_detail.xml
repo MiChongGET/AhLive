@@ -97,11 +97,11 @@
                 <!--<LinearLayout-->
                     <!--android:gravity="center"-->
                     <!--android:orientation="vertical"-->
-                    <!--android:layout_weight="1"-->
+                    <!--android:layout_weight="one"-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="match_parent">-->
                     <!--<TextView-->
-                        <!--android:text="1"-->
+                        <!--android:text="one"-->
                         <!--android:id="@+id/ranking"-->
                         <!--android:layout_width="wrap_content"-->
                         <!--android:layout_height="wrap_content"/>-->
@@ -114,11 +114,11 @@
                 <!--<LinearLayout-->
                     <!--android:orientation="vertical"-->
                     <!--android:gravity="center"-->
-                    <!--android:layout_weight="1"-->
+                    <!--android:layout_weight="one"-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="match_parent">-->
                     <!--<TextView-->
-                        <!--android:text="1"-->
+                        <!--android:text="one"-->
                         <!--android:id="@+id/todayBoxDes"-->
                         <!--android:layout_width="wrap_content"-->
                         <!--android:layout_height="wrap_content"/>-->
@@ -131,12 +131,12 @@
                 <!--<LinearLayout-->
                     <!--android:orientation="vertical"-->
                     <!--android:gravity="center"-->
-                    <!--android:layout_weight="1"-->
+                    <!--android:layout_weight="one"-->
                     <!--android:layout_width="match_parent"-->
                     <!--android:layout_height="match_parent">-->
 
                 <!--<TextView-->
-                    <!--android:text="1"-->
+                    <!--android:text="one"-->
                     <!--android:id="@+id/totalBoxDes"-->
                     <!--android:layout_width="wrap_content"-->
                     <!--android:layout_height="wrap_content"/>-->

@@ -20,18 +20,18 @@ public class NewCenterHotContentBean {
      * ugc_recommend : {"reason":"","activity":""}
      * article_type : 0
      * tag : news_agriculture
-     * forward_info : {"forward_count":1}
+     * forward_info : {"forward_count":one}
      * has_m3u8_video : 0
      * keywords : 天然气,小农民,空气污染,农民朋友,农村
      * rid : 20170727152247010011018141972D9F
      * show_portrait_article : false
      * user_verified : 0
-     * aggr_type : 1
+     * aggr_type : one
      * cell_type : 0
      * article_sub_type : 0
-     * bury_count : 1
+     * bury_count : one
      * title : 农民朋友注意了，这三项补贴近万元，人人有份错过可惜！
-     * ignore_web_transform : 1
+     * ignore_web_transform : one
      * source_icon_style : 5
      * tip : 0
      * hot : 0
@@ -40,12 +40,12 @@ public class NewCenterHotContentBean {
      * source : 山间小农民
      * comment_count : 217
      * article_url : http://toutiao.com/group/6447304960120471822/
-     * filter_words : [{"id":"8:0","name":"看过了","is_selected":false},{"id":"9:1","name":"内容太水","is_selected":false},{"id":"5:1266141208","name":"拉黑作者:山间小农民","is_selected":false},{"id":"3:306446079","name":"不想看:能源","is_selected":false}]
+     * filter_words : [{"id":"8:0","name":"看过了","is_selected":false},{"id":"9:one","name":"内容太水","is_selected":false},{"id":"5:1266141208","name":"拉黑作者:山间小农民","is_selected":false},{"id":"3:306446079","name":"不想看:能源","is_selected":false}]
      * share_count : 575
      * publish_time : 1501130562
-     * action_list : [{"action":1,"extra":{},"desc":""},{"action":3,"extra":{},"desc":""},{"action":7,"extra":{},"desc":""},{"action":9,"extra":{},"desc":""}]
+     * action_list : [{"action":one,"extra":{},"desc":""},{"action":3,"extra":{},"desc":""},{"action":7,"extra":{},"desc":""},{"action":9,"extra":{},"desc":""}]
      * gallary_image_count : 3
-     * cell_layout_style : 1
+     * cell_layout_style : one
      * tag_id : 6447304960120471822
      * video_style : 0
      * verified_content :
@@ -659,7 +659,7 @@ public class NewCenterHotContentBean {
 
     public static class ForwardInfoBean {
         /**
-         * forward_count : 1
+         * forward_count : one
          */
 
         private int forward_count;
@@ -1057,7 +1057,7 @@ public class NewCenterHotContentBean {
 
     public static class ActionListBean {
         /**
-         * action : 1
+         * action : one
          * extra : {}
          * desc :
          */

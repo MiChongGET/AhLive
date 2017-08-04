@@ -867,8 +867,8 @@ public class FunVideoBean {
 
                 public static class DanmakuAttrsBean {
                     /**
-                     * allow_show_danmaku : 1
-                     * allow_send_danmaku : 1
+                     * allow_show_danmaku : one
+                     * allow_send_danmaku : one
                      */
 
                     private int allow_show_danmaku;

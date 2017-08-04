@@ -34,7 +34,7 @@ public class LoadMoreScrollListener extends RecyclerView.OnScrollListener {
         if(manager instanceof LinearLayoutManager){
             int lastVisibleItemPosition = ((LinearLayoutManager) manager).findLastVisibleItemPosition();
 
-            Log.v("dyp","lastVisibleItemPosition:"+lastVisibleItemPosition+",adapter.getItemCount()-1 :"+ (adapter.getItemCount()-1) +",hasMore:"+adapter.hasMore);
+            Log.v("dyp","lastVisibleItemPosition:"+lastVisibleItemPosition+",adapter.getItemCount()-one :"+ (adapter.getItemCount()-1) +",hasMore:"+adapter.hasMore);
 
             if(adapter.hasMore&& adapter.getItemCount() > adapter.getPageCount() && adapter.getItemCount()-1 == lastVisibleItemPosition){
                 if(!adapter.isLoading()){

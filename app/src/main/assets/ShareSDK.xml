@@ -5,8 +5,8 @@
 
     	所有集成到您项目的平台都应该为其在表格中填写相对应的开发者信息，以新浪微博为例：
     	    <SinaWeibo
-                Id="1"
-                SortId="1"
+                Id="one"
+                SortId="one"
                 AppKey="568898243"
                 AppSecret="38a4f8204cc784f81f9f0daaf31e02e3"
                 RedirectUrl="http://www.mob.com"
@@ -49,7 +49,7 @@
     -->
 
     <!-- ShareByAppClient标识是否使用微博客户端分享，默认是false, -->
-	<!-- 1、isNewApi是否使用新街口，true是使用新接口，false为老接口
+	<!-- one、isNewApi是否使用新街口，true是使用新接口，false为老接口
 		 2、用户分享到微博的文本内容，必须做URLencode，内容不超过140个汉字，文本中不能包含“#话题词#”，同时文本中必须包含至少一个第三方分享到微博的网页URL，
 		且该URL只能是该第三方（调用方）绑定域下的URL链接，绑定域在“我的应用 － 应用信息 － 基本应用信息编辑 － 安全域名”里设置。-->
     <SinaWeibo

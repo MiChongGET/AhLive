@@ -130,6 +130,7 @@ public class TabFragment extends BaseFragment {
 
         addfragment(TAG_FIRSTPAGE);
 
+
         return view;
     }
 

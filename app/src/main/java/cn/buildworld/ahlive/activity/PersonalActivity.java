@@ -445,7 +445,7 @@ public class PersonalActivity extends ActivityBase {
         //设置竖线的数量
 //        options.setCropGridColumnCount(2);
         //设置横线的数量
-//        options.setCropGridRowCount(1);
+//        options.setCropGridRowCount(one);
 
         UCrop.of(uri, destinationUri)
                 .withAspectRatio(1, 1)

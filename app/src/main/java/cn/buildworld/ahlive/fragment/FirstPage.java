@@ -34,7 +34,7 @@ import cn.buildworld.ahlive.utils.net.XUtils;
  */
 
 public class FirstPage extends BaseFragment {
-    public static final int []RES = new int[]{R.mipmap.image5,R.mipmap.image2,R.mipmap.image3,R.mipmap.image4,R.mipmap.image6,R.mipmap.image7,R.mipmap.image8};
+    public static final int []RES = new int[]{R.mipmap.one,R.mipmap.two,R.mipmap.three,R.mipmap.four,R.mipmap.five};
     private MZBannerView mzBannerView;
     private List<Integer> list;
     private String TAG = "首页";
