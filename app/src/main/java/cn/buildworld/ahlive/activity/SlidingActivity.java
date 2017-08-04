@@ -164,7 +164,6 @@ public class SlidingActivity extends CheckPermissionsActivity
 
 
     //高德地图定位功能
-
     public void getLocation(){
         //定位初始化
         mLocationClient = new AMapLocationClient(getApplicationContext());

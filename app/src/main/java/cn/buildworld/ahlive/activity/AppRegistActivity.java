@@ -26,6 +26,7 @@ import android.widget.Toast;
 
 import com.vondear.rxtools.RxActivityUtils;
 import com.vondear.rxtools.RxAnimationUtils;
+import com.vondear.rxtools.RxEncryptUtils;
 import com.vondear.rxtools.RxKeyboardUtils;
 import com.vondear.rxtools.activity.AndroidBug5497Workaround;
 
@@ -80,6 +81,7 @@ public class AppRegistActivity extends AppCompatActivity {
     private int height = 0;
     private String mPasswd2;
     private String mPasswd;
+    private String TAG ="用户注册:";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -234,7 +236,12 @@ public class AppRegistActivity extends AppCompatActivity {
                     RxKeyboardUtils.hideSoftInput(AppRegistActivity.this);
 
                     final String name = mEtMobile.getText().toString();
-                    String url = "http://www.buildworld.xyz/ahlivelogin/regist.php?name="+name+"&passwd="+mEtPassword.getText().toString();
+                    String passwd = mEtPassword.getText().toString();
+//                    Log.i(TAG, "passwd: "+passwd);
+                    String md5ToString = RxEncryptUtils.encryptMD5ToString(passwd+"");
+
+                    Log.i(TAG, "md5ToString: "+md5ToString);
+                    String url = "http://www.buildworld.xyz/ahlivelogin/regist.php?name="+name+"&passwd="+md5ToString;
                     XUtils.Get(url,null,new MyCallBack<String>(){
                         @Override
                         public void onSuccess(String result) {

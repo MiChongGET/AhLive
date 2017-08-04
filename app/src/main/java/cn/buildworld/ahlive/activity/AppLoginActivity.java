@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vondear.rxtools.RxAnimationUtils;
+import com.vondear.rxtools.RxEncryptUtils;
 import com.vondear.rxtools.RxKeyboardUtils;
 import com.vondear.rxtools.activity.AndroidBug5497Workaround;
 
@@ -73,6 +74,7 @@ public class AppLoginActivity extends AppCompatActivity {
     private int keyHeight = 0; //软件盘弹起后所占高度
     private float scale = 0.6f; //logo缩放比例
     private int height = 0;
+    private String TAG = "登录";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,7 +96,9 @@ public class AppLoginActivity extends AppCompatActivity {
 
     //网络登录
     private void doLogin(final String name, final String passwd) {
-        String url = "http://www.buildworld.xyz/ahlivelogin/login.php?name="+name+"&passwd="+passwd;
+        String md5ToString = RxEncryptUtils.encryptMD5ToString(passwd+"");
+        Log.i(TAG, "passwd: "+md5ToString);
+        String url = "http://www.buildworld.xyz/ahlivelogin/login.php?name="+name+"&passwd="+md5ToString;
         XUtils.Get(url,null,new MyCallBack<String>(){
             @Override
             public void onSuccess(String result) {
