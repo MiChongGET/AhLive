@@ -77,7 +77,7 @@ mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListene
 
 >7、上映电影模块使用[时光网](https://github.com/jokermonn/-Api/blob/master/Time.md)的API
 
-![](https://github.com/MiChongGET/AhLive/blob/master/app/pic/6.png)![](https://github.com/MiChongGET/AhLive/blob/master/app/pic/8.png)![](https://github.com/MiChongGET/AhLive/blob/master/app/pic/9.png)
+![](https://github.com/MiChongGET/AhLive/blob/master/app/pic/7.png)![](https://github.com/MiChongGET/AhLive/blob/master/app/pic/8.png)![](https://github.com/MiChongGET/AhLive/blob/master/app/pic/9.png)
 
 电影详情模块使用CollapsingToolbarLayout+AppBarLayout，下半部分使用TabLayout+ViewPager结合使用实现滑动效果。预告片视频使用的是[Jiecaovideoplayer](https://github.com/lipangit/JieCaoVideoPlayer)。分享模块使用的Mob的社会化分享业务。评论区主要是实现每20个条目更新。
 
