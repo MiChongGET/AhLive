@@ -15,7 +15,9 @@ import java.util.List;
 import cn.buildworld.ahlive.R;
 import cn.buildworld.ahlive.activity.NewsBrowserActivity;
 import cn.buildworld.ahlive.adapter.NewsCentHotAdapter;
+import cn.buildworld.ahlive.adapter.NewsCentSocietyAdapter;
 import cn.buildworld.ahlive.bean.news.NewCenterHotContentBean;
+import cn.buildworld.ahlive.bean.news.NewCenterSocietyContentBean;
 import cn.buildworld.ahlive.bean.news.NewsCenterHotBean;
 import cn.buildworld.ahlive.utils.net.MyCallBack;
 import cn.buildworld.ahlive.utils.MyDecoration;
@@ -32,7 +34,7 @@ public class NewsCenterSociety extends BaseFragment {
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private long mL;
-    private NewsCentHotAdapter mNewsCentHotAdapter;
+    private NewsCentSocietyAdapter mNewsCentHotAdapter;
     private Gson gson;
     private List<NewsCenterHotBean.DataBean> data;
     private NewCenterHotContentBean mContentBean;
@@ -79,13 +81,13 @@ public class NewsCenterSociety extends BaseFragment {
                 NewsCenterHotBean newsCenterHotBean = gson.fromJson(result, NewsCenterHotBean.class);
                 data = newsCenterHotBean.getData();
 
-                mNewsCentHotAdapter = new NewsCentHotAdapter(data, getContext());
+                mNewsCentHotAdapter = new NewsCentSocietyAdapter(data, getContext());
                 mRecyclerView.setAdapter(mNewsCentHotAdapter);
                 Log.i(TAG, "onSuccess: "+ data.size());
                 String content = data.get(0).getContent();
                 Log.i(TAG, "content"+content);
 
-                mNewsCentHotAdapter.setOnNewsCenterListener(new NewsCentHotAdapter.OnNewsCenterListener() {
+                mNewsCentHotAdapter.setOnNewsCenterListener(new NewsCentSocietyAdapter.OnNewsCenterListener() {
                     @Override
                     public void onClick(View view, int position,String url) {
 //                        Toast.makeText(getActivity(), "我是"+position+url, Toast.LENGTH_SHORT).show();

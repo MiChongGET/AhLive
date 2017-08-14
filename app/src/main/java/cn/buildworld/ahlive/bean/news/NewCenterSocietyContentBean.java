@@ -8,67 +8,69 @@ import java.util.List;
  * 作者：MiChong on 2017/7/27 0027 20:24
  * 邮箱：1564666023@qq.com
  */
-public class NewCenterHotContentBean {
+public class NewCenterSocietyContentBean {
 
 
     /**
-     * abstract : 上个月在“淘宝造物节”期间推出“无人零售快闪店”引发关注后，阿里巴巴集团该项目负责人8月14日宣布，将于年底前在杭州落成“全球第一家真正意义的无人零售实体店”，向消费者长期开放。7月8日，无人零售店“淘咖啡”亮相淘宝造物节，消费者扫码进店。
-     * action_extra : {"channel_id": 3189398996}
+     * abstract : 时间过得真快，转眼间就到了8月份了，每年到这个时候交警部分都是处理一批违章的驾驶证，对他们进行注销处理。
+     * action_extra : {"channel_id": 3189398998}
      * action_list : [{"action":1,"desc":"","extra":{}},{"action":3,"desc":"","extra":{}},{"action":7,"desc":"","extra":{}},{"action":9,"desc":"","extra":{}}]
      * aggr_type : 1
      * allow_download : false
      * article_sub_type : 0
      * article_type : 0
-     * article_url : http://m.thepaper.cn/rss_detail.jsp?contid=1762526&from=toutiao
+     * article_url : http://toutiao.com/group/6452170999713497613/
      * ban_comment : 0
-     * behot_time : 1502700994
-     * bury_count : 0
+     * behot_time : 1502705938
+     * bury_count : 1
      * cell_flag : 11
      * cell_layout_style : 1
      * cell_type : 0
-     * comment_count : 0
-     * cursor : 1502700994999
+     * comment_count : 4
+     * cursor : 1502705938999
      * digg_count : 0
-     * display_url : http://toutiao.com/group/6454042280994488590/
-     * filter_words : [{"id":"8:0","is_selected":false,"name":"看过了"},{"id":"9:1","is_selected":false,"name":"内容太水"},{"id":"5:31336367","is_selected":false,"name":"拉黑作者:澎湃新闻"},{"id":"3:31138380","is_selected":false,"name":"不想看:互联网电商"},{"id":"6:17652","is_selected":false,"name":"不想看:杭州"},{"id":"6:19807","is_selected":false,"name":"不想看:阿里巴巴"}]
+     * display_url : http://toutiao.com/group/6452170999713497613/
+     * filter_words : [{"id":"8:0","is_selected":false,"name":"看过了"},{"id":"9:1","is_selected":false,"name":"内容太水"},{"id":"5:798710758","is_selected":false,"name":"拉黑作者:覃小懒评车"},{"id":"2:11781439","is_selected":false,"name":"不想看:民生"},{"id":"6:17477","is_selected":false,"name":"不想看:驾驶证"}]
      * forward_info : {"forward_count":0}
-     * gallary_image_count : 1
-     * group_id : 6454042280994488590
+     * gallary_image_count : 3
+     * group_id : 6452170999713497613
      * has_image : true
      * has_m3u8_video : false
      * has_mp4_video : 0
      * has_video : false
-     * hot : 0
+     * hot : 1
      * ignore_web_transform : 1
+     * image_list : [{"height":311,"uri":"list/320400012203a03a9c21","url":"http://p3.pstatp.com/list/300x196/320400012203a03a9c21.webp","url_list":[{"url":"http://p3.pstatp.com/list/300x196/320400012203a03a9c21.webp"},{"url":"http://pb9.pstatp.com/list/300x196/320400012203a03a9c21.webp"},{"url":"http://pb1.pstatp.com/list/300x196/320400012203a03a9c21.webp"}],"width":554},{"height":360,"uri":"list/320b00002442d16fbe14","url":"http://p3.pstatp.com/list/300x196/320b00002442d16fbe14.webp","url_list":[{"url":"http://p3.pstatp.com/list/300x196/320b00002442d16fbe14.webp"},{"url":"http://pb9.pstatp.com/list/300x196/320b00002442d16fbe14.webp"},{"url":"http://pb1.pstatp.com/list/300x196/320b00002442d16fbe14.webp"}],"width":641},{"height":309,"uri":"list/320b00002445c917259f","url":"http://p1.pstatp.com/list/300x196/320b00002445c917259f.webp","url_list":[{"url":"http://p1.pstatp.com/list/300x196/320b00002445c917259f.webp"},{"url":"http://pb3.pstatp.com/list/300x196/320b00002445c917259f.webp"},{"url":"http://pb9.pstatp.com/list/300x196/320b00002445c917259f.webp"}],"width":551}]
      * is_subject : false
-     * item_id : 6454046645532230158
+     * item_id : 6452170999713497613
      * item_version : 0
-     * keywords : 就业率,无人零售店,无人零售,阿里巴巴集团,淘宝造物节
+     * keywords : 司机,驾驶证
      * level : 0
-     * log_pb : {"impr_id":"201708141656340100080601058791E7"}
-     * media_info : {"avatar_url":"http://p1.pstatp.com/large/d290013b7aaaabcfff2","follow":false,"is_star_user":false,"media_id":51045089537,"name":"澎湃新闻","recommend_reason":"","recommend_type":0,"user_id":51045089537,"user_verified":true,"verified_content":""}
-     * media_name : 澎湃新闻
-     * middle_image : {"height":337,"uri":"list/3117000234f27b0ad401","url":"http://p3.pstatp.com/list/300x196/3117000234f27b0ad401.webp","url_list":[{"url":"http://p3.pstatp.com/list/300x196/3117000234f27b0ad401.webp"},{"url":"http://pb9.pstatp.com/list/300x196/3117000234f27b0ad401.webp"},{"url":"http://pb1.pstatp.com/list/300x196/3117000234f27b0ad401.webp"}],"width":600}
-     * publish_time : 1502699340
-     * read_count : 22
-     * rid : 201708141656340100080601058791E7
-     * share_count : 0
-     * share_url : http://toutiao.com/group/6454042280994488590/?iid=123456789&app=news_article
+     * log_pb : {"impr_id":"2017081418190901000805902615128E"}
+     * media_info : {"avatar_url":"http://p1.pstatp.com/large/ef400044e9390d597df","follow":false,"is_star_user":false,"media_id":51397739201,"name":"覃小懒评车","recommend_reason":"","recommend_type":0,"user_id":51398653338,"user_verified":false,"verified_content":""}
+     * media_name : 覃小懒评车
+     * middle_image : {"height":311,"uri":"list/320400012203a03a9c21","url":"http://p3.pstatp.com/list/300x196/320400012203a03a9c21.webp","url_list":[{"url":"http://p3.pstatp.com/list/300x196/320400012203a03a9c21.webp"},{"url":"http://pb9.pstatp.com/list/300x196/320400012203a03a9c21.webp"},{"url":"http://pb1.pstatp.com/list/300x196/320400012203a03a9c21.webp"}],"width":554}
+     * publish_time : 1502263127
+     * read_count : 29560
+     * repin_count : 132
+     * rid : 2017081418190901000805902615128E
+     * share_count : 56
+     * share_url : http://toutiao.com/a6452170999713497613/?iid=123456789&app=news_article
      * show_portrait : false
      * show_portrait_article : false
-     * source : 澎湃新闻
+     * source : 覃小懒评车
      * source_icon_style : 2
-     * source_open_url : sslocal://profile?uid=51045089537
-     * tag : news_tech
-     * tag_id : 6454042280994488590
-     * tip : 0
-     * title : 首家无人零售实体店年底杭州开业，阿里称“不会降低就业率”
-     * ugc_recommend : {"activity":"","reason":"澎湃新闻官方帐号"}
-     * url : http://m.thepaper.cn/rss_detail.jsp?contid=1762526&from=toutiao
-     * user_info : {"avatar_url":"http://p3.pstatp.com/thumb/d290013b7aaaabcfff2","description":"专注时政与思想的媒体开放平台","follow":false,"follower_count":0,"name":"澎湃新闻","user_auth_info":"{\"auth_type\": \"0\", \"auth_info\": \"澎湃新闻官方帐号\"}","user_id":51045089537,"user_verified":true,"verified_content":"澎湃新闻官方帐号"}
+     * source_open_url : sslocal://profile?uid=51398653338
+     * tag : news_society
+     * tag_id : 6452170999713497613
+     * tip : 1
+     * title : 驾驶证非常重要的一行字，忽略它后果很严重！
+     * ugc_recommend : {"activity":"","reason":""}
+     * url : http://toutiao.com/group/6452170999713497613/
+     * user_info : {"avatar_url":"http://p3.pstatp.com/thumb/ef400044e9390d597df","description":"介绍自己的用车体验，评测热门车辆，给出购车小建议。","follow":false,"follower_count":0,"name":"覃小懒评车","user_id":51398653338,"user_verified":false}
      * user_repin : 0
-     * user_verified : 1
-     * verified_content : 澎湃新闻官方帐号
+     * user_verified : 0
+     * verified_content :
      * video_style : 0
      */
 
@@ -110,6 +112,7 @@ public class NewCenterHotContentBean {
     private MiddleImageBean middle_image;
     private int publish_time;
     private int read_count;
+    private int repin_count;
     private String rid;
     private int share_count;
     private String share_url;
@@ -131,6 +134,7 @@ public class NewCenterHotContentBean {
     private int video_style;
     private List<ActionListBean> action_list;
     private List<FilterWordsBean> filter_words;
+    private List<ImageListBean> image_list;
 
     public String getAbstractX() {
         return abstractX;
@@ -428,6 +432,14 @@ public class NewCenterHotContentBean {
         this.read_count = read_count;
     }
 
+    public int getRepin_count() {
+        return repin_count;
+    }
+
+    public void setRepin_count(int repin_count) {
+        this.repin_count = repin_count;
+    }
+
     public String getRid() {
         return rid;
     }
@@ -596,6 +608,14 @@ public class NewCenterHotContentBean {
         this.filter_words = filter_words;
     }
 
+    public List<ImageListBean> getImage_list() {
+        return image_list;
+    }
+
+    public void setImage_list(List<ImageListBean> image_list) {
+        this.image_list = image_list;
+    }
+
     public static class ForwardInfoBean {
         /**
          * forward_count : 0
@@ -614,7 +634,7 @@ public class NewCenterHotContentBean {
 
     public static class LogPbBean {
         /**
-         * impr_id : 201708141656340100080601058791E7
+         * impr_id : 2017081418190901000805902615128E
          */
 
         private String impr_id;
@@ -630,15 +650,15 @@ public class NewCenterHotContentBean {
 
     public static class MediaInfoBean {
         /**
-         * avatar_url : http://p1.pstatp.com/large/d290013b7aaaabcfff2
+         * avatar_url : http://p1.pstatp.com/large/ef400044e9390d597df
          * follow : false
          * is_star_user : false
-         * media_id : 51045089537
-         * name : 澎湃新闻
+         * media_id : 51397739201
+         * name : 覃小懒评车
          * recommend_reason :
          * recommend_type : 0
-         * user_id : 51045089537
-         * user_verified : true
+         * user_id : 51398653338
+         * user_verified : false
          * verified_content :
          */
 
@@ -736,11 +756,11 @@ public class NewCenterHotContentBean {
 
     public static class MiddleImageBean {
         /**
-         * height : 337
-         * uri : list/3117000234f27b0ad401
-         * url : http://p3.pstatp.com/list/300x196/3117000234f27b0ad401.webp
-         * url_list : [{"url":"http://p3.pstatp.com/list/300x196/3117000234f27b0ad401.webp"},{"url":"http://pb9.pstatp.com/list/300x196/3117000234f27b0ad401.webp"},{"url":"http://pb1.pstatp.com/list/300x196/3117000234f27b0ad401.webp"}]
-         * width : 600
+         * height : 311
+         * uri : list/320400012203a03a9c21
+         * url : http://p3.pstatp.com/list/300x196/320400012203a03a9c21.webp
+         * url_list : [{"url":"http://p3.pstatp.com/list/300x196/320400012203a03a9c21.webp"},{"url":"http://pb9.pstatp.com/list/300x196/320400012203a03a9c21.webp"},{"url":"http://pb1.pstatp.com/list/300x196/320400012203a03a9c21.webp"}]
+         * width : 554
          */
 
         private int height;
@@ -791,7 +811,7 @@ public class NewCenterHotContentBean {
 
         public static class UrlListBean {
             /**
-             * url : http://p3.pstatp.com/list/300x196/3117000234f27b0ad401.webp
+             * url : http://p3.pstatp.com/list/300x196/320400012203a03a9c21.webp
              */
 
             private String url;
@@ -809,7 +829,7 @@ public class NewCenterHotContentBean {
     public static class UgcRecommendBean {
         /**
          * activity :
-         * reason : 澎湃新闻官方帐号
+         * reason :
          */
 
         private String activity;
@@ -834,15 +854,13 @@ public class NewCenterHotContentBean {
 
     public static class UserInfoBean {
         /**
-         * avatar_url : http://p3.pstatp.com/thumb/d290013b7aaaabcfff2
-         * description : 专注时政与思想的媒体开放平台
+         * avatar_url : http://p3.pstatp.com/thumb/ef400044e9390d597df
+         * description : 介绍自己的用车体验，评测热门车辆，给出购车小建议。
          * follow : false
          * follower_count : 0
-         * name : 澎湃新闻
-         * user_auth_info : {"auth_type": "0", "auth_info": "澎湃新闻官方帐号"}
-         * user_id : 51045089537
-         * user_verified : true
-         * verified_content : 澎湃新闻官方帐号
+         * name : 覃小懒评车
+         * user_id : 51398653338
+         * user_verified : false
          */
 
         private String avatar_url;
@@ -850,10 +868,8 @@ public class NewCenterHotContentBean {
         private boolean follow;
         private int follower_count;
         private String name;
-        private String user_auth_info;
         private long user_id;
         private boolean user_verified;
-        private String verified_content;
 
         public String getAvatar_url() {
             return avatar_url;
@@ -895,14 +911,6 @@ public class NewCenterHotContentBean {
             this.name = name;
         }
 
-        public String getUser_auth_info() {
-            return user_auth_info;
-        }
-
-        public void setUser_auth_info(String user_auth_info) {
-            this.user_auth_info = user_auth_info;
-        }
-
         public long getUser_id() {
             return user_id;
         }
@@ -917,14 +925,6 @@ public class NewCenterHotContentBean {
 
         public void setUser_verified(boolean user_verified) {
             this.user_verified = user_verified;
-        }
-
-        public String getVerified_content() {
-            return verified_content;
-        }
-
-        public void setVerified_content(String verified_content) {
-            this.verified_content = verified_content;
         }
     }
 
@@ -1000,6 +1000,78 @@ public class NewCenterHotContentBean {
 
         public void setName(String name) {
             this.name = name;
+        }
+    }
+
+    public static class ImageListBean {
+        /**
+         * height : 311
+         * uri : list/320400012203a03a9c21
+         * url : http://p3.pstatp.com/list/300x196/320400012203a03a9c21.webp
+         * url_list : [{"url":"http://p3.pstatp.com/list/300x196/320400012203a03a9c21.webp"},{"url":"http://pb9.pstatp.com/list/300x196/320400012203a03a9c21.webp"},{"url":"http://pb1.pstatp.com/list/300x196/320400012203a03a9c21.webp"}]
+         * width : 554
+         */
+
+        private int height;
+        private String uri;
+        private String url;
+        private int width;
+        private List<UrlListBeanX> url_list;
+
+        public int getHeight() {
+            return height;
+        }
+
+        public void setHeight(int height) {
+            this.height = height;
+        }
+
+        public String getUri() {
+            return uri;
+        }
+
+        public void setUri(String uri) {
+            this.uri = uri;
+        }
+
+        public String getUrl() {
+            return url;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public int getWidth() {
+            return width;
+        }
+
+        public void setWidth(int width) {
+            this.width = width;
+        }
+
+        public List<UrlListBeanX> getUrl_list() {
+            return url_list;
+        }
+
+        public void setUrl_list(List<UrlListBeanX> url_list) {
+            this.url_list = url_list;
+        }
+
+        public static class UrlListBeanX {
+            /**
+             * url : http://p3.pstatp.com/list/300x196/320400012203a03a9c21.webp
+             */
+
+            private String url;
+
+            public String getUrl() {
+                return url;
+            }
+
+            public void setUrl(String url) {
+                this.url = url;
+            }
         }
     }
 }
